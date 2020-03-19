@@ -1,6 +1,6 @@
 {
   "name": "sofistik-language",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "simple SOFiSTiK grammar for Atom IDE",
   "keywords": [
     "SOFiSTiK",
