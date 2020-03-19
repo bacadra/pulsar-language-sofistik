@@ -1,0 +1,29 @@
+# ***** References *****
+# https://flight-manual.atom.io/hacking-atom/sections/creating-a-grammar/
+# http://manual.macromates.com/en/language_grammars/
+# https://regex101.com/
+
+scopeName: 'source.sofi'
+name: 'SOFiSTiK'
+fileTypes: ['dat','gra']
+patterns: [
+  { # prog
+    match: '^ *(.?(?:prog|apply) .+) +(.*)'
+    captures:
+      1: name: 'support.class'
+      2: name: 'comment.line'
+  }
+  { # strings
+    begin: '\'|\"'
+    end: '\'|\"'
+    name: 'string'
+  }
+  { # first key
+    match: '^[ ]*\\w+'
+    name: 'keyword.control'
+  }
+  {
+    match: '[\$|!|\/\/|#].*'
+    name: 'comment.line'
+  }
+]

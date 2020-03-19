@@ -1,0 +1,10 @@
+{
+  "name": "sofistik-language",
+  "version": "0.0.0",
+  "description": "SOFiSTiK CADINP language",
+  "keywords": ["SOFiSTiK", "CADINP", "language"],
+  "readmeFilename": "README.md",
+  "homepage"  : "https://github.com/bacadra/sofistik-language",
+  "url"       : "https://github.com/bacadra/sofistik-language",
+  "repository": "https://github.com/bacadra/sofistik-language"
+}
