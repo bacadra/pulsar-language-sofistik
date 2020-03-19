@@ -1,10 +1,14 @@
 {
   "name": "sofistik-language",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "simple SOFiSTiK grammar for Atom IDE",
-  "keywords": ["SOFiSTiK", "CADINP", "language"],
+  "keywords": [
+    "SOFiSTiK",
+    "CADINP",
+    "language"
+  ],
   "readmeFilename": "README.md",
-  "homepage"  : "https://github.com/bacadra/language-sofistik",
-  "url"       : "https://github.com/bacadra/language-sofistik",
+  "homepage": "https://github.com/bacadra/language-sofistik",
+  "url": "https://github.com/bacadra/language-sofistik",
   "repository": "https://github.com/bacadra/language-sofistik"
 }
