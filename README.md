@@ -2,6 +2,11 @@
 
 in progres...
 
+## TODO
+
+* get tables to format it property
+* fill parametr names
+
 ## See another bacadra packages...
 
 * [bacadra-atom](https://github.com/bacadra/bacadra-atom)

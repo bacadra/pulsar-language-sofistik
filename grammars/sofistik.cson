@@ -3,20 +3,25 @@
 # http://manual.macromates.com/en/language_grammars/
 # https://regex101.com/
 
+# __________________ GENERAL _______________________________________________ #
+
 scopeName: 'source.sofi'
 name: 'SOFiSTiK'
 fileTypes: ['dat','gra']
 patterns: [
+
+# __________________ PROG OUTSIDE __________________________________________ #
+
   {include: '#def1'}
   {include: '#def2'}
   {include: '#inc1'}
   {include: '#com1'}
   {include: '#com2'}
 
-
+# __________________ AQUA __________________________________________________ #
 
   {
-  begin: '(?i)^ *(.?prog +aqua) +(.*)'
+  begin: '(?i)^ *([+-]?prog +aqua) +(.*)'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
@@ -24,40 +29,38 @@ patterns: [
   endCaptures:
     1: name: 'keyword.control'
   patterns: [
-    {include: '#def1'}
-    {include: '#def2'}
-    {include: '#inc1'}
-    {include: '#com1'}
-    {include: '#com2'}
-    {include: '#linsep'}
-    {include: '#str1'}
-    {include: '#str2'}
-    {include: '#spec1'}
-    {include: '#spec2'}
-    {include: '#var1'}
-    {include: '#var2'}
-    {
-      match: '(?i)[ ]*(prof)($| .*)'
-      captures:
-        1: name: 'keyword.control'
-        2: patterns: [
-            {
-              match: '(?i)(?<!\\w)(no|type|z1|z2|z3|mno|alph|ym|zm|refp|redd|refs|dtyp|sym|ref|mati|vd|vb|vs|vt|vr1|vr2|vb2|vt2|bcyz)(?!\\w)'
-              name: 'entity.name.function'
-            }
-          ]
-    }
+    {include: '#normalText'}
+
+    # # ********* example how to desine parametrs for function ********* #
+    # # but problem is how to get tables with short code...
+    # {
+    #   match: '(?i)[ ]*(prof)($| .*)'
+    #   captures:
+    #     1: name: 'keyword.control'
+    #     2: patterns: [
+    #         {'include': '#normalText'}
+    #         {
+    #           match: '(?i)(?<!\\w)(no|type|z1|z2|z3|mno|alph|ym|zm|refp|redd|refs|dtyp|sym|ref|mati|vd|vb|vs|vt|vr1|vr2|vb2|vt2|bcyz)(?!\\w)'
+    #           name: 'entity.name.function'
+    #         }
+    #       ]
+    # }
+    # ****************************************************************** #
+
     {
       match: '(?i)[ ]*(ctrl|norm|mate|mat|mlay|namt|bmat|hmat|conc|stee|timb|maso|ssla|mext|bore|blay|bbax|bbla|btab|smat|sfla|sval|srec|scit|cabl|sect|cs|sv|poly|vert|circ|cut|pane|plat|weld|prof|spt|neff|wpar|wind|lay|rf|lrf|crf|curf|tvar|inte|impo|expo|echo)($| .*)'
-      captures: 1: name: 'keyword.control'
+      captures:
+        1: name: 'keyword.control'
+        2: patterns: [{'include': '#normalText'}]
     }
   ]
   }
 
 
+# __________________ SOFIMSHC ______________________________________________ #
 
   {
-  begin: '(?i)^ *(.?prog +sofimshc) +(.*)'
+  begin: '(?i)^ *([+-]?prog +sofimshc) +(.*)'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
@@ -65,29 +68,21 @@ patterns: [
   endCaptures:
     1: name: 'keyword.control'
   patterns: [
-    {include: '#def1'}
-    {include: '#def2'}
-    {include: '#inc1'}
-    {include: '#com1'}
-    {include: '#com2'}
-    {include: '#linsep'}
-    {include: '#str1'}
-    {include: '#str2'}
-    {include: '#spec1'}
-    {include: '#spec2'}
-    {include: '#var1'}
-    {include: '#var2'}
+    {include: '#normalText'}
     {
       match: '(?i)[ ]*(syst|ctrl|grp|impo|expo|echo|coor|xsub|xcon|gax|gaxa|gaxh|gaxb|gaxc|gaxn|gaxp|gaxs|gaxv|gar|gara|garc|gars|spt|sptp|spts|spth|sln|slnb|slnp|slnn|slns|slnc|sar|sarb|sarr|sarp|sarc|sars|svo|svob|guid|bbox|slvl)($| .*)'
-      captures: 1: name: 'keyword.control'
+      captures:
+        1: name: 'keyword.control'
+        2: patterns: [{'include': '#normalText'}]
     }
   ]
   }
 
 
+# __________________ SOFILOAD ______________________________________________ #
 
   {
-  begin: '(?i)^ *(.?prog +sofiload) +(.*)'
+  begin: '(?i)^ *([+-]?prog +sofiload) +(.*)'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
@@ -95,29 +90,21 @@ patterns: [
   endCaptures:
     1: name: 'keyword.control'
   patterns: [
-    {include: '#def1'}
-    {include: '#def2'}
-    {include: '#inc1'}
-    {include: '#com1'}
-    {include: '#com2'}
-    {include: '#linsep'}
-    {include: '#str1'}
-    {include: '#str2'}
-    {include: '#spec1'}
-    {include: '#spec2'}
-    {include: '#var1'}
-    {include: '#var2'}
+    {include: '#normalText'}
     {
       match: '(?i)[ ]*(grp|act|lc|node|cabl|trus|beam|bepl|quad|bric|copy|lar|poin|line|curv|area|volu|expo|eval|ctrl|coor|echo|resp|func|fimp|acce|step|simq|reva|push|gax|lane|trai|trpl|trbl|trex|wind|wpro|wrou|wtop|wspe|wtst|wgen|wipt|wave)($| .*)'
-      captures: 1: name: 'keyword.control'
+      captures:
+        1: name: 'keyword.control'
+        2: patterns: [{'include': '#normalText'}]
     }
   ]
   }
 
 
+# __________________ ASE ___________________________________________________ #
 
   {
-  begin: '(?i)^ *(.?prog +ase) +(.*)'
+  begin: '(?i)^ *([+-]?prog +ase) +(.*)'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
@@ -125,29 +112,21 @@ patterns: [
   endCaptures:
     1: name: 'keyword.control'
   patterns: [
-    {include: '#def1'}
-    {include: '#def2'}
-    {include: '#inc1'}
-    {include: '#com1'}
-    {include: '#com2'}
-    {include: '#linsep'}
-    {include: '#str1'}
-    {include: '#str2'}
-    {include: '#spec1'}
-    {include: '#spec2'}
-    {include: '#var1'}
-    {include: '#var2'}
+    {include: '#normalText'}
     {
       match: '(?i)[ ]*(ctrl|syst|step|hist|ulti|push|plot|crep|grp|grp2|elem|len0|high|tbea|reiq|stex|obli|slip|volu|movs|laun|sfix|actb|lc|temp|pext|lcc|eige|mass|v0|rein|desi|nstr|echo)($| .*)'
-      captures: 1: name: 'keyword.control'
+      captures:
+        1: name: 'keyword.control'
+        2: patterns: [{'include': '#normalText'}]
     }
   ]
   }
 
 
+# __________________ AQB ___________________________________________________ #
 
   {
-  begin: '(?i)^ *(.?prog +aqb) +(.*)'
+  begin: '(?i)^ *([+-]?prog +aqb) +(.*)'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
@@ -155,29 +134,21 @@ patterns: [
   endCaptures:
     1: name: 'keyword.control'
   patterns: [
-    {include: '#def1'}
-    {include: '#def2'}
-    {include: '#inc1'}
-    {include: '#com1'}
-    {include: '#com2'}
-    {include: '#linsep'}
-    {include: '#str1'}
-    {include: '#str2'}
-    {include: '#spec1'}
-    {include: '#spec2'}
-    {include: '#var1'}
-    {include: '#var2'}
+    {include: '#normalText'}
     {
       match: '(?i)[ ]*(norm|ctrl|tvar|beam|tend|lc|s|comb|eige|stre|rein|desi|nstr|capa|echo)($| .*)'
-      captures: 1: name: 'keyword.control'
+      captures:
+        1: name: 'keyword.control'
+        2: patterns: [{'include': '#normalText'}]
     }
   ]
   }
 
 
+# __________________ TEMPLATE ______________________________________________ #
 
   {
-  begin: '(?i)^ *(.?prog +template) +(.*)'
+  begin: '(?i)^ *([+-]?prog +template) +(.*)'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
@@ -185,29 +156,21 @@ patterns: [
   endCaptures:
     1: name: 'keyword.control'
   patterns: [
-    {include: '#def1'}
-    {include: '#def2'}
-    {include: '#inc1'}
-    {include: '#com1'}
-    {include: '#com2'}
-    {include: '#linsep'}
-    {include: '#str1'}
-    {include: '#str2'}
-    {include: '#spec1'}
-    {include: '#spec2'}
-    {include: '#var1'}
-    {include: '#var2'}
+    {include: '#normalText'}
     {
       match: '(?i)[ ]*(page|echo)($| .*)'
-      captures: 1: name: 'keyword.control'
+      captures:
+        1: name: 'keyword.control'
+        2: patterns: [{'include': '#normalText'}]
     }
   ]
   }
 
 
+# __________________ CSM ___________________________________________________ #
 
   {
-  begin: '(?i)^ *(.?prog +csm) +(.*)'
+  begin: '(?i)^ *([+-]?prog +csm) +(.*)'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
@@ -215,29 +178,21 @@ patterns: [
   endCaptures:
     1: name: 'keyword.control'
   patterns: [
-    {include: '#def1'}
-    {include: '#def2'}
-    {include: '#inc1'}
-    {include: '#com1'}
-    {include: '#com2'}
-    {include: '#linsep'}
-    {include: '#str1'}
-    {include: '#str2'}
-    {include: '#spec1'}
-    {include: '#spec2'}
-    {include: '#var1'}
-    {include: '#var2'}
+    {include: '#normalText'}
     {
       match: '(?i)[ ]*(ctrl|laun|cs|grp|grcs|wait|lc|camb|cabl|crep|deps|act|desi|desb|suma|rein|box|qcut|scal|sele|expo|eqlc|equu|eqpp|eqbe|eqit|echo)($| .*)'
-      captures: 1: name: 'keyword.control'
+      captures:
+        1: name: 'keyword.control'
+        2: patterns: [{'include': '#normalText'}]
     }
   ]
   }
 
 
+# __________________ DYNA __________________________________________________ #
 
   {
-  begin: '(?i)^ *(.?prog +dyna) +(.*)'
+  begin: '(?i)^ *([+-]?prog +dyna) +(.*)'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
@@ -245,29 +200,21 @@ patterns: [
   endCaptures:
     1: name: 'keyword.control'
   patterns: [
-    {include: '#def1'}
-    {include: '#def2'}
-    {include: '#inc1'}
-    {include: '#com1'}
-    {include: '#com2'}
-    {include: '#linsep'}
-    {include: '#str1'}
-    {include: '#str2'}
-    {include: '#spec1'}
-    {include: '#spec2'}
-    {include: '#var1'}
-    {include: '#var2'}
+    {include: '#normalText'}
     {
       match: '(?i)[ ]*(syst|ctrl|grp|mat|bmat|smat|mass|eige|modd|step|lc|cont|hist|extr|echo)($| .*)'
-      captures: 1: name: 'keyword.control'
+      captures:
+        1: name: 'keyword.control'
+        2: patterns: [{'include': '#normalText'}]
     }
   ]
   }
 
 
+# __________________ DYNR __________________________________________________ #
 
   {
-  begin: '(?i)^ *(.?prog +dynr) +(.*)'
+  begin: '(?i)^ *([+-]?prog +dynr) +(.*)'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
@@ -275,29 +222,21 @@ patterns: [
   endCaptures:
     1: name: 'keyword.control'
   patterns: [
-    {include: '#def1'}
-    {include: '#def2'}
-    {include: '#inc1'}
-    {include: '#com1'}
-    {include: '#com2'}
-    {include: '#linsep'}
-    {include: '#str1'}
-    {include: '#str2'}
-    {include: '#spec1'}
-    {include: '#spec2'}
-    {include: '#var1'}
-    {include: '#var2'}
+    {include: '#normalText'}
     {
       match: '(?i)[ ]*(size|schh|resp|func|exci|spec|hist|echo)($| .*)'
-      captures: 1: name: 'keyword.control'
+      captures:
+        1: name: 'keyword.control'
+        2: patterns: [{'include': '#normalText'}]
     }
   ]
   }
 
 
+# __________________ MAXIMA ________________________________________________ #
 
   {
-  begin: '(?i)^ *(.?prog +maxima) +(.*)'
+  begin: '(?i)^ *([+-]?prog +maxima) +(.*)'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
@@ -305,29 +244,21 @@ patterns: [
   endCaptures:
     1: name: 'keyword.control'
   patterns: [
-    {include: '#def1'}
-    {include: '#def2'}
-    {include: '#inc1'}
-    {include: '#com1'}
-    {include: '#com2'}
-    {include: '#linsep'}
-    {include: '#str1'}
-    {include: '#str2'}
-    {include: '#spec1'}
-    {include: '#spec2'}
-    {include: '#var1'}
-    {include: '#var2'}
+    {include: '#normalText'}
     {
       match: '(?i)[ ]*(ctrl|comb|act|add|ada|lc|supp|sum|expo|echo)($| .*)'
-      captures: 1: name: 'keyword.control'
+      captures:
+        1: name: 'keyword.control'
+        2: patterns: [{'include': '#normalText'}]
     }
   ]
   }
 
 
+# __________________ ELLA __________________________________________________ #
 
   {
-  begin: '(?i)^ *(.?prog +ella) +(.*)'
+  begin: '(?i)^ *([+-]?prog +ella) +(.*)'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
@@ -335,29 +266,21 @@ patterns: [
   endCaptures:
     1: name: 'keyword.control'
   patterns: [
-    {include: '#def1'}
-    {include: '#def2'}
-    {include: '#inc1'}
-    {include: '#com1'}
-    {include: '#com2'}
-    {include: '#linsep'}
-    {include: '#str1'}
-    {include: '#str2'}
-    {include: '#spec1'}
-    {include: '#spec2'}
-    {include: '#var1'}
-    {include: '#var2'}
+    {include: '#normalText'}
     {
       match: '(?i)[ ]*(echo|ctrl|gax|lane|lsel|calc|linf|appl|size|show|act|lc|trai|trpl|trbl|save|sace|posl|comb)($| .*)'
-      captures: 1: name: 'keyword.control'
+      captures:
+        1: name: 'keyword.control'
+        2: patterns: [{'include': '#normalText'}]
     }
   ]
   }
 
 
+# __________________ TALPA _________________________________________________ #
 
   {
-  begin: '(?i)^ *(.?prog +talpa) +(.*)'
+  begin: '(?i)^ *([+-]?prog +talpa) +(.*)'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
@@ -365,29 +288,21 @@ patterns: [
   endCaptures:
     1: name: 'keyword.control'
   patterns: [
-    {include: '#def1'}
-    {include: '#def2'}
-    {include: '#inc1'}
-    {include: '#com1'}
-    {include: '#com2'}
-    {include: '#linsep'}
-    {include: '#str1'}
-    {include: '#str2'}
-    {include: '#spec1'}
-    {include: '#spec2'}
-    {include: '#var1'}
-    {include: '#var2'}
+    {include: '#normalText'}
     {
       match: '(?i)[ ]*(task|syst|ctrl|phrs|plc|tplc|grp|lc|lcc|hist|nstr|csys|ccrl|cs|cgrp|cloa|cgw|ctxt|echo)($| .*)'
-      captures: 1: name: 'keyword.control'
+      captures:
+        1: name: 'keyword.control'
+        2: patterns: [{'include': '#normalText'}]
     }
   ]
   }
 
 
+# __________________ BEMESS ________________________________________________ #
 
   {
-  begin: '(?i)^ *(.?prog +bemess) +(.*)'
+  begin: '(?i)^ *([+-]?prog +bemess) +(.*)'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
@@ -395,27 +310,39 @@ patterns: [
   endCaptures:
     1: name: 'keyword.control'
   patterns: [
-    {include: '#def1'}
-    {include: '#def2'}
-    {include: '#inc1'}
-    {include: '#com1'}
-    {include: '#com2'}
-    {include: '#linsep'}
-    {include: '#str1'}
-    {include: '#str2'}
-    {include: '#spec1'}
-    {include: '#spec2'}
-    {include: '#var1'}
-    {include: '#var2'}
+    {include: '#normalText'}
     {
       match: '(?i)[ ]*(norm|ctrl|crac|mrei|shft|nstr|mat|geom|dire|thre|di3d|lay|para|punc|lc|grp|elem|node|sele|s|expo|echo)($| .*)'
-      captures: 1: name: 'keyword.control'
+      captures:
+        1: name: 'keyword.control'
+        2: patterns: [{'include': '#normalText'}]
     }
   ]
   }
 ]
 
+# __________________ REPOSITORY ____________________________________________ #
+
 repository:
+  normalText: {
+    patterns: [
+      {include: '#def1'}
+      {include: '#def2'}
+      {include: '#inc1'}
+      {include: '#com1'}
+      {include: '#com2'}
+      {include: '#linsep'}
+      {include: '#str1'}
+      {include: '#str2'}
+      {include: '#spec1'}
+      {include: '#spec2'}
+      {include: '#var1'}
+      {include: '#var2'}
+    ]
+  }
+
+
+
   def1: {
     match: '(?i)[ ]*(#define|#enddef|#include)($| \\w*)'
     captures:
@@ -453,13 +380,11 @@ repository:
       1: name: 'keyword.control'
   }
   var1: {
-    match: '(?i)(?<!\\w)(let|sto|loop)(#[^ \\n]*)'
-    captures:
-      1: name: 'keyword.control'
-      2: name: 'variable.other'
+    match: '(?<!\\w)(?:let|sto|loop)(?=#\\w+)'
+    name: 'keyword.control'
   }
   var2: {
-    match: '[ \\n](#[^ \\n]+)'
+    match: '#\\w+'
     name: 'variable.other'
   }
   com1: {
