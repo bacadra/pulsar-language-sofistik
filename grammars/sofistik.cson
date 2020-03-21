@@ -12,13 +12,7 @@ patterns: [
 
 # __________________ PROG OUTSIDE __________________________________________ #
 
-  # {include: '#def3'}
-  # {include: '#defblo'}
-  # {include: '#def1'}
-  # {include: '#def2'}
-  # {include: '#inc1'}
-  # {include: '#com1'}
-  # {include: '#com2'}
+  {'include': '#normalText'}
 
   {
   match: '(?i) *([\\+-]?prog)'
