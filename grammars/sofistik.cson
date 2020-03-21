@@ -12,11 +12,11 @@ patterns: [
 
 # __________________ PROG OUTSIDE __________________________________________ #
 
-  {'include': '#normalText'}
+  {include: '#normalText'}
 
   {
-  match: '(?i) *([\\+-]?prog)'
-  name: 'support.class'
+    match: '(?i) *([\\+-]?prog)'
+    name: 'support.class'
   }
 
 # __________________ AQUA __________________________________________________ #
@@ -30,12 +30,10 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
-    {include: '#normalText'}
-
     # # ********* example how to desine parametrs for function ********* #
     # # but problem is how to get tables with short code...
     # {
-    #   match: '(?i)[ ]*(prof)($| .*)'
+    #   match: '(?i)(?<=\\W|^)(prof)( .+?(?=;|$)|)'
     #   captures:
     #     1: name: 'keyword.control'
     #     2: patterns: [
@@ -47,13 +45,15 @@ patterns: [
     #       ]
     # }
     # ****************************************************************** #
-
     {
-      match: '(?i)[ ]*(ctrl|norm|mate|mat|mlay|namt|bmat|hmat|conc|stee|timb|maso|ssla|mext|bore|blay|bbax|bbla|btab|smat|sfla|sval|srec|scit|cabl|sect|cs|sv|poly|vert|circ|cut|pane|plat|weld|prof|spt|neff|wpar|wind|lay|rf|lrf|crf|curf|tvar|inte|impo|expo|echo)($| .*)'
+      match: '(?i)(^\\W*|\\;\\W*)(ctrl|norm|mate|mat|mlay|namt|bmat|hmat|conc|stee|timb|maso|ssla|mext|bore|blay|bbax|bbla|btab|smat|sfla|sval|srec|scit|cabl|sect|cs|sv|poly|vert|circ|cut|pane|plat|weld|prof|spt|neff|wpar|wind|lay|rf|lrf|crf|curf|tvar|inte|impo|expo|echo)( .+?(?=;|$)|)'
       captures:
-        1: name: 'keyword.control'
-        2: patterns: [{'include': '#normalText'}]
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+        3: patterns: [{'include': '#normalText'}]
     }
+    {include: '#normalText'}
+
   ]
   }
 
@@ -69,13 +69,13 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
-    {include: '#normalText'}
     {
-      match: '(?i)[ ]*(syst|ctrl|grp|impo|expo|echo|coor|xsub|xcon|gax|gaxa|gaxh|gaxb|gaxc|gaxn|gaxp|gaxs|gaxv|gar|gara|garc|gars|spt|sptp|spts|spth|sln|slnb|slnp|slnn|slns|slnc|sar|sarb|sarr|sarp|sarc|sars|svo|svob|guid|bbox|slvl)($| .*)'
+      match: '(?i)(?<=\\W|^)(syst|ctrl|grp|impo|expo|echo|coor|xsub|xcon|gax|gaxa|gaxh|gaxb|gaxc|gaxn|gaxp|gaxs|gaxv|gar|gara|garc|gars|spt|sptp|spts|spth|sln|slnb|slnp|slnn|slns|slnc|sar|sarb|sarr|sarp|sarc|sars|svo|svob|guid|bbox|slvl)( .+?(?=;|$)|)'
       captures:
         1: name: 'keyword.control'
         2: patterns: [{'include': '#normalText'}]
     }
+    {include: '#normalText'}
   ]
   }
 
@@ -91,13 +91,13 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
-    {include: '#normalText'}
     {
-      match: '(?i)[ ]*(grp|act|lc|node|cabl|trus|beam|bepl|quad|bric|copy|lar|poin|line|curv|area|volu|expo|eval|ctrl|coor|echo|resp|func|fimp|acce|step|simq|reva|push|gax|lane|trai|trpl|trbl|trex|wind|wpro|wrou|wtop|wspe|wtst|wgen|wipt|wave)($| .*)'
+      match: '(?i)(?<=\\W|^)(grp|act|lc|node|cabl|trus|beam|bepl|quad|bric|copy|lar|poin|line|curv|area|volu|expo|eval|ctrl|coor|echo|resp|func|fimp|acce|step|simq|reva|push|gax|lane|trai|trpl|trbl|trex|wind|wpro|wrou|wtop|wspe|wtst|wgen|wipt|wave)( .+?(?=;|$)|)'
       captures:
         1: name: 'keyword.control'
         2: patterns: [{'include': '#normalText'}]
     }
+    {include: '#normalText'}
   ]
   }
 
@@ -113,13 +113,13 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
-    {include: '#normalText'}
     {
-      match: '(?i)[ ]*(ctrl|syst|step|hist|ulti|push|plot|crep|grp|grp2|elem|len0|high|tbea|reiq|stex|obli|slip|volu|movs|laun|sfix|actb|lc|temp|pext|lcc|eige|mass|v0|rein|desi|nstr|echo)($| .*)'
+      match: '(?i)(?<=\\W|^)(ctrl|syst|step|hist|ulti|push|plot|crep|grp|grp2|elem|len0|high|tbea|reiq|stex|obli|slip|volu|movs|laun|sfix|actb|lc|temp|pext|lcc|eige|mass|v0|rein|desi|nstr|echo)( .+?(?=;|$)|)'
       captures:
         1: name: 'keyword.control'
         2: patterns: [{'include': '#normalText'}]
     }
+    {include: '#normalText'}
   ]
   }
 
@@ -135,13 +135,13 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
-    {include: '#normalText'}
     {
-      match: '(?i)[ ]*(norm|ctrl|tvar|beam|tend|lc|s|comb|eige|stre|rein|desi|nstr|capa|echo)($| .*)'
+      match: '(?i)(?<=\\W|^)(norm|ctrl|tvar|beam|tend|lc|s|comb|eige|stre|rein|desi|nstr|capa|echo)( .+?(?=;|$)|)'
       captures:
         1: name: 'keyword.control'
         2: patterns: [{'include': '#normalText'}]
     }
+    {include: '#normalText'}
   ]
   }
 
@@ -157,13 +157,13 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
-    {include: '#normalText'}
     {
-      match: '(?i)[ ]*(page|echo)($| .*)'
+      match: '(?i)(?<=\\W|^)(page|echo)( .+?(?=;|$)|)'
       captures:
         1: name: 'keyword.control'
         2: patterns: [{'include': '#normalText'}]
     }
+    {include: '#normalText'}
   ]
   }
 
@@ -179,13 +179,13 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
-    {include: '#normalText'}
     {
-      match: '(?i)[ ]*(ctrl|laun|cs|grp|grcs|wait|lc|camb|cabl|crep|deps|act|desi|desb|suma|rein|box|qcut|scal|sele|expo|eqlc|equu|eqpp|eqbe|eqit|echo)($| .*)'
+      match: '(?i)(?<=\\W|^)(ctrl|laun|cs|grp|grcs|wait|lc|camb|cabl|crep|deps|act|desi|desb|suma|rein|box|qcut|scal|sele|expo|eqlc|equu|eqpp|eqbe|eqit|echo)( .+?(?=;|$)|)'
       captures:
         1: name: 'keyword.control'
         2: patterns: [{'include': '#normalText'}]
     }
+    {include: '#normalText'}
   ]
   }
 
@@ -201,13 +201,13 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
-    {include: '#normalText'}
     {
-      match: '(?i)[ ]*(syst|ctrl|grp|mat|bmat|smat|mass|eige|modd|step|lc|cont|hist|extr|echo)($| .*)'
+      match: '(?i)(?<=\\W|^)(syst|ctrl|grp|mat|bmat|smat|mass|eige|modd|step|lc|cont|hist|extr|echo)( .+?(?=;|$)|)'
       captures:
         1: name: 'keyword.control'
         2: patterns: [{'include': '#normalText'}]
     }
+    {include: '#normalText'}
   ]
   }
 
@@ -223,13 +223,13 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
-    {include: '#normalText'}
     {
-      match: '(?i)[ ]*(size|schh|resp|func|exci|spec|hist|echo)($| .*)'
+      match: '(?i)(?<=\\W|^)(size|schh|resp|func|exci|spec|hist|echo)( .+?(?=;|$)|)'
       captures:
         1: name: 'keyword.control'
         2: patterns: [{'include': '#normalText'}]
     }
+    {include: '#normalText'}
   ]
   }
 
@@ -245,13 +245,13 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
-    {include: '#normalText'}
     {
-      match: '(?i)[ ]*(ctrl|comb|act|add|ada|lc|supp|sum|expo|echo)($| .*)'
+      match: '(?i)(?<=\\W|^)(ctrl|comb|act|add|ada|lc|supp|sum|expo|echo)( .+?(?=;|$)|)'
       captures:
         1: name: 'keyword.control'
         2: patterns: [{'include': '#normalText'}]
     }
+    {include: '#normalText'}
   ]
   }
 
@@ -267,13 +267,13 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
-    {include: '#normalText'}
     {
-      match: '(?i)[ ]*(echo|ctrl|gax|lane|lsel|calc|linf|appl|size|show|act|lc|trai|trpl|trbl|save|sace|posl|comb)($| .*)'
+      match: '(?i)(?<=\\W|^)(echo|ctrl|gax|lane|lsel|calc|linf|appl|size|show|act|lc|trai|trpl|trbl|save|sace|posl|comb)( .+?(?=;|$)|)'
       captures:
         1: name: 'keyword.control'
         2: patterns: [{'include': '#normalText'}]
     }
+    {include: '#normalText'}
   ]
   }
 
@@ -289,13 +289,13 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
-    {include: '#normalText'}
     {
-      match: '(?i)[ ]*(task|syst|ctrl|phrs|plc|tplc|grp|lc|lcc|hist|nstr|csys|ccrl|cs|cgrp|cloa|cgw|ctxt|echo)($| .*)'
+      match: '(?i)(?<=\\W|^)(task|syst|ctrl|phrs|plc|tplc|grp|lc|lcc|hist|nstr|csys|ccrl|cs|cgrp|cloa|cgw|ctxt|echo)( .+?(?=;|$)|)'
       captures:
         1: name: 'keyword.control'
         2: patterns: [{'include': '#normalText'}]
     }
+    {include: '#normalText'}
   ]
   }
 
@@ -311,13 +311,13 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
-    {include: '#normalText'}
     {
-      match: '(?i)[ ]*(norm|ctrl|crac|mrei|shft|nstr|mat|geom|dire|thre|di3d|lay|para|punc|lc|grp|elem|node|sele|s|expo|echo)($| .*)'
+      match: '(?i)(?<=\\W|^)(norm|ctrl|crac|mrei|shft|nstr|mat|geom|dire|thre|di3d|lay|para|punc|lc|grp|elem|node|sele|s|expo|echo)( .+?(?=;|$)|)'
       captures:
         1: name: 'keyword.control'
         2: patterns: [{'include': '#normalText'}]
     }
+    {include: '#normalText'}
   ]
   }
 ]
@@ -342,21 +342,22 @@ repository:
       {include: '#var1'}
       {include: '#var2'}
       {include: '#expr'}
+      {include: '#inLoop'}
     ]
   }
 
   def1: {
-    match: '(?i)[ ]*(#include|[\\+-]?apply)( .+)'
+    match: '(?i)^[ ]*(#include|[\\+-]?apply)( .+)'
     captures:
       1: name: 'entity.name.section'
   }
   def2: {
-    match: '(?i)(?:^|;)[ ]*(end)(?!\\w)'
+    match: '(?i)(?<=\\W|^)(end)( .+?(?=;|$)|)'
     captures:
       1: name: 'keyword.control'
   }
   def3: {
-    match: '(?i)[ ]*(#define)( \\w*=)'
+    match: '(?i)^[ ]*(#define)( \\w*=)'
     captures:
       1: name: 'entity.name.section'
   }
@@ -374,7 +375,7 @@ repository:
   }
   linsep: { # line sep
     match: ';'
-    name:'support.type'
+    name: 'support.type'
   }
   spec1: { # special
     match: '(?i)(?:^|;)[ ]*(head) .*'
@@ -403,13 +404,12 @@ repository:
     name: 'comment.line'
   }
   defblo: {
-  begin: '(?i)[ ]*(#define)(?:$| .*)'
-  beginCaptures:
-    1: name: 'variable.other'
-  end: '(?i)(?:^|;)[ ]*(#enddef)(?!\\w)'
-  endCaptures:
-    1: name: 'variable.other'
-  patterns: [{'include': '#normalText'}]
+    begin: '(?i)^[ ]*(#define)(?:$| .*)'
+    beginCaptures:
+      1: name: 'variable.other'
+    end: '(?i)(?:^|;)[ ]*(#enddef)(?!\\w)'
+    endCaptures:
+      1: name: 'variable.other'
   }
   expr: {
     match: '(=\\S+)'
@@ -417,4 +417,8 @@ repository:
       1:
         name: 'entity.name.function'
         patterns: [{'include': '#var2'}]
+  }
+  inLoop: {
+    match: '\\([^ ]+? [^ ]+?(?: [^ ]+?)?\\)'
+    name: 'entity.name.function'
   }
