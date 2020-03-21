@@ -12,22 +12,29 @@ patterns: [
 
 # __________________ PROG OUTSIDE __________________________________________ #
 
-  {include: '#def1'}
-  {include: '#def2'}
-  {include: '#inc1'}
-  {include: '#com1'}
-  {include: '#com2'}
+  # {include: '#def3'}
+  # {include: '#defblo'}
+  # {include: '#def1'}
+  # {include: '#def2'}
+  # {include: '#inc1'}
+  # {include: '#com1'}
+  # {include: '#com2'}
+
+  {
+  match: '(?i) *([\\+-]?prog)'
+  name: 'support.class'
+  }
 
 # __________________ AQUA __________________________________________________ #
 
   {
-  begin: '(?i)^ *([+-]?prog +aqua) +(.*)'
+  begin: '(?i)(?<=prog)( +aqua)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
-  end: '(?i)(?:^|;)[ ]*(end)(?!\\w)'
+  end: '(?i) *([\\+-]?prog)'
   endCaptures:
-    1: name: 'keyword.control'
+    1: name: 'support.class'
   patterns: [
     {include: '#normalText'}
 
@@ -60,13 +67,13 @@ patterns: [
 # __________________ SOFIMSHC ______________________________________________ #
 
   {
-  begin: '(?i)^ *([+-]?prog +sofimshc) +(.*)'
+  begin: '(?i)(?<=prog)( +sofimshc)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
-  end: '(?i)(?:^|;)[ ]*(end)(?!\\w)'
+  end: '(?i) *([\\+-]?prog)'
   endCaptures:
-    1: name: 'keyword.control'
+    1: name: 'support.class'
   patterns: [
     {include: '#normalText'}
     {
@@ -82,13 +89,13 @@ patterns: [
 # __________________ SOFILOAD ______________________________________________ #
 
   {
-  begin: '(?i)^ *([+-]?prog +sofiload) +(.*)'
+  begin: '(?i)(?<=prog)( +sofiload)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
-  end: '(?i)(?:^|;)[ ]*(end)(?!\\w)'
+  end: '(?i) *([\\+-]?prog)'
   endCaptures:
-    1: name: 'keyword.control'
+    1: name: 'support.class'
   patterns: [
     {include: '#normalText'}
     {
@@ -104,13 +111,13 @@ patterns: [
 # __________________ ASE ___________________________________________________ #
 
   {
-  begin: '(?i)^ *([+-]?prog +ase) +(.*)'
+  begin: '(?i)(?<=prog)( +ase)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
-  end: '(?i)(?:^|;)[ ]*(end)(?!\\w)'
+  end: '(?i) *([\\+-]?prog)'
   endCaptures:
-    1: name: 'keyword.control'
+    1: name: 'support.class'
   patterns: [
     {include: '#normalText'}
     {
@@ -126,13 +133,13 @@ patterns: [
 # __________________ AQB ___________________________________________________ #
 
   {
-  begin: '(?i)^ *([+-]?prog +aqb) +(.*)'
+  begin: '(?i)(?<=prog)( +aqb)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
-  end: '(?i)(?:^|;)[ ]*(end)(?!\\w)'
+  end: '(?i) *([\\+-]?prog)'
   endCaptures:
-    1: name: 'keyword.control'
+    1: name: 'support.class'
   patterns: [
     {include: '#normalText'}
     {
@@ -148,13 +155,13 @@ patterns: [
 # __________________ TEMPLATE ______________________________________________ #
 
   {
-  begin: '(?i)^ *([+-]?prog +template) +(.*)'
+  begin: '(?i)(?<=prog)( +template)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
-  end: '(?i)(?:^|;)[ ]*(end)(?!\\w)'
+  end: '(?i) *([\\+-]?prog)'
   endCaptures:
-    1: name: 'keyword.control'
+    1: name: 'support.class'
   patterns: [
     {include: '#normalText'}
     {
@@ -170,13 +177,13 @@ patterns: [
 # __________________ CSM ___________________________________________________ #
 
   {
-  begin: '(?i)^ *([+-]?prog +csm) +(.*)'
+  begin: '(?i)(?<=prog)( +csm)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
-  end: '(?i)(?:^|;)[ ]*(end)(?!\\w)'
+  end: '(?i) *([\\+-]?prog)'
   endCaptures:
-    1: name: 'keyword.control'
+    1: name: 'support.class'
   patterns: [
     {include: '#normalText'}
     {
@@ -192,13 +199,13 @@ patterns: [
 # __________________ DYNA __________________________________________________ #
 
   {
-  begin: '(?i)^ *([+-]?prog +dyna) +(.*)'
+  begin: '(?i)(?<=prog)( +dyna)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
-  end: '(?i)(?:^|;)[ ]*(end)(?!\\w)'
+  end: '(?i) *([\\+-]?prog)'
   endCaptures:
-    1: name: 'keyword.control'
+    1: name: 'support.class'
   patterns: [
     {include: '#normalText'}
     {
@@ -214,13 +221,13 @@ patterns: [
 # __________________ DYNR __________________________________________________ #
 
   {
-  begin: '(?i)^ *([+-]?prog +dynr) +(.*)'
+  begin: '(?i)(?<=prog)( +dynr)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
-  end: '(?i)(?:^|;)[ ]*(end)(?!\\w)'
+  end: '(?i) *([\\+-]?prog)'
   endCaptures:
-    1: name: 'keyword.control'
+    1: name: 'support.class'
   patterns: [
     {include: '#normalText'}
     {
@@ -236,13 +243,13 @@ patterns: [
 # __________________ MAXIMA ________________________________________________ #
 
   {
-  begin: '(?i)^ *([+-]?prog +maxima) +(.*)'
+  begin: '(?i)(?<=prog)( +maxima)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
-  end: '(?i)(?:^|;)[ ]*(end)(?!\\w)'
+  end: '(?i) *([\\+-]?prog)'
   endCaptures:
-    1: name: 'keyword.control'
+    1: name: 'support.class'
   patterns: [
     {include: '#normalText'}
     {
@@ -258,13 +265,13 @@ patterns: [
 # __________________ ELLA __________________________________________________ #
 
   {
-  begin: '(?i)^ *([+-]?prog +ella) +(.*)'
+  begin: '(?i)(?<=prog)( +ella)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
-  end: '(?i)(?:^|;)[ ]*(end)(?!\\w)'
+  end: '(?i) *([\\+-]?prog)'
   endCaptures:
-    1: name: 'keyword.control'
+    1: name: 'support.class'
   patterns: [
     {include: '#normalText'}
     {
@@ -280,13 +287,13 @@ patterns: [
 # __________________ TALPA _________________________________________________ #
 
   {
-  begin: '(?i)^ *([+-]?prog +talpa) +(.*)'
+  begin: '(?i)(?<=prog)( +talpa)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
-  end: '(?i)(?:^|;)[ ]*(end)(?!\\w)'
+  end: '(?i) *([\\+-]?prog)'
   endCaptures:
-    1: name: 'keyword.control'
+    1: name: 'support.class'
   patterns: [
     {include: '#normalText'}
     {
@@ -302,13 +309,13 @@ patterns: [
 # __________________ BEMESS ________________________________________________ #
 
   {
-  begin: '(?i)^ *([+-]?prog +bemess) +(.*)'
+  begin: '(?i)(?<=prog)( +bemess)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'comment.line'
-  end: '(?i)(?:^|;)[ ]*(end)(?!\\w)'
+  end: '(?i) *([\\+-]?prog)'
   endCaptures:
-    1: name: 'keyword.control'
+    1: name: 'support.class'
   patterns: [
     {include: '#normalText'}
     {
@@ -326,6 +333,8 @@ patterns: [
 repository:
   normalText: {
     patterns: [
+      {include: '#def3'}
+      {include: '#defblo'}
       {include: '#def1'}
       {include: '#def2'}
       {include: '#inc1'}
@@ -338,20 +347,24 @@ repository:
       {include: '#spec2'}
       {include: '#var1'}
       {include: '#var2'}
+      {include: '#expr'}
     ]
   }
 
-
-
   def1: {
-    match: '(?i)[ ]*(#define|#enddef|#include)($| \\w*)'
+    match: '(?i)[ ]*(#include|[\\+-]?apply)( .+)'
     captures:
-      1: name: 'variable.other'
+      1: name: 'entity.name.section'
   }
   def2: {
     match: '(?i)(?:^|;)[ ]*(end)(?!\\w)'
     captures:
       1: name: 'keyword.control'
+  }
+  def3: {
+    match: '(?i)[ ]*(#define)( \\w*=)'
+    captures:
+      1: name: 'entity.name.section'
   }
   inc1: {
     match: '\\$\\(.+\\)'
@@ -394,4 +407,20 @@ repository:
   com2: {
     match: '\\$[^\(].*'
     name: 'comment.line'
+  }
+  defblo: {
+  begin: '(?i)[ ]*(#define)(?:$| .*)'
+  beginCaptures:
+    1: name: 'variable.other'
+  end: '(?i)(?:^|;)[ ]*(#enddef)(?!\\w)'
+  endCaptures:
+    1: name: 'variable.other'
+  patterns: [{'include': '#normalText'}]
+  }
+  expr: {
+    match: '(=\\S+)'
+    captures:
+      1:
+        name: 'entity.name.function'
+        patterns: [{'include': '#var2'}]
   }
