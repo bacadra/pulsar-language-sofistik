@@ -7,7 +7,7 @@
 
 scopeName: 'source.sofi'
 name: 'SOFiSTiK'
-fileTypes: ['dat','gra']
+fileTypes: ['dat','gra','sto','dfs','blk']
 patterns: [
 
 # __________________ PROG OUTSIDE __________________________________________ #
@@ -347,9 +347,10 @@ repository:
   }
 
   def1: {
-    match: '(?i)^[ ]*(#include|[\\+-]?apply)( .+)'
+    match: '(?i)^[ ]*(#include|[\\+-]?apply)( +.+)'
     captures:
       1: name: 'entity.name.section'
+      2: name: 'string'
   }
   def2: {
     match: '(?i)(?<=\\W|^)(end)( .+?(?=;|$)|)'
@@ -357,9 +358,10 @@ repository:
       1: name: 'keyword.control'
   }
   def3: {
-    match: '(?i)^[ ]*(#define)( \\w*=)'
+    match: '(?i)^[ ]*(#define)( +\\w* *)='
     captures:
       1: name: 'entity.name.section'
+      2: name: 'string'
   }
   inc1: {
     match: '\\$\\(.+\\)'
@@ -388,7 +390,7 @@ repository:
       1: name: 'keyword.control'
   }
   var1: {
-    match: '(?<!\\w)(?:let|sto|loop)(?=#\\w+)'
+    match: '(?<!\\w)(?:let|sto|del|dbg|loop)(?=#\\w+)'
     name: 'keyword.control'
   }
   var2: {
@@ -404,9 +406,10 @@ repository:
     name: 'comment.line'
   }
   defblo: {
-    begin: '(?i)^[ ]*(#define)(?:$| .*)'
+    begin: '(?i)^[ ]*(#define)($| .*)'
     beginCaptures:
       1: name: 'variable.other'
+      2: name: 'string'
     end: '(?i)(?:^|;)[ ]*(#enddef)(?!\\w)'
     endCaptures:
       1: name: 'variable.other'
