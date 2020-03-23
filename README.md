@@ -1,11 +1,11 @@
 # language-sofistik
 
-in progres...
+Grammatic for SOFiSTiK input files, with extensions `.dat` `.gra` `.results` and extended by `.sto` `.dfs` `.blk`.
 
 ## TODO
 
 * get tables to format it property
-* fill parametr names
+* fill parametr names for methods
 
 ## See another bacadra packages...
 

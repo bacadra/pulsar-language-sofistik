@@ -7,7 +7,7 @@
 
 scopeName: 'source.sofi'
 name: 'SOFiSTiK'
-fileTypes: ['dat','gra','sto','dfs','blk']
+fileTypes: ['dat','gra','.results','sto','dfs','blk']
 patterns: [
 
 # __________________ PROG OUTSIDE __________________________________________ #
