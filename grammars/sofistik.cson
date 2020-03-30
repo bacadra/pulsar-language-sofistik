@@ -458,7 +458,7 @@ repository:
     name: 'variable.other'
   }
   com1: {
-    match: '[!|\/\/].*'
+    match: '(?:!|//).*'
     name: 'comment.line'
   }
   com2: {
