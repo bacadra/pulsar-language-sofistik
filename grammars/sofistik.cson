@@ -404,6 +404,7 @@ repository:
       {include: '#str2'}
       {include: '#linsep'}
       {include: '#var2'}
+      {include: '#var3'}
       {include: '#expr'}
       {include: '#inLoop'}
     ]
@@ -482,7 +483,7 @@ repository:
     name: 'variable.other'
   }
   expr: {
-    match: '(=\\S+)'
+    match: '(?<!\\w)(=\\S+)'
     captures:
       1:
         name: 'entity.name.function'
@@ -496,7 +497,11 @@ repository:
 # __________________________________________________________________________ #
 
   var1: {
-    match: '(?i)(?<!\\w)(?:let|sto|del|dbg|loop)(?=#\\w+)'
+    match: '(?i)(?<!\\w)(?:let|sto|del|dbg)(?=#\\w+)'
+    name: 'keyword.control'
+  }
+  var3: {
+    match: '(?i)(?<!\\w)(?:loop|if|elseif|else|endif)(?!\\w)'
     name: 'keyword.control'
   }
   spec1: {
