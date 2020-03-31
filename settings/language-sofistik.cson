@@ -2,5 +2,6 @@
   editor:
     autoIndentOnPaste: false
     softTabs: true
+    softWrap: false
     tabLength: 2
     commentStart: '$ '
