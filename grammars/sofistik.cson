@@ -59,6 +59,28 @@ patterns: [
   ]
   }
 
+# __________________ SOFIMSHA ______________________________________________ #
+
+  {
+  begin: '(?i)(?<=prog)( +sofimsha)( .*)?'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'comment.line'
+  end: '(?i) *([\\+-]?prog)'
+  endCaptures:
+    1: name: 'support.class'
+  patterns: [
+    {
+      match: '(?i)(^\\W*|\\;\\W*)(syst|ctrl|grp|node|edge|kine|getn|trus|cabl|beam|bsec|quad|bric|spri|boun|addm|flex|mass|sbox|del|mod|tran|extr|loft|mirr|umsh|intf|rset|expo|impo|echo)( .+?(?=;|$)| *$)'
+      captures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+        3: patterns: [{'include': '#normalText'}]
+    }
+    {include: '#normalTextIn'}
+    {include: '#normalText'}
+  ]
+  }
 
 # __________________ SOFIMSHC ______________________________________________ #
 
