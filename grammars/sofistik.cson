@@ -33,6 +33,7 @@ patterns: [
   patterns: [
     # # ********* example how to desine parametrs for function ********* #
     # # but problem is how to get tables with short code...
+    {include: '#normalText'}
     {
       match: '(?i)(^\\W*|\\;\\W*)(prof)( .+?(?=;|$)| *$)'
       captures:
@@ -55,7 +56,6 @@ patterns: [
         3: patterns: [{'include': '#normalText'}]
     }
     {include: '#normalTextIn'}
-    {include: '#normalText'}
   ]
   }
 
@@ -70,6 +70,7 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
+    {include: '#normalText'}
     {
       match: '(?i)(^\\W*|\\;\\W*)(syst|ctrl|grp|node|edge|kine|getn|trus|cabl|beam|bsec|quad|bric|spri|boun|addm|flex|mass|sbox|del|mod|tran|extr|loft|mirr|umsh|intf|rset|expo|impo|echo)( .+?(?=;|$)| *$)'
       captures:
@@ -78,7 +79,6 @@ patterns: [
         3: patterns: [{'include': '#normalText'}]
     }
     {include: '#normalTextIn'}
-    {include: '#normalText'}
   ]
   }
 
@@ -93,6 +93,7 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
+    {include: '#normalText'}
     {
       match: '(?i)(^\\W*|\\;\\W*)(syst|ctrl|grp|impo|expo|echo|coor|xsub|xcon|gax|gaxa|gaxh|gaxb|gaxc|gaxn|gaxp|gaxs|gaxv|gar|gara|garc|gars|spt|sptp|spts|spth|sln|slnb|slnp|slnn|slns|slnc|sar|sarb|sarr|sarp|sarc|sars|svo|svob|guid|bbox|slvl)( .+?(?=;|$)| *$)'
       captures:
@@ -101,7 +102,6 @@ patterns: [
         3: patterns: [{'include': '#normalText'}]
     }
     {include: '#normalTextIn'}
-    {include: '#normalText'}
   ]
   }
 
@@ -117,6 +117,7 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
+    {include: '#normalText'}
     {
       match: '(?i)(^\\W*|\\;\\W*)(grp|act|lc|node|cabl|trus|beam|bepl|quad|bric|copy|lar|poin|line|curv|area|volu|expo|eval|ctrl|coor|echo|resp|func|fimp|acce|step|simq|reva|push|gax|lane|trai|trpl|trbl|trex|wind|wpro|wrou|wtop|wspe|wtst|wgen|wipt|wave)( .+?(?=;|$)| *$)'
       captures:
@@ -125,7 +126,6 @@ patterns: [
         3: patterns: [{'include': '#normalText'}]
     }
     {include: '#normalTextIn'}
-    {include: '#normalText'}
   ]
   }
 
@@ -141,6 +141,7 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
+    {include: '#normalText'}
     {
       match: '(?i)(^\\W*|\\;\\W*)(ctrl|syst|step|hist|ulti|push|plot|crep|grp|grp2|elem|len0|high|tbea|reiq|stex|obli|slip|volu|movs|laun|sfix|actb|lc|temp|pext|lcc|eige|mass|v0|rein|desi|nstr|echo)( .+?(?=;|$)| *$)'
       captures:
@@ -149,7 +150,6 @@ patterns: [
         3: patterns: [{'include': '#normalText'}]
     }
     {include: '#normalTextIn'}
-    {include: '#normalText'}
   ]
   }
 
@@ -165,6 +165,7 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
+    {include: '#normalText'}
     {
       match: '(?i)(^\\W*|\\;\\W*)(norm|ctrl|tvar|beam|tend|lc|s|comb|eige|stre|rein|desi|nstr|capa|echo)( .+?(?=;|$)| *$)'
       captures:
@@ -173,7 +174,6 @@ patterns: [
         3: patterns: [{'include': '#normalText'}]
     }
     {include: '#normalTextIn'}
-    {include: '#normalText'}
   ]
   }
 
@@ -189,6 +189,7 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
+    {include: '#normalText'}
     {
       match: '(?i)(^\\W*|\\;\\W*)(page|echo)( .+?(?=;|$)| *$)'
       captures:
@@ -197,7 +198,6 @@ patterns: [
         3: patterns: [{'include': '#normalText'}]
     }
     {include: '#normalTextIn'}
-    {include: '#normalText'}
   ]
   }
 
@@ -213,6 +213,7 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
+    {include: '#normalText'}
     {
       match: '(?i)(^\\W*|\\;\\W*)(ctrl|laun|cs|grp|grcs|wait|lc|camb|cabl|crep|deps|act|desi|desb|suma|rein|box|qcut|scal|sele|expo|eqlc|equu|eqpp|eqbe|eqit|echo)( .+?(?=;|$)| *$)'
       captures:
@@ -221,7 +222,6 @@ patterns: [
         3: patterns: [{'include': '#normalText'}]
     }
     {include: '#normalTextIn'}
-    {include: '#normalText'}
   ]
   }
 
@@ -237,6 +237,7 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
+    {include: '#normalText'}
     {
       match: '(?i)(^\\W*|\\;\\W*)(syst|ctrl|grp|mat|bmat|smat|mass|eige|modd|step|lc|cont|hist|extr|echo)( .+?(?=;|$)| *$)'
       captures:
@@ -245,7 +246,6 @@ patterns: [
         3: patterns: [{'include': '#normalText'}]
     }
     {include: '#normalTextIn'}
-    {include: '#normalText'}
   ]
   }
 
@@ -261,6 +261,7 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
+    {include: '#normalText'}
     {
       match: '(?i)(^\\W*|\\;\\W*)(size|schh|resp|func|exci|spec|hist|echo)( .+?(?=;|$)| *$)'
       captures:
@@ -269,7 +270,6 @@ patterns: [
         3: patterns: [{'include': '#normalText'}]
     }
     {include: '#normalTextIn'}
-    {include: '#normalText'}
   ]
   }
 
@@ -285,6 +285,7 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
+    {include: '#normalText'}
     {
       match: '(?i)(^\\W*|\\;\\W*)(ctrl|comb|act|add|ada|lc|supp|sum|expo|echo)( .+?(?=;|$)| *$)'
       captures:
@@ -293,7 +294,6 @@ patterns: [
         3: patterns: [{'include': '#normalText'}]
     }
     {include: '#normalTextIn'}
-    {include: '#normalText'}
   ]
   }
 
@@ -309,6 +309,7 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
+    {include: '#normalText'}
     {
       match: '(?i)(^\\W*|\\;\\W*)(echo|ctrl|gax|lane|lsel|calc|linf|appl|size|show|act|lc|trai|trpl|trbl|save|sace|posl|comb)( .+?(?=;|$)| *$)'
       captures:
@@ -317,7 +318,6 @@ patterns: [
         3: patterns: [{'include': '#normalText'}]
     }
     {include: '#normalTextIn'}
-    {include: '#normalText'}
   ]
   }
 
@@ -333,6 +333,7 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
+    {include: '#normalText'}
     {
       match: '(?i)(^\\W*|\\;\\W*)(task|syst|ctrl|phrs|plc|tplc|grp|lc|lcc|hist|nstr|csys|ccrl|cs|cgrp|cloa|cgw|ctxt|echo)( .+?(?=;|$)| *$)'
       captures:
@@ -341,7 +342,6 @@ patterns: [
         3: patterns: [{'include': '#normalText'}]
     }
     {include: '#normalTextIn'}
-    {include: '#normalText'}
   ]
   }
 
@@ -357,6 +357,7 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
+    {include: '#normalText'}
     {
       match: '(?i)(^\\W*|\\;\\W*)(norm|ctrl|crac|mrei|shft|nstr|mat|geom|dire|thre|di3d|lay|para|punc|lc|grp|elem|node|sele|s|expo|echo)( .+?(?=;|$)| *$)'
       captures:
@@ -365,7 +366,6 @@ patterns: [
         3: patterns: [{'include': '#normalText'}]
     }
     {include: '#normalTextIn'}
-    {include: '#normalText'}
   ]
   }
 
@@ -381,6 +381,7 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
+    {include: '#normalText'}
     {
       match: '(?i)(^\\W*|\\;\\W*)(cdb|size|pict|and|ff|grp|lc|dbo|diag|dgra|diax|dlin|diap|dlab|filt|join|xlsx|pfa|pln|pmr|txtp|view|stru|cros|node|beam|quad|bric|rset)( .+?(?=;|$)| *$)'
       captures:
@@ -389,7 +390,6 @@ patterns: [
         3: patterns: [{'include': '#normalText'}]
     }
     {include: '#normalTextIn'}
-    {include: '#normalText'}
   ]
   }
 
@@ -405,6 +405,7 @@ patterns: [
   endCaptures:
     1: name: 'support.class'
   patterns: [
+    {include: '#normalText'}
     {
       match: '(?i)(^\\W*|\\;\\W*)(ctrl|db|size|siz2|and|schh|sch2|sch3|grid|lego|pale|colo|col2|colb|fill|sele|grp|box|sel|view|pers|visi|defo|move|draw|text|post|nive|curv|axis|dsir|cutp|lc|dsgn|arro|list|stru|load|node|beam|quad|isol|sect|bric|inte)( .+?(?=;|$)| *$)'
       captures:
@@ -413,7 +414,6 @@ patterns: [
         3: patterns: [{'include': '#normalText'}]
     }
     {include: '#normalTextIn'}
-    {include: '#normalText'}
   ]
   }
 
