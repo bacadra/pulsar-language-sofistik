@@ -3,10 +3,10 @@
   "version": "0.1.15",
   "description": "SOFiSTiK grammar for Atom IDE",
   "keywords": [
+    "bacadra",
     "SOFiSTiK",
     "CADINP",
-    "language",
-    "bacadra"
+    "language"
   ],
   "readmeFilename": "README.md",
   "homepage": "https://github.com/bacadra/language-sofistik",
