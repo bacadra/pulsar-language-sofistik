@@ -1,0 +1,11 @@
+# ***** References *****
+# https://flight-manual.atom.io/hacking-atom/sections/creating-a-grammar/
+# http://manual.macromates.com/en/language_grammars/
+# https://regex101.com/
+
+# ================== GENERAL =================================================
+
+scopeName: 'source.sofi'
+name: 'SOFiSTiK RAW'
+fileTypes: ['erg','lst','prt','urs']
+patterns: []
