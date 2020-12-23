@@ -119,6 +119,32 @@ patterns: [
   patterns: [
     {include: '#normalText'}
     {
+      match: '(?i)(^\\W*|\\;\\W*)(act)( .+?(?=;|$)| *$)'
+      captures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+        3: patterns: [
+          {'include': '#normalText'}
+          {
+            match: '(?i)(?<!\\w)(type|gamu|gamf|psi0|psi1|psi2|ps1s|gama|part|sup|titl)(?!\\w)'
+            name: 'entity.name.function'
+          }
+        ]
+    }
+    {
+      match: '(?i)(^\\W*|\\;\\W*)(area)( .+?(?=;|$)| *$)'
+      captures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+        3: patterns: [
+          {'include': '#normalText'}
+          {
+            match: '(?i)(?<!\\w)(ref|no|titl|proj|wide|nred|type|p1|x1|y1|z1|p2|x2|y2|z2|p3|x3|y3|z3|p4|x4|y4|z4|p5|x5|y5|z5|p6|x6|y6|z6)(?!\\w)'
+            name: 'entity.name.function'
+          }
+        ]
+    }
+    {
       match: '(?i)(^\\W*|\\;\\W*)(grp|act|lc|node|cabl|trus|beam|bepl|quad|bric|copy|lar|poin|line|curv|area|volu|expo|eval|ctrl|coor|echo|resp|func|fimp|acce|step|simq|reva|push|gax|lane|trai|trpl|trbl|trex|wind|wpro|wrou|wtop|wspe|wtst|wgen|wipt|wave)( .+?(?=;|$)| *$)'
       captures:
         1: name: 'support.type'
@@ -431,8 +457,9 @@ repository:
   normalText: {
     patterns: [
       {include: '#defA'}
-      {include: '#defB'}
+      # {include: '#defB'}
       {include: '#defC'}
+      {include: '#defD'}
       {include: '#inc1'}
       {include: '#com1'}
       {include: '#com2'}
@@ -442,6 +469,7 @@ repository:
       {include: '#var2'}
       {include: '#var3'}
       {include: '#expr'}
+      {include: '#units'}
       # {include: '#inLoop'}
     ]
   }
@@ -465,6 +493,7 @@ repository:
       {include: '#keyGTXI'}
       {include: '#keyGFAI'}
       {include: '#text'}
+      {include: '#units'}
     ]
   }
 
@@ -484,28 +513,33 @@ repository:
     ]
   }
   defA: {
-    match: '(?i)^[ ]*(#define)( +\\w* *)='
+    match: '(?i)^[ ]*(#define|#enddef)( .+(?==)| .+|)'
     captures:
       1: name: 'entity.name.section'
       2: name: 'string'
   }
-  defB: {
-    begin: '(?i)^[ ]*(#define)($| .*)'
-    beginCaptures:
-      1: name: 'variable.other'
-      2: name: 'string'
-    end: '(?i)(?:^|;)[ ]*(#enddef)(?!\\w)'
-    endCaptures:
-      1: name: 'variable.other'
-  }
+  # defB: {
+  #   begin: '(?i)^[ ]*(#define)($| .*)'
+  #   beginCaptures:
+  #     1: name: 'variable.other'
+  #     2: name: 'string'
+  #   end: '(?i)(?:^|;)[ ]*(#enddef)(?!\\w)'
+  #   endCaptures:
+  #     1: name: 'variable.other'
+  # }
   defC: {
     match: '(?i)^[ ]*(#include|[\\+-]?apply)( +.+)'
     captures:
       1: name: 'entity.name.section'
       2: name: 'string'
   }
+  defD: {
+    match: '(?i)^[ ]*(#if|#endif)'
+    captures:
+      1: name: 'entity.name.section'
+  }
   inc1: {
-    match: '\\$\\(.+\\)'
+    match: '\\$\\(.+?\\)'
     name: 'variable.other'
   }
   com1: {
@@ -542,6 +576,10 @@ repository:
   inLoop: { # what is it? :D
     match: '\\([^ ]+? [^ ]+?(?: [^ ]+?)?\\)'
     name: 'entity.name.function'
+  }
+  units: {
+    match: '(?<=\\w)\\[\\w+?\\]'
+    name: 'constant.other'
   }
 
 # ============================================================================
