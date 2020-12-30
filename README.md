@@ -4,7 +4,7 @@ SOFiSTiK grammar is provide for files with extensions `.dat` `.gra` `.results`. 
 
 SOFiSTiK RAW grammar is provide  for files with extensions `.erg`, `.lst`, `.prt` and `.urs`.
 
-## See my another packages...
+# See also
 
 * [bacadra-atom](https://github.com/bacadra/bacadra-atom)
 * [bib-finder](https://github.com/bacadra/bib-finder)
