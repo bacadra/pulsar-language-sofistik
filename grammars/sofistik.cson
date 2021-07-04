@@ -337,7 +337,7 @@ patterns: [
   patterns: [
     {include: '#normalText'}
     {
-      match: '(?i)(^ *)(echo|ctrl|gax|lane|lsel|calc|linf|appl|size|show|act|lc|trai|trpl|trbl|save|sace|posl|comb)( .+?(?=;|$)| *$)'
+      match: '(?i)(^ *)(echo|ctrl|gax|lane|lsel|calc|linf|appl|size|show|act|lc|trai|trpl|trbl|save|case|posl|comb)( .+?(?=;|$)| *$)'
       captures:
         1: name: 'support.type'
         2: name: 'keyword.control'
