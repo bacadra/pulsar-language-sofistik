@@ -5,7 +5,7 @@
 
 # ================== GENERAL =================================================
 
-scopeName: 'source.sofi'
+scopeName: 'source.sofistik'
 name: 'SOFiSTiK'
 fileTypes: ['dat','gra','results','sto','dfs','blk']
 patterns: [
