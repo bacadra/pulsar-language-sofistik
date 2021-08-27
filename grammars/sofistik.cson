@@ -577,13 +577,13 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      begin: '(?i)(^ *)(NORM)(?=;|$| )'
       beginCaptures:
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQB'}
         {
-          match: '(?i)(?<!\\w)(OPT|VAL|SELE)(?!\\w)'
+          match: '(?i)(?<!\\w)(DC|NDC|COUN|CAT|LON|LAT|GAMF|ALT|WIND|SNOW|SEIS|WCAT|UNIT|LANG)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -599,6 +599,21 @@ repository:
         {'include': '#AQB'}
         {
           match: '(?i)(?<!\\w)(OPT|VAL|VAL2)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '#normalTextIn'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *)(TVAR)(?=;|$| )'
+      beginCaptures:
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#AQB'}
+        {
+          match: '(?i)(?<!\\w)(SCOP|CMNT)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -652,6 +667,21 @@ repository:
         ]
       }
       {
+      begin: '(?i)(^ *)(STRE)(?=;|$| )'
+      beginCaptures:
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#AQB'}
+        {
+          match: '(?i)(?<!\\w)(SMOD|STYP|SC|ST|SBC|SBT|SBBC|SBBT|SI|SII|TAU|SV|TAUS|SSTM|SSEM|SSKM|SSER|SSKR|CC|CBC|CBBC|LIMA|ZMAX|ZDIF|SCMG)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '#normalTextIn'}
+        {'include': '$self'}
+        ]
+      }
+      {
       begin: '(?i)(^ *)(COMB)(?=;|$| )'
       beginCaptures:
         2: name: 'keyword.control'
@@ -674,21 +704,6 @@ repository:
         {'include': '#AQB'}
         {
           match: '(?i)(?<!\\w)(MNO|PHI|EPS|REL|T|RH|TEMP|T0|GRP|LCT)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '#normalTextIn'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^ *)(STRE)(?=;|$| )'
-      beginCaptures:
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#AQB'}
-        {
-          match: '(?i)(?<!\\w)(SMOD|STYP|SC|ST|SBC|SBT|SBBC|SBBT|SI|SII|TAU|SV|TAUS|SSTM|SSEM|SSKM|SSER|SSKR|CC|CBC|CBBC|LIMA|ZMAX|ZDIF|SCMG)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -756,6 +771,21 @@ repository:
         {'include': '$self'}
         ]
       }
+      {
+      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      beginCaptures:
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#AQB'}
+        {
+          match: '(?i)(?<!\\w)(OPT|VAL|SELE)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '#normalTextIn'}
+        {'include': '$self'}
+        ]
+      }
     ]
   }
   ASE: {
@@ -816,6 +846,21 @@ repository:
         {'include': '#ASE'}
         {
           match: '(?i)(?<!\\w)(STEP|FAK1|FAKE|DFAK|PRO|DL|PRIM|DMIN)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '#normalTextIn'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *)(PUSH)(?=;|$| )'
+      beginCaptures:
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#ASE'}
+        {
+          match: '(?i)(?<!\\w)(N|FDL|PRIM|CONT)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -929,13 +974,13 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TBEA)(?=;|$| )'
+      begin: '(?i)(^ *)(TBEX)(?=;|$| )'
       beginCaptures:
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
         {
-          match: '(?i)(?<!\\w)(NC|b)(?!\\w)'
+          match: '(?i)(?<!\\w)(NOG|NEFF|AREA|EX_Q|F_IZ|F_GZ|FIXE)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1064,13 +1109,28 @@ repository:
         ]
       }
       {
+      begin: '(?i)(^ *)(ACTB)(?=;|$| )'
+      beginCaptures:
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#ASE'}
+        {
+          match: '(?i)(?<!\\w)(NO|MEND|MT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '#normalTextIn'}
+        {'include': '$self'}
+        ]
+      }
+      {
       begin: '(?i)(^ *)(LC)(?=;|$| )'
       beginCaptures:
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
         {
-          match: '(?i)(?<!\\w)(NO|FACT|DLX|DLY|DLZ|BET2|TITL|TYPE|GAMU|GAMF|PSI0|PSI1|PSI2|PS1S|CRI1|CRI2|CRI3)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|FACT|FACD|DLX|DLY|DLZ|BET2|TITL|TYPE|GAMU|GAMF|PSI0|PSI1|PSI2|PS1S|CRI1|CRI2|CRI3)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1506,6 +1566,36 @@ repository:
         ]
       }
       {
+      begin: '(?i)(^ *)(BTAB)(?=;|$| )'
+      beginCaptures:
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#AQUA'}
+        {
+          match: '(?i)(?<!\\w)(OPT|D|V1|V2|V3|V4|V5|V6|V7|V8|V9|V10|FACS)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '#normalTextIn'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *)(SMAT)(?=;|$| )'
+      beginCaptures:
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#AQUA'}
+        {
+          match: '(?i)(?<!\\w)(NO|LTYP|MTYP|P+ P- VY+ VY-|VZ+|VZ-|MY+|MY-|MZ+|MZ-|ALPH|P10|P2|TITL)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '#normalTextIn'}
+        {'include': '$self'}
+        ]
+      }
+      {
       begin: '(?i)(^ *)(BBLA)(?=;|$| )'
       beginCaptures:
         2: name: 'keyword.control'
@@ -1821,6 +1911,21 @@ repository:
         ]
       }
       {
+      begin: '(?i)(^ *)(LAY)(?=;|$| )'
+      beginCaptures:
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#AQUA'}
+        {
+          match: '(?i)(?<!\\w)(NO|TID|TYPE|MRF)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '#normalTextIn'}
+        {'include': '$self'}
+        ]
+      }
+      {
       begin: '(?i)(^ *)(RF)(?=;|$| )'
       beginCaptures:
         2: name: 'keyword.control'
@@ -2120,6 +2225,21 @@ repository:
       {include: '#normalTextIn'}
     
       {
+      begin: '(?i)(^ *)(NORM)(?=;|$| )'
+      beginCaptures:
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEMESS'}
+        {
+          match: '(?i)(?<!\\w)(DC|NDC|COUN|CAT|LON|LAT|G|ALT|WIND|SNOW|SEIS|WCAT|UNIT|LANG)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '#normalTextIn'}
+        {'include': '$self'}
+        ]
+      }
+      {
       begin: '(?i)(^ *)(CTRL)(?=;|$| )'
       beginCaptures:
         2: name: 'keyword.control'
@@ -2127,6 +2247,21 @@ repository:
         {'include': '#BEMESS'}
         {
           match: '(?i)(?<!\\w)(TYPE|RMOD|SYST|WALL|AUGM|THIC|TENS|LCR|PFAI|RO_V|COTT|FACH|WARN|LCRI|VF70|SNIP|WINT|WEND|REDN|RADP|BUBB|REDM|VPDC|SIGZ|LCRP|WTEN)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '#normalTextIn'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *)(REIN)(?=;|$| )'
+      beginCaptures:
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEMESS'}
+        {
+          match: '(?i)(?<!\\w)(TITL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -2262,6 +2397,21 @@ repository:
         {'include': '#BEMESS'}
         {
           match: '(?i)(?<!\\w)(OAL|OAF|X|Y|Z|LAY|POS|Z|DIRE|D|AS|ASMA|BS|WK|SS)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '#normalTextIn'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *)(LAY)(?=;|$| )'
+      beginCaptures:
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEMESS'}
+        {
+          match: '(?i)(?<!\\w)(POS|Z|DIRE|DU|AS|ASMA|BS|WK|SS)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -5938,6 +6088,21 @@ repository:
         ]
       }
       {
+      begin: '(?i)(^ *)(EVAL)(?=;|$| )'
+      beginCaptures:
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SOFILOAD'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|NO|NAME|IND|LEIG|NEIG)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '#normalTextIn'}
+        {'include': '$self'}
+        ]
+      }
+      {
       begin: '(?i)(^ *)(CTRL)(?=;|$| )'
       beginCaptures:
         2: name: 'keyword.control'
@@ -5998,6 +6163,21 @@ repository:
         ]
       }
       {
+      begin: '(?i)(^ *)(FIMP)(?=;|$| )'
+      beginCaptures:
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SOFILOAD'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|NO|LC|TEFF|TBLC|TITL)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '#normalTextIn'}
+        {'include': '$self'}
+        ]
+      }
+      {
       begin: '(?i)(^ *)(ACCE)(?=;|$| )'
       beginCaptures:
         2: name: 'keyword.control'
@@ -6020,6 +6200,51 @@ repository:
         {'include': '#SOFILOAD'}
         {
           match: '(?i)(?<!\\w)(N|DT|LCST|TITL)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '#normalTextIn'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *)(SIMQ)(?=;|$| )'
+      beginCaptures:
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SOFILOAD'}
+        {
+          match: '(?i)(?<!\\w)(LSPE|LINT|DT|TMIN|TMAX|NFRE|ITER|AG|D|TITL)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '#normalTextIn'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *)(REVA)(?=;|$| )'
+      beginCaptures:
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SOFILOAD'}
+        {
+          match: '(?i)(?<!\\w)(TYPT|TYPE|LFUN|TMIN|TMAX|TDIF|D1|D2|D4|D4|D5|REF1|RID1|REF2|RID2|REF3|RID3)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '#normalTextIn'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *)(PUSH)(?=;|$| )'
+      beginCaptures:
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SOFILOAD'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|OPT|LCC0|LCC1|NLCC|CNOD|DSTR|LCDM|SPL1|SPL2|SPL3|SPL4|SPL5)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -6200,6 +6425,21 @@ repository:
         {'include': '#SOFILOAD'}
         {
           match: '(?i)(?<!\\w)(TYPE|A1LO|A2LO|A3LO|BLO|CLO|A1LA|A2LA|A3LA|BLA|CLA|A1VE|A2VE|A3VE|BVE|CVE|C3E|KUU|KUV|KUW|KVU|KVV|KVW|KWU|KWV|KWW)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '#normalTextIn'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *)(WTST)(?=;|$| )'
+      beginCaptures:
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SOFILOAD'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|NEIG|LC|XREF|YREF|ZREF|RX|RY|RZ|COMP|CU|CV|CW)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -6828,7 +7068,22 @@ repository:
       patterns: [
         {'include': '#SOFIMSHC'}
         {
-          match: '(?i)(?<!\\w)(TYP|FIXA|FIXL|FIXM|CD)(?!\\w)'
+          match: '(?i)(?<!\\w)(TYP|FIXA|FIXL|FIXM|FIXS|CDB)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '#normalTextIn'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *)(XCON)(?=;|$| )'
+      beginCaptures:
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SOFIMSHC'}
+        {
+          match: '(?i)(?<!\\w)(SEL|FIXA|FIXL|FIXM|FIXS)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -7167,6 +7422,21 @@ repository:
         ]
       }
       {
+      begin: '(?i)(^ *)(SLSC)(?=;|$| )'
+      beginCaptures:
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SOFIMSHC'}
+        {
+          match: '(?i)(?<!\\w)(REF|S|TYPM|TYPT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '#normalTextIn'}
+        {'include': '$self'}
+        ]
+      }
+      {
       begin: '(?i)(^ *)(SAR)(?=;|$| )'
       beginCaptures:
         2: name: 'keyword.control'
@@ -7279,6 +7549,51 @@ repository:
         {'include': '#SOFIMSHC'}
         {
           match: '(?i)(?<!\\w)(NAR|ACT|NO|T|FAC0|FAC1|TFAC|TFA1|TREF|PHI0|PHI|DPHI|REF|DX|DY|DZ|XX|YY|ZZ|NARA|NARE|MNO)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '#normalTextIn'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *)(SVOB)(?=;|$| )'
+      beginCaptures:
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SOFIMSHC'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|NO)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '#normalTextIn'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *)(GUID)(?=;|$| )'
+      beginCaptures:
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SOFIMSHC'}
+        {
+          match: '(?i)(?<!\\w)(ID)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '#normalTextIn'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *)(BBOX)(?=;|$| )'
+      beginCaptures:
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SOFIMSHC'}
+        {
+          match: '(?i)(?<!\\w)(XMIN|YMIN|ZMIN|XMAX|YMAX|ZMAX)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
