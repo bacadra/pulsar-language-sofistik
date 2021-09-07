@@ -1,7 +1,7 @@
 '.source.sofistik':
   editor:
     autoIndentOnPaste: false
-    softTabs: true
+    softTabs: false
     softWrap: false
     tabLength: 2
     commentStart: '$ '
