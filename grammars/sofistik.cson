@@ -5,7 +5,7 @@
 
 scopeName: 'source.sofistik'
 name: 'SOFiSTiK'
-fileTypes: ['dat','gra','grb','results','sto','dfs','blk']
+fileTypes: ['dat','gra','grb','results']
 foldingStartMarker: '+prog'
 patterns: [
   {include: '#normalText'}
@@ -349,6 +349,10 @@ repository:
     match: ';'
     name: 'support.type'
   }
+  var1: {
+    match: '(?i)(?<!\\w)(?:let|sto|del|dbg)(?=#\\w+)'
+    name: 'keyword.control'
+  }
   var2: {
     match: '#\\w+'
     name: 'variable.other'
@@ -367,11 +371,6 @@ repository:
   units: {
     match: '(?<=\\w)\\[[\\w/\\*]+?\\]'
     name: 'constant.other'
-  }
-
-  var1: {
-    match: '(?i)(?<!\\w)(?:let|sto|del|dbg)(?=#\\w+)'
-    name: 'keyword.control'
   }
   var3: {
     match: '(?i)(?<!\\w)(?:loop|if|elseif|else|endif)(?!\\w)'
@@ -1587,7 +1586,7 @@ repository:
       patterns: [
         {'include': '#AQUA'}
         {
-          match: '(?i)(?<!\\w)(NO|LTYP|MTYP|P+ P- VY+ VY-|VZ+|VZ-|MY+|MY-|MZ+|MZ-|ALPH|P10|P2|TITL)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|LTYP|MTYP|P+ |P-|VY+|VY-|VZ+|VZ-|MY+|MY-|MZ+|MZ-|ALPH|P10|P2|TITL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -2576,21 +2575,6 @@ repository:
       {include: '#normalText'}
       {include: '#normalTextIn'}
     
-      {
-      begin: '(?i)(^ *)(HEAD)(?=;|$| )'
-      beginCaptures:
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#COLUMN'}
-        {
-          match: '(?i)(?<!\\w)()(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '#normalTextIn'}
-        {'include': '$self'}
-        ]
-      }
       {
       begin: '(?i)(^ *)(ECHO)(?=;|$| )'
       beginCaptures:
@@ -8813,7 +8797,7 @@ repository:
       patterns: [
         {'include': '#WING'}
         {
-          match: '(?i)(?<!\\w)(TYPE|FAC|LC|T|EXPO)(?!\\w)'
+          match: '(?i)(?<!\\w)(TYPE|FAC|LC|T|EXPO|SMOV)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -8828,7 +8812,7 @@ repository:
       patterns: [
         {'include': '#WING'}
         {
-          match: '(?i)(?<!\\w)(TITL)(?!\\w)'
+          match: '(?i)(?<!\\w)(X|Y|Z|REF|UNIT|A|SCHH|FACW|MARG|C10|CB|ALIG|SET|BOX|GRNO|DTYP|DIST|DASH|PICT|SBOX|ADJU)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -8843,7 +8827,7 @@ repository:
       patterns: [
         {'include': '#WING'}
         {
-          match: '(?i)(?<!\\w)(NO|F|DX|H)(?!\\w)'
+          match: '(?i)(?<!\\w)(X|Y|Z|REF|UNIT|C|DTYP|GRP|MNO|HINT|DIST)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -8873,7 +8857,7 @@ repository:
       patterns: [
         {'include': '#WING'}
         {
-          match: '(?i)(?<!\\w)(NO|NX|NY|NZ|XMIN|XMAX|YMIN|YMAX|ZMIN|ZMAX|SNO|LDIR)(?!\\w)'
+          match: '(?i)(?<!\\w)(TITL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -8888,7 +8872,7 @@ repository:
       patterns: [
         {'include': '#WING'}
         {
-          match: '(?i)(?<!\\w)(CUT|GRP|SELE|LC)(?!\\w)'
+          match: '(?i)(?<!\\w)(TITL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -8903,7 +8887,7 @@ repository:
       patterns: [
         {'include': '#WING'}
         {
-          match: '(?i)(?<!\\w)()(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|F|DX|H)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -8918,7 +8902,7 @@ repository:
       patterns: [
         {'include': '#WING'}
         {
-          match: '(?i)(?<!\\w)()(?!\\w)'
+          match: '(?i)(?<!\\w)(TITL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -8927,13 +8911,28 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(DSIRCUTP)(?=;|$| )'
+      begin: '(?i)(^ *)(DSIR)(?=;|$| )'
       beginCaptures:
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
         {
-          match: '(?i)(?<!\\w)()(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|NX|NY|NZ|XMIN|XMAX|YMIN|YMAX|ZMIN|ZMAX|SNO|LDIR)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '#normalTextIn'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *)(CUPT)(?=;|$| )'
+      beginCaptures:
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#WING'}
+        {
+          match: '(?i)(?<!\\w)(CUT|GRP|SELE|LC)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
