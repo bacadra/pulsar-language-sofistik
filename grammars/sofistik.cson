@@ -267,7 +267,6 @@ repository:
       {include: '#comments'}
       {include: '#str1'}
       {include: '#str2'}
-      {include: '#linsep'}
       {include: '#var2'}
       {include: '#var3'}
       {include: '#expr'}
@@ -344,10 +343,6 @@ repository:
   str2: { # strings
     match: "\\'.*?\\'"
     name: 'string'
-  }
-  linsep: { # line sep
-    match: ';'
-    name: 'support.type'
   }
   var1: {
     match: '(?i)(?<!\\w)(?:let|sto|del|dbg)(?=#\\w+)'
@@ -576,8 +571,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(NORM)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(NORM)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQB'}
@@ -591,8 +587,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CTRL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQB'}
@@ -606,8 +603,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TVAR)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TVAR)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQB'}
@@ -621,8 +619,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BEAM)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BEAM)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQB'}
@@ -636,8 +635,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TEND)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TEND)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQB'}
@@ -651,8 +651,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQB'}
@@ -666,8 +667,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(STRE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(STRE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQB'}
@@ -681,8 +683,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(COMB)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(COMB)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQB'}
@@ -696,8 +699,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(EIGE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(EIGE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQB'}
@@ -711,8 +715,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(REIN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(REIN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQB'}
@@ -726,8 +731,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(DESI)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(DESI)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQB'}
@@ -741,8 +747,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(NSTR)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(NSTR)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQB'}
@@ -756,8 +763,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CAPA)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CAPA)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQB'}
@@ -771,8 +779,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQB'}
@@ -793,8 +802,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(CTRL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -808,8 +818,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SYST)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SYST)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -823,8 +834,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(STEP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(STEP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -838,8 +850,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ULTI)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ULTI)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -853,8 +866,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PUSH)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PUSH)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -868,8 +882,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PLOT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PLOT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -883,8 +898,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CREP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CREP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -898,8 +914,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GRP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GRP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -913,8 +930,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GRP2)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GRP2)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -928,8 +946,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ELEM)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ELEM)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -943,8 +962,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LEN0)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LEN0)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -958,8 +978,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(HIGH)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(HIGH)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -973,8 +994,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TBEX)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TBEX)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -988,8 +1010,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(REIQ)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(REIQ)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -1003,8 +1026,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(STEX)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(STEX)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -1018,8 +1042,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(OBLI)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(OBLI)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -1033,8 +1058,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SLIP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SLIP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -1048,8 +1074,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(VOLU)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(VOLU)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -1063,8 +1090,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(MOVS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(MOVS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -1078,8 +1106,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LAUN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LAUN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -1093,8 +1122,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SFIX)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SFIX)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -1108,8 +1138,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ACTB)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ACTB)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -1123,8 +1154,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -1138,8 +1170,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TEMP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TEMP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -1153,8 +1186,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PEXT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PEXT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -1168,8 +1202,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LCC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LCC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -1183,8 +1218,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(EIGE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(EIGE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -1198,8 +1234,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(MASS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(MASS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -1213,8 +1250,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(V0)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(V0)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -1228,8 +1266,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(REIN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(REIN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -1243,8 +1282,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(DESI)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(DESI)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -1258,8 +1298,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(NSTR)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(NSTR)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -1273,8 +1314,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ASE'}
@@ -1295,8 +1337,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(CTRL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1310,8 +1353,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(NORM)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(NORM)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1325,8 +1369,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(MATE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(MATE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1340,8 +1385,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(MAT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(MAT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1355,8 +1401,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(FLAY)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(FLAY)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1370,8 +1417,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(MLAY)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(MLAY)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1385,8 +1433,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(NMAT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(NMAT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1400,8 +1449,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BMAT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BMAT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1415,8 +1465,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(HMAT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(HMAT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1430,8 +1481,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CONC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CONC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1445,8 +1497,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(STEE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(STEE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1460,8 +1513,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TIMB)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TIMB)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1475,8 +1529,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(MASO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(MASO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1490,8 +1545,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SSLA)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SSLA)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1505,8 +1561,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(MEXT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(MEXT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1520,8 +1577,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BORE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BORE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1535,8 +1593,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BLAY)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BLAY)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1550,8 +1609,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BBAX)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BBAX)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1565,8 +1625,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BTAB)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BTAB)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1580,8 +1641,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SMAT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SMAT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1595,8 +1657,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BBLA)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BBLA)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1610,8 +1673,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SVAL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SVAL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1625,8 +1689,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SREC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SREC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1640,8 +1705,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SCIT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SCIT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1655,8 +1721,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CABL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CABL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1670,8 +1737,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SECT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SECT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1685,8 +1753,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1700,8 +1769,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SV)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SV)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1715,8 +1785,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(POLY)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(POLY)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1730,8 +1801,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(VERT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(VERT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1745,8 +1817,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CIRC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CIRC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1760,8 +1833,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(NEFF)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(NEFF)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1775,8 +1849,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CUT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CUT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1790,8 +1865,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PANE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PANE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1805,8 +1881,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PLAT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PLAT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1820,8 +1897,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(WELD)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(WELD)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1835,8 +1913,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PROF)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PROF)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1850,8 +1929,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SPT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SPT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1865,8 +1945,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SFLA)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SFLA)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1880,8 +1961,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(WPAR)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(WPAR)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1895,8 +1977,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(WIND)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(WIND)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1910,8 +1993,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LAY)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LAY)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1925,8 +2009,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(RF)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(RF)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1940,8 +2025,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LRF)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LRF)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1955,8 +2041,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CRF)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CRF)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1970,8 +2057,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CURF)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CURF)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -1985,8 +2073,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TVAR)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TVAR)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -2000,8 +2089,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(INTE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(INTE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -2015,8 +2105,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(IMPO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(IMPO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -2030,8 +2121,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(EXPO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(EXPO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -2045,8 +2137,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#AQUA'}
@@ -2067,8 +2160,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(CVA)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CVA)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BDK'}
@@ -2082,8 +2176,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CVE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CVE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BDK'}
@@ -2097,8 +2192,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CVM)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CVM)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BDK'}
@@ -2112,8 +2208,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CVL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CVL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BDK'}
@@ -2127,8 +2224,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CV)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CV)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BDK'}
@@ -2142,8 +2240,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TVAR)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TVAR)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BDK'}
@@ -2157,8 +2256,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CTRL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BDK'}
@@ -2172,8 +2272,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LF)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LF)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BDK'}
@@ -2187,8 +2288,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(MEMB)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(MEMB)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BDK'}
@@ -2202,8 +2304,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BDK'}
@@ -2224,8 +2327,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(NORM)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(NORM)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BEMESS'}
@@ -2239,8 +2343,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CTRL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BEMESS'}
@@ -2254,8 +2359,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(REIN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(REIN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BEMESS'}
@@ -2269,8 +2375,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CRAC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CRAC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BEMESS'}
@@ -2284,8 +2391,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(MREI)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(MREI)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BEMESS'}
@@ -2299,8 +2407,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SHFT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SHFT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BEMESS'}
@@ -2314,8 +2423,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(NSTR)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(NSTR)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BEMESS'}
@@ -2329,8 +2439,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(MAT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(MAT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BEMESS'}
@@ -2344,8 +2455,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GEOM)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GEOM)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BEMESS'}
@@ -2359,8 +2471,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(DIRE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(DIRE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BEMESS'}
@@ -2374,8 +2487,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(THRE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(THRE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BEMESS'}
@@ -2389,8 +2503,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(DI3D)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(DI3D)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BEMESS'}
@@ -2404,8 +2519,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LAY)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LAY)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BEMESS'}
@@ -2419,8 +2535,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PARA)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PARA)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BEMESS'}
@@ -2434,8 +2551,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PUNC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PUNC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BEMESS'}
@@ -2449,8 +2567,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BEMESS'}
@@ -2464,8 +2583,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GRP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GRP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BEMESS'}
@@ -2479,8 +2599,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ELEM)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ELEM)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BEMESS'}
@@ -2494,8 +2615,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(NODE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(NODE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BEMESS'}
@@ -2509,8 +2631,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SELE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SELE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BEMESS'}
@@ -2524,8 +2647,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(S)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(S)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BEMESS'}
@@ -2539,8 +2663,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(EXPO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(EXPO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BEMESS'}
@@ -2554,8 +2679,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#BEMESS'}
@@ -2576,8 +2702,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#COLUMN'}
@@ -2591,8 +2718,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CTRL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#COLUMN'}
@@ -2606,8 +2734,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(POS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(POS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#COLUMN'}
@@ -2621,8 +2750,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(COMB)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(COMB)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#COLUMN'}
@@ -2636,8 +2766,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CINP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CINP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#COLUMN'}
@@ -2651,8 +2782,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(FIRE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(FIRE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#COLUMN'}
@@ -2666,8 +2798,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(L0FI)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(L0FI)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#COLUMN'}
@@ -2681,8 +2814,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(WARM)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(WARM)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#COLUMN'}
@@ -2696,8 +2830,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CREP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CREP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#COLUMN'}
@@ -2711,8 +2846,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GEOM)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GEOM)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#COLUMN'}
@@ -2726,8 +2862,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(IMP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(IMP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#COLUMN'}
@@ -2741,8 +2878,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BUCK)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BUCK)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#COLUMN'}
@@ -2756,8 +2894,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SLN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SLN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#COLUMN'}
@@ -2771,8 +2910,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#COLUMN'}
@@ -2786,8 +2926,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SCHN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SCHN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#COLUMN'}
@@ -2801,8 +2942,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(END)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(END)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#COLUMN'}
@@ -2823,8 +2965,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(CTRL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -2838,8 +2981,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LAUN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LAUN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -2853,8 +2997,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -2868,8 +3013,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GRP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GRP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -2883,8 +3029,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GRCS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GRCS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -2898,8 +3045,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(WAIT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(WAIT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -2913,8 +3061,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -2928,8 +3077,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CAMB)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CAMB)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -2943,8 +3093,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CREP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CREP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -2958,8 +3109,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(DEPS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(DEPS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -2973,8 +3125,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TBEX)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TBEX)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -2988,8 +3141,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ACT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ACT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3003,8 +3157,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(DESI)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(DESI)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3018,8 +3173,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GRPD)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GRPD)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3033,8 +3189,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LAM)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LAM)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3048,8 +3205,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(COMB)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(COMB)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3063,8 +3221,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LCCS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LCCS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3078,8 +3237,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(DECS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(DECS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3093,8 +3253,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(COPY)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(COPY)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3108,8 +3269,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SUMA)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SUMA)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3123,8 +3285,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(REIN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(REIN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3138,8 +3301,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BOX)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BOX)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3153,8 +3317,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(QCUT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(QCUT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3168,8 +3333,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SCAL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SCAL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3183,8 +3349,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SELE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SELE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3198,8 +3365,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(EXPO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(EXPO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3213,8 +3381,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(EQLC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(EQLC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3228,8 +3397,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(EQUU)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(EQUU)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3243,8 +3413,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(EQPP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(EQPP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3258,8 +3429,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(EQBE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(EQBE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3273,8 +3445,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(EQIT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(EQIT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3288,8 +3461,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(KINK)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(KINK)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3303,8 +3477,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CABL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CABL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3318,8 +3493,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(MEX)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(MEX)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3333,8 +3509,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BOND)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BOND)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3348,8 +3525,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TEMP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TEMP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3363,8 +3541,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#CSM'}
@@ -3385,8 +3564,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(CDB)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CDB)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DBMERG'}
@@ -3400,8 +3580,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(MAT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(MAT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DBMERG'}
@@ -3415,8 +3596,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SECT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SECT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DBMERG'}
@@ -3430,8 +3612,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DBMERG'}
@@ -3445,8 +3628,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GRP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GRP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DBMERG'}
@@ -3460,8 +3644,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(NODE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(NODE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DBMERG'}
@@ -3475,8 +3660,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BEAM)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BEAM)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DBMERG'}
@@ -3490,8 +3676,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TRUS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TRUS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DBMERG'}
@@ -3505,8 +3692,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CABL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CABL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DBMERG'}
@@ -3520,8 +3708,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SPRI)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SPRI)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DBMERG'}
@@ -3535,8 +3724,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(QUAD)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(QUAD)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DBMERG'}
@@ -3550,8 +3740,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BRIC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BRIC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DBMERG'}
@@ -3565,8 +3756,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DBMERG'}
@@ -3587,8 +3779,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(FLOW)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(FLOW)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DOLFYN'}
@@ -3602,8 +3795,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(WIND)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(WIND)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DOLFYN'}
@@ -3617,8 +3811,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CASE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CASE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DOLFYN'}
@@ -3632,8 +3827,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(IN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(IN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DOLFYN'}
@@ -3647,8 +3843,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(EPS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(EPS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DOLFYN'}
@@ -3662,8 +3859,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(OUT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(OUT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DOLFYN'}
@@ -3677,8 +3875,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(INOU)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(INOU)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DOLFYN'}
@@ -3692,8 +3891,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(WALL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(WALL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DOLFYN'}
@@ -3707,8 +3907,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(DRAG)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(DRAG)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DOLFYN'}
@@ -3722,8 +3923,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(STEP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(STEP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DOLFYN'}
@@ -3737,8 +3939,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(HIST)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(HIST)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DOLFYN'}
@@ -3752,8 +3955,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SOLV)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SOLV)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DOLFYN'}
@@ -3767,8 +3971,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(DOLF)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(DOLF)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DOLFYN'}
@@ -3789,8 +3994,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(SYST)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SYST)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DYNA'}
@@ -3804,8 +4010,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CTRL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DYNA'}
@@ -3819,8 +4026,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GRP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GRP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DYNA'}
@@ -3834,8 +4042,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(MAT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(MAT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DYNA'}
@@ -3849,8 +4058,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BMAT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BMAT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DYNA'}
@@ -3864,8 +4074,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SMAT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SMAT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DYNA'}
@@ -3879,8 +4090,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(MASS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(MASS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DYNA'}
@@ -3894,8 +4106,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(EIGE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(EIGE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DYNA'}
@@ -3909,8 +4122,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(MODD)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(MODD)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DYNA'}
@@ -3924,8 +4138,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(STEP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(STEP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DYNA'}
@@ -3939,8 +4154,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DYNA'}
@@ -3954,8 +4170,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CONT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CONT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DYNA'}
@@ -3969,8 +4186,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(HIST)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(HIST)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DYNA'}
@@ -3984,8 +4202,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(EXTR)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(EXTR)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DYNA'}
@@ -3999,8 +4218,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DYNA'}
@@ -4021,8 +4241,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(SIZE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SIZE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DYNR'}
@@ -4036,8 +4257,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SCHH)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SCHH)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DYNR'}
@@ -4051,8 +4273,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(RESP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(RESP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DYNR'}
@@ -4066,8 +4289,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(FUNC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(FUNC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DYNR'}
@@ -4081,8 +4305,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(EXCI)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(EXCI)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DYNR'}
@@ -4096,8 +4321,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SPEC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SPEC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DYNR'}
@@ -4111,8 +4337,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(HIST)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(HIST)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DYNR'}
@@ -4126,8 +4353,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#DYNR'}
@@ -4148,8 +4376,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ELLA'}
@@ -4163,8 +4392,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CTRL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ELLA'}
@@ -4178,8 +4408,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GAX)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GAX)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ELLA'}
@@ -4193,8 +4424,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LANE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LANE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ELLA'}
@@ -4208,8 +4440,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LSEL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LSEL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ELLA'}
@@ -4223,13 +4456,14 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CALC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CALC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ELLA'}
         {
-          match: '(?i)(?<!\\w)(TYPE|LMAX|LMIN|FROM|TO|DELT|SYST)(?!\\w)'
+          match: '(?i)(?<!\\w)(TYPE|LMAX|LMIN|FROM|TO|DELT|SYST|PHI)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -4238,8 +4472,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LINF)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LINF)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ELLA'}
@@ -4253,8 +4488,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(APPL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(APPL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ELLA'}
@@ -4268,8 +4504,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SIZE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SIZE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ELLA'}
@@ -4283,8 +4520,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SHOW)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SHOW)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ELLA'}
@@ -4298,8 +4536,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ACT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ACT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ELLA'}
@@ -4313,8 +4552,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ELLA'}
@@ -4328,13 +4568,14 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TRAI)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TRAI)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ELLA'}
         {
-          match: '(?i)(?<!\\w)(TYPE|P1|P2|P3|P4|P5|P6|P7|P8|P9|PFAC|WIDT|PHI|PHI2|PHIS|PHI4|V|FUGA|XCON|DIR|DIRT)(?!\\w)'
+          match: '(?i)(?<!\\w)(TYPE|P1|P2|P3|P4|P5|P6|P7|P8|P9|PFAC|WIDT|PHI|PHI2|PHIS|PHI4|V|FUGA|XCON|DIR|DIRT|FRB|DAB|BOGI|FRBO|DABO|WHEE|FRWH|DAWH|YEX)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -4343,8 +4584,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TRPL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TRPL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ELLA'}
@@ -4358,8 +4600,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TRBL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TRBL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ELLA'}
@@ -4373,8 +4616,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SAVE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SAVE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ELLA'}
@@ -4388,8 +4632,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CASE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CASE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ELLA'}
@@ -4403,8 +4648,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(POSL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(POSL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ELLA'}
@@ -4418,8 +4664,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(COMB)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(COMB)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#ELLA'}
@@ -4440,8 +4687,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(POS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(POS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#FOOTING'}
@@ -4455,8 +4703,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CTRL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#FOOTING'}
@@ -4470,8 +4719,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(MATF)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(MATF)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#FOOTING'}
@@ -4485,8 +4735,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ACT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ACT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#FOOTING'}
@@ -4500,8 +4751,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TAB)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TAB)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#FOOTING'}
@@ -4515,8 +4767,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BESI)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BESI)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#FOOTING'}
@@ -4530,8 +4783,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GEOM)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GEOM)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#FOOTING'}
@@ -4545,8 +4799,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SLEE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SLEE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#FOOTING'}
@@ -4560,8 +4815,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(COLU)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(COLU)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#FOOTING'}
@@ -4575,8 +4831,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SPT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SPT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#FOOTING'}
@@ -4590,8 +4847,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#FOOTING'}
@@ -4605,8 +4863,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LOAD)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LOAD)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#FOOTING'}
@@ -4620,8 +4879,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(KN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(KN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#FOOTING'}
@@ -4635,8 +4895,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BEW)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BEW)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#FOOTING'}
@@ -4650,8 +4911,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#FOOTING'}
@@ -4672,8 +4934,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(CTRL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HASE'}
@@ -4687,8 +4950,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GRP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GRP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HASE'}
@@ -4702,8 +4966,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(HALF)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(HALF)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HASE'}
@@ -4717,8 +4982,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BORE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BORE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HASE'}
@@ -4732,8 +4998,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PILE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PILE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HASE'}
@@ -4747,8 +5014,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PLAS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PLAS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HASE'}
@@ -4762,8 +5030,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LOAR)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LOAR)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HASE'}
@@ -4777,8 +5046,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HASE'}
@@ -4792,8 +5062,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LOAD)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LOAD)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HASE'}
@@ -4807,8 +5078,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SELE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SELE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HASE'}
@@ -4822,8 +5094,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SELP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SELP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HASE'}
@@ -4837,8 +5110,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HASE'}
@@ -4859,8 +5133,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(SYST)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SYST)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HYDRA'}
@@ -4874,8 +5149,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CTRL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HYDRA'}
@@ -4889,8 +5165,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GRP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GRP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HYDRA'}
@@ -4904,8 +5181,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(STEP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(STEP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HYDRA'}
@@ -4919,8 +5197,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PLC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PLC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HYDRA'}
@@ -4934,8 +5213,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(NVAL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(NVAL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HYDRA'}
@@ -4949,8 +5229,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(HMAT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(HMAT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HYDRA'}
@@ -4964,8 +5245,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LINK)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LINK)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HYDRA'}
@@ -4979,8 +5261,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PIPE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PIPE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HYDRA'}
@@ -4994,8 +5277,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HYDRA'}
@@ -5009,8 +5293,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BOUN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BOUN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HYDRA'}
@@ -5024,8 +5309,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SURF)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SURF)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HYDRA'}
@@ -5039,8 +5325,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(FUNC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(FUNC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HYDRA'}
@@ -5054,8 +5341,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(HIST)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(HIST)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HYDRA'}
@@ -5069,8 +5357,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#HYDRA'}
@@ -5091,8 +5380,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(CTRL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#MAXIMA'}
@@ -5106,8 +5396,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(COMB)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(COMB)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#MAXIMA'}
@@ -5121,8 +5412,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ACT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ACT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#MAXIMA'}
@@ -5136,8 +5428,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ADD)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ADD)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#MAXIMA'}
@@ -5151,8 +5444,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ADA)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ADA)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#MAXIMA'}
@@ -5166,8 +5460,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#MAXIMA'}
@@ -5181,8 +5476,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SUPP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SUPP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#MAXIMA'}
@@ -5196,8 +5492,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SUM)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SUM)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#MAXIMA'}
@@ -5211,8 +5508,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(EXPO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(EXPO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#MAXIMA'}
@@ -5226,8 +5524,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#MAXIMA'}
@@ -5241,8 +5540,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TRAC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TRAC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#MAXIMA'}
@@ -5263,8 +5563,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(CDB)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CDB)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5278,8 +5579,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SIZE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SIZE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5293,8 +5595,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PICT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PICT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5308,8 +5611,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(AND)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(AND)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5323,8 +5627,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(FF)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(FF)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5338,8 +5643,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GRP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GRP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5353,8 +5659,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(VIEW)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(VIEW)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5368,8 +5675,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5383,8 +5691,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(DBO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(DBO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5398,8 +5707,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(FILT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(FILT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5413,8 +5723,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(JOIN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(JOIN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5428,8 +5739,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(XLSX)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(XLSX)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5443,8 +5755,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PFA)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PFA)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5458,8 +5771,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PLN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PLN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5473,8 +5787,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PMR)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PMR)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5488,8 +5803,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TXTP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TXTP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5503,8 +5819,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(DIAG)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(DIAG)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5518,8 +5835,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(DGRA)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(DGRA)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5533,8 +5851,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(DLIN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(DLIN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5548,8 +5867,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(DIAX)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(DIAX)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5563,8 +5883,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(DLAB)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(DLAB)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5578,8 +5899,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(STRU)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(STRU)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5593,8 +5915,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CROS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CROS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5608,8 +5931,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(NODE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(NODE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5623,8 +5947,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BEAM)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BEAM)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5638,8 +5963,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(QUAD)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(QUAD)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5653,8 +5979,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BRIC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BRIC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#RESULTS'}
@@ -5675,8 +6002,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(CTRL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SIR'}
@@ -5690,8 +6018,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SIZE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SIZE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SIR'}
@@ -5705,8 +6034,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SCHH)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SCHH)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SIR'}
@@ -5720,8 +6050,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(COLO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(COLO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SIR'}
@@ -5735,8 +6066,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GRP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GRP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SIR'}
@@ -5750,8 +6082,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SIR'}
@@ -5765,8 +6098,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SECT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SECT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SIR'}
@@ -5780,8 +6114,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SIR'}
@@ -5802,8 +6137,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(GRP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GRP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -5817,8 +6153,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ACT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ACT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -5832,8 +6169,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -5847,8 +6185,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(NODE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(NODE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -5862,8 +6201,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CABL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CABL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -5877,8 +6217,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TRUS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TRUS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -5892,8 +6233,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BEAM)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BEAM)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -5907,8 +6249,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BEPL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BEPL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -5922,8 +6265,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(QUAD)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(QUAD)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -5937,8 +6281,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BRIC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BRIC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -5952,8 +6297,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(COPY)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(COPY)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -5967,8 +6313,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LAR)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LAR)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -5982,8 +6329,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(POIN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(POIN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -5997,8 +6345,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LINE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LINE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6012,8 +6361,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CURV)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CURV)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6027,8 +6377,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(AREA)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(AREA)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6042,8 +6393,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(VOLU)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(VOLU)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6057,8 +6409,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(EXPO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(EXPO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6072,8 +6425,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(EVAL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(EVAL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6087,8 +6441,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CTRL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6102,8 +6457,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6117,8 +6473,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(RESP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(RESP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6132,8 +6489,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(FUNC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(FUNC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6147,8 +6505,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(FIMP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(FIMP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6162,8 +6521,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ACCE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ACCE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6177,8 +6537,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(STEP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(STEP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6192,8 +6553,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SIMQ)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SIMQ)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6207,8 +6569,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(REVA)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(REVA)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6222,8 +6585,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PUSH)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PUSH)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6237,8 +6601,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GAX)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GAX)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6252,8 +6617,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LANE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LANE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6267,13 +6633,14 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TRAI)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TRAI)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
         {
-          match: '(?i)(?<!\\w)(TYPE|P1|PFAC|WIDT|PHI|PHI2|PHIS|PHI4|V|FUGA|XCON|YEX|DIR|DIRT|FRB|DAB|BOGI|FRBO|DABO|WHEE|FRWH|DAWH)(?!\\w)'
+          match: '(?i)(?<!\\w)(TYPE|P1|P2|P3|P4|P5|P6|P7|P8|P9|PFAC|WIDT|PHI|PHI2|PHIS|PHI4|V|FUGA|XCON|DIR|DIRT|FRB|DAB|BOGI|FRBO|DABO|WHEE|FRWH|DAWH|YEX)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -6282,8 +6649,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TRPL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TRPL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6297,8 +6665,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TRBL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TRBL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6312,8 +6681,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TREX)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TREX)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6327,8 +6697,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(WAVE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(WAVE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6342,8 +6713,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(WIND)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(WIND)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6357,8 +6729,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(WPRO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(WPRO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6372,8 +6745,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(WROU)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(WROU)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6387,8 +6761,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(WTOP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(WTOP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6402,8 +6777,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(WSPE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(WSPE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6417,8 +6793,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(WTST)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(WTST)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6432,8 +6809,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(WGEN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(WGEN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6447,8 +6825,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(WIPT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(WIPT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFILOAD'}
@@ -6469,8 +6848,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(SYST)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SYST)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6484,8 +6864,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CTRL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6499,8 +6880,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GRP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GRP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6514,8 +6896,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(NODE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(NODE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6529,8 +6912,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(EDGE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(EDGE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6544,8 +6928,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(KINE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(KINE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6559,8 +6944,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GETN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GETN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6574,8 +6960,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TRUS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TRUS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6589,8 +6976,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CABL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CABL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6604,8 +6992,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BEAM)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BEAM)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6619,8 +7008,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BSEC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BSEC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6634,8 +7024,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(QUAD)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(QUAD)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6649,8 +7040,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BRIC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BRIC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6664,8 +7056,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SPRI)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SPRI)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6679,8 +7072,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BOUN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BOUN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6694,8 +7088,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ADDM)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ADDM)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6709,8 +7104,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(MASS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(MASS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6724,8 +7120,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SBOX)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SBOX)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6739,8 +7136,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(DEL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(DEL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6754,8 +7152,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(MOD)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(MOD)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6769,8 +7168,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TRAN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TRAN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6784,8 +7184,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(EXTR)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(EXTR)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6799,8 +7200,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LOFT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LOFT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6814,8 +7216,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(MIRR)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(MIRR)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6829,8 +7232,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(UMSH)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(UMSH)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6844,8 +7248,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(UBND)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(UBND)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6859,8 +7264,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(INTF)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(INTF)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6874,8 +7280,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(RSET)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(RSET)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6889,8 +7296,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(EXPO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(EXPO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6904,8 +7312,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(IMPO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(IMPO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6919,8 +7328,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHA'}
@@ -6941,8 +7351,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(SYST)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SYST)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -6956,8 +7367,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GRP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GRP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -6971,8 +7383,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CTRL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -6986,8 +7399,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(IMPO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(IMPO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7001,8 +7415,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(EXPO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(EXPO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7016,8 +7431,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7031,8 +7447,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(COOR)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(COOR)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7046,8 +7463,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(XSUB)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(XSUB)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7061,8 +7479,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(XCON)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(XCON)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7076,8 +7495,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GAX)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GAX)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7091,8 +7511,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GAXA)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GAXA)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7106,8 +7527,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GAXH)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GAXH)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7121,8 +7543,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GAXB)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GAXB)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7136,8 +7559,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GAXC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GAXC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7151,8 +7575,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GAXN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GAXN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7166,8 +7591,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GAXP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GAXP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7181,8 +7607,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GAXS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GAXS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7196,8 +7623,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GAXV)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GAXV)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7211,8 +7639,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GAR)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GAR)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7226,8 +7655,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GARA)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GARA)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7241,8 +7671,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GARC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GARC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7256,8 +7687,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GARS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GARS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7271,8 +7703,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SPT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SPT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7286,8 +7719,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SPTP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SPTP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7301,8 +7735,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SPTS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SPTS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7316,8 +7751,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SPTH)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SPTH)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7331,8 +7767,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SLN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SLN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7346,8 +7783,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SLNB)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SLNB)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7361,8 +7799,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SLNP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SLNP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7376,8 +7815,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SLNN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SLNN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7391,8 +7831,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SLNS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SLNS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7406,8 +7847,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SLSC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SLSC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7421,8 +7863,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SAR)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SAR)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7436,8 +7879,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SARB)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SARB)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7451,8 +7895,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SARR)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SARR)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7466,8 +7911,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SARP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SARP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7481,8 +7927,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SARN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SARN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7496,8 +7943,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SARC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SARC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7511,8 +7959,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SVO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SVO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7526,8 +7975,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SVOS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SVOS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7541,8 +7991,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SVOB)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SVOB)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7556,8 +8007,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GUID)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GUID)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7571,8 +8023,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BBOX)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BBOX)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#SOFIMSHC'}
@@ -7593,8 +8046,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#STAR2'}
@@ -7608,8 +8062,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CTRL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#STAR2'}
@@ -7623,8 +8078,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GRP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GRP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#STAR2'}
@@ -7638,8 +8094,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(INFL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(INFL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#STAR2'}
@@ -7653,8 +8110,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#STAR2'}
@@ -7668,8 +8126,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LCC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LCC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#STAR2'}
@@ -7683,8 +8142,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LV)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LV)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#STAR2'}
@@ -7698,8 +8158,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(REIN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(REIN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#STAR2'}
@@ -7713,8 +8174,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(DESI)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(DESI)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#STAR2'}
@@ -7728,8 +8190,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(NSTR)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(NSTR)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#STAR2'}
@@ -7750,8 +8213,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(TASK)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TASK)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TALPA'}
@@ -7765,8 +8229,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SYST)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SYST)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TALPA'}
@@ -7780,8 +8245,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CTRL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TALPA'}
@@ -7795,8 +8261,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PHRS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PHRS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TALPA'}
@@ -7810,8 +8277,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PLC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PLC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TALPA'}
@@ -7825,8 +8293,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TPLC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TPLC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TALPA'}
@@ -7840,8 +8309,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GRP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GRP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TALPA'}
@@ -7855,8 +8325,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TALPA'}
@@ -7870,8 +8341,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LCC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LCC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TALPA'}
@@ -7885,8 +8357,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(HIST)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(HIST)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TALPA'}
@@ -7900,8 +8373,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(NSTR)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(NSTR)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TALPA'}
@@ -7915,8 +8389,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TALPA'}
@@ -7930,8 +8405,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CSYS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CSYS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TALPA'}
@@ -7945,8 +8421,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CCRL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CCRL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TALPA'}
@@ -7960,8 +8437,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TALPA'}
@@ -7975,8 +8453,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CGRP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CGRP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TALPA'}
@@ -7990,8 +8469,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CLOA)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CLOA)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TALPA'}
@@ -8005,8 +8485,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CGW)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CGW)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TALPA'}
@@ -8020,8 +8501,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CTXT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CTXT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TALPA'}
@@ -8042,8 +8524,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(SYSP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SYSP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TENDON'}
@@ -8057,8 +8540,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CTRL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TENDON'}
@@ -8072,8 +8556,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TENDON'}
@@ -8087,8 +8572,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(AXES)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(AXES)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TENDON'}
@@ -8102,8 +8588,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TOPP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TOPP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TENDON'}
@@ -8117,8 +8604,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TGEO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TGEO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TENDON'}
@@ -8132,8 +8620,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PTUV)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PTUV)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TENDON'}
@@ -8147,8 +8636,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PTSV)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PTSV)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TENDON'}
@@ -8162,8 +8652,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TENDON'}
@@ -8177,8 +8668,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PDAT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PDAT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TENDON'}
@@ -8192,8 +8684,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PSIG)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PSIG)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TENDON'}
@@ -8207,8 +8700,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PFAC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PFAC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TENDON'}
@@ -8222,8 +8716,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PDEF)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PDEF)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TENDON'}
@@ -8237,8 +8732,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(FRIC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(FRIC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TENDON'}
@@ -8252,8 +8748,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TEND)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TEND)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TENDON'}
@@ -8267,8 +8764,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TDEL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TDEL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TENDON'}
@@ -8282,8 +8780,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SIZE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SIZE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TENDON'}
@@ -8297,8 +8796,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(COLO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(COLO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TENDON'}
@@ -8312,8 +8812,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SCHH)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SCHH)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TENDON'}
@@ -8327,8 +8828,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PLOT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PLOT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TENDON'}
@@ -8342,8 +8844,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(AND)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(AND)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TENDON'}
@@ -8364,8 +8867,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(CUTT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CUTT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TEXTILE'}
@@ -8379,8 +8883,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GRP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GRP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TEXTILE'}
@@ -8394,8 +8899,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(QUAD)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(QUAD)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TEXTILE'}
@@ -8409,8 +8915,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(COMP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(COMP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TEXTILE'}
@@ -8424,8 +8931,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LINE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LINE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TEXTILE'}
@@ -8439,8 +8947,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ECHO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#TEXTILE'}
@@ -8461,8 +8970,9 @@ repository:
       {include: '#normalTextIn'}
     
       {
-      begin: '(?i)(^ *)(CTRL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8476,8 +8986,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(DB)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(DB)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8491,8 +9002,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SIZE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SIZE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8506,8 +9018,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SIZ2)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SIZ2)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8521,8 +9034,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(AND)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(AND)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8536,8 +9050,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SCHH)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SCHH)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8551,8 +9066,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SCH2)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SCH2)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8566,8 +9082,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SCH3)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SCH3)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8581,8 +9098,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GRID)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GRID)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8596,8 +9114,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LEGO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LEGO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8611,8 +9130,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PALE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PALE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8626,8 +9146,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(COLO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(COLO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8641,8 +9162,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(COL2)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(COL2)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8656,8 +9178,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(COLB)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(COLB)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8671,8 +9194,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(FILL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(FILL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8686,8 +9210,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SELE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SELE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8701,8 +9226,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(GRP)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(GRP)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8716,8 +9242,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BOX)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BOX)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8731,8 +9258,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SEL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SEL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8746,8 +9274,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(VIEW)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(VIEW)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8761,8 +9290,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(PERS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(PERS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8776,8 +9306,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(VISI)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(VISI)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8791,8 +9322,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(DEFO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(DEFO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8806,8 +9338,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(MOVE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(MOVE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8821,8 +9354,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(DRAW)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(DRAW)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8836,8 +9370,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(TEXT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(TEXT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8851,8 +9386,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(POST)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(POST)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8866,8 +9402,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(NIVE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(NIVE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8881,8 +9418,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CURV)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CURV)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8896,8 +9434,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(AXIS)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(AXIS)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8911,8 +9450,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(DSIR)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(DSIR)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8926,8 +9466,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(CUPT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(CUPT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8941,8 +9482,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8956,8 +9498,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(DSGN)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(DSGN)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8971,8 +9514,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ARRO)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ARRO)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -8986,8 +9530,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LIST)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LIST)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -9001,8 +9546,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(STRU)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(STRU)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -9016,8 +9562,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(LOAD)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(LOAD)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -9031,8 +9578,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(NODE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(NODE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -9046,8 +9594,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BEAM)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BEAM)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -9061,8 +9610,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(QUAD)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(QUAD)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -9076,8 +9626,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(ISOL)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(ISOL)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -9091,8 +9642,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(SECT)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(SECT)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -9106,8 +9658,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(BRIC)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(BRIC)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
@@ -9121,8 +9674,9 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *)(INTE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(INTE)(?=;|$| )'
       beginCaptures:
+        1: name: 'support.type'
         2: name: 'keyword.control'
       patterns: [
         {'include': '#WING'}
