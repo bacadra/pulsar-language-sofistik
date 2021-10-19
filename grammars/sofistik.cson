@@ -568,7 +568,6 @@ repository:
   AQB: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(NORM)(?=;|$| )'
@@ -794,12 +793,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   ASE: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
@@ -1329,12 +1328,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   AQUA: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
@@ -2152,12 +2151,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   BDK: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(CVA)(?=;|$| )'
@@ -2319,12 +2318,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   BEMESS: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(NORM)(?=;|$| )'
@@ -2694,12 +2693,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   COLUMN: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
@@ -2957,12 +2956,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   CSM: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
@@ -3556,12 +3555,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   DBMERG: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(CDB)(?=;|$| )'
@@ -3771,12 +3770,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   DOLFYN: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(FLOW)(?=;|$| )'
@@ -3986,12 +3985,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   DYNA: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(SYST)(?=;|$| )'
@@ -4233,12 +4232,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   DYNR: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(SIZE)(?=;|$| )'
@@ -4368,12 +4367,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   ELLA: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
@@ -4679,12 +4678,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   FOOTING: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(POS)(?=;|$| )'
@@ -4926,12 +4925,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   HASE: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
@@ -5125,12 +5124,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   HYDRA: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(SYST)(?=;|$| )'
@@ -5372,12 +5371,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   MAXIMA: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
@@ -5555,12 +5554,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   RESULTS: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(CDB)(?=;|$| )'
@@ -5994,12 +5993,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   SIR: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
@@ -6129,12 +6128,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   SOFILOAD: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(GRP)(?=;|$| )'
@@ -6840,12 +6839,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   SOFIMSHA: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(SYST)(?=;|$| )'
@@ -7343,12 +7342,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   SOFIMSHC: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(SYST)(?=;|$| )'
@@ -8038,12 +8037,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   STAR2: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
@@ -8205,12 +8204,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   TALPA: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(TASK)(?=;|$| )'
@@ -8516,12 +8515,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   TENDON: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(SYSP)(?=;|$| )'
@@ -8859,12 +8858,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   TEXTILE: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(CUTT)(?=;|$| )'
@@ -8962,12 +8961,12 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   WING: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
       {
       begin: '(?i)(^ *|; *)(CTRL)(?=;|$| )'
@@ -9025,7 +9024,7 @@ repository:
       patterns: [
         {'include': '#WING'}
         {
-          match: '(?i)(?<!\\w)(UMBR|DRUO|DRUR|DRUL|LEGW|FREE|FAKH|DRUU|SHAE|ASB)(?!\\w)'
+          match: '(?i)(?<!\\w)(UMBR|DRUO|DRUR|DRUL|LEGW|FREE|FAKH|DRUU|SHAE|ASB|POSD)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -9217,7 +9216,7 @@ repository:
       patterns: [
         {'include': '#WING'}
         {
-          match: '(?i)(?<!\\w)(NO|GRP|BOX|SICH|PERS|VIEW|DEFO|SEL|ALTE|TITL)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|GRP|BOX|SICH|PERS|VIEW|DEFO|SEL|ALTE|TITL|NUMB)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -9689,12 +9688,13 @@ repository:
         {'include': '$self'}
         ]
       }
+      {include: '#normalTextIn'}
     ]
   }
   TEMPLATE: {
     patterns: [
       {include: '#normalText'}
-      {include: '#normalTextIn'}
     
+      {include: '#normalTextIn'}
     ]
   }
