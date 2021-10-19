@@ -11,7 +11,7 @@ patterns: [
   {include: '#normalText'}
 
   {
-  begin: '(?i)^ *([\+-]?prog)( +AQB)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +AQB)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -20,7 +20,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +ASE)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +ASE)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -29,7 +29,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +AQUA)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +AQUA)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -38,7 +38,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +BDK)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +BDK)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -47,7 +47,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +BEMESS)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +BEMESS)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -56,7 +56,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +COLUMN)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +COLUMN)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -65,7 +65,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +CSM)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +CSM)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -74,7 +74,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +DBMERG)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +DBMERG)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -83,7 +83,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +DOLFYN)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +DOLFYN)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -92,7 +92,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +DYNA)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +DYNA)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -101,7 +101,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +DYNR)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +DYNR)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -110,7 +110,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +ELLA)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +ELLA)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -119,7 +119,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +FOOTING)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +FOOTING)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -128,7 +128,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +HASE)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +HASE)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -137,7 +137,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +HYDRA)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +HYDRA)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -146,7 +146,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +MAXIMA)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +MAXIMA)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -155,7 +155,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +RESULTS)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +RESULTS)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -164,7 +164,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +SIR)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +SIR)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -173,7 +173,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +SOFILOAD)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +SOFILOAD)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -182,7 +182,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +SOFIMSHA)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +SOFIMSHA)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -191,7 +191,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +SOFIMSHC)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +SOFIMSHC)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -200,7 +200,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +STAR2)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +STAR2)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -209,7 +209,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +TALPA)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +TALPA)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -218,7 +218,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +TENDON)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +TENDON)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -227,7 +227,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +TEXTILE)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +TEXTILE)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -236,7 +236,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +WING)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +WING)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -245,7 +245,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\+-]?prog)( +TEMPLATE)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +TEMPLATE)( .*)?'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -333,7 +333,7 @@ repository:
     name: 'variable.other'
   }
   comments: {
-    match: '(!|//|\\$).*'
+    match: '(?i)(!|\\/\\/|\\$(?!prog)).*'
     name: 'comment.line'
   }
   str1: { # strings
