@@ -262,6 +262,15 @@ patterns: [
   patterns: [{'include': '#DECREATOR'}, {'include': '$self'}]
   }
     
+  {
+  begin: '(?i)^ *([\$\+-]?prog)( +PLBCONVERTER)( .*)?'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  patterns: [{'include': '#PLBCONVERTER'}, {'include': '$self'}]
+  }
+    
 
 ]
 
@@ -357,7 +366,7 @@ repository:
     name: 'string.single'
   }
   var1: {
-    match: '(?i)(?<!\\w)(?:let|sto|del|dbg)(?=#\\w+)'
+    match: '(?i)(?<!\\w)(?:let|sto|del|dbg|prt)(?=#\\w+)'
     name: 'keyword.control'
   }
   var2: {
@@ -756,7 +765,7 @@ repository:
         {'include': '#AQB'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(OPT|VAL|VAL2)(?!\\w)'
+          match: '(?i)(?<!\\w)(OPT|VAL|VAL2|VAL3)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -772,7 +781,7 @@ repository:
         {'include': '#AQB'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(SCOP|CMNT)(?!\\w)'
+          match: '(?i)(?<!\\w)(NAME|VAL|SCOP|CMNT)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -788,7 +797,7 @@ repository:
         {'include': '#AQB'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(FROM|TO|STEP|TYPE|X|XE|NCS|BETA|BETS|STYP|PRED|LAMS|LAMT|LAML|LAMC|CS|CS0|CS1|CS2|CS3|CS4|CS5|CS6|CS7|CS8|CS9|CS10|CS11|CS12|CS13|CS14|CS15|CS16|CS17|CS18|CS19|CS20|CS21|CS22|CS23|CS24|CS25|CS26|CS27|CS28|CS29|CS30|CS31)(?!\\w)'
+          match: '(?i)(?<!\\w)(FROM|TO|STEP|TYPE|X|XE|NCS|BETA|BETS|STYP|PRED|LAMS|LAMT|LAML|LAMC|LAMM|CS|CS0|CS1|CS2|CS3|CS4|CS5|CS6|CS7|CS8|CS9|CS10|CS11|CS12|CS13|CS14|CS15|CS16|CS17|CS18|CS19|CS20|CS21|CS22|CS23|CS24|CS25|CS26|CS27|CS28|CS29|CS30|CS31)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -820,7 +829,7 @@ repository:
         {'include': '#AQB'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|TYPE|CST|REF|TITL|GAMU|GAMF|PSI0|PSI1|PSI2|PS1S|GAMA|APAR|SUP|FAT|S|NCS|NO|X|N|VY|VZ|MT|MY|MZ|MB|MT2|Y|Z|REF)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|TYPE|CST|REF|TITL|GAMU|GAMF|PSI0|PSI1|PSI2|PS1S|GAMA|APAR|SUP|FAT)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -828,7 +837,7 @@ repository:
         ]
       }
       {
-      begin: '(?i)(^ *|; *)(STRE)(?=;|$| )'
+      begin: '(?i)(^ *|; *)(S)(?=;|$| )'
       beginCaptures:
         1: name: 'support.type'
         2: name: 'keyword.control'
@@ -836,7 +845,7 @@ repository:
         {'include': '#AQB'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NCS|NOB|X|N|VY|VZ|MT|MY|MZ|MB|MT2|Y|Z|REF)(?!\\w)'
+          match: '(?i)(?<!\\w)(NCS|NO|X|N|VY|VZ|MT|MY|MZ|MB|MT2|Y|Z|REF)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -852,7 +861,7 @@ repository:
         {'include': '#AQB'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(EXTR|SCOM|SFAC|LC1|F1|LC2|F2|LC3|F3|LC4|F4|LC5|F5|LC6|F6|LCST|CST|TITL)(?!\\w)'
+          match: '(?i)(?<!\\w)(EXTR|SCOM|SFAC|LC1|F1|LC2|F2|LC3|F3|LC4|F4|LC5|F5|LC6|LCST|CST|TITL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -868,7 +877,23 @@ repository:
         {'include': '#AQB'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(MNO|PHI|EPS|REL|T|RH|TEMP|T0|GRP|LCT)(?!\\w)'
+          match: '(?i)(?<!\\w)(MNO|PHI|EPS|REL|T|RH|TEMP|T0|TS|GRP|EXP)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(STRE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#AQB'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(SMOD|STYP|SC|ST|SBC|SBT|SBBC|SBBT|SI|SII|TAU|SV|TAUS|SSTM|SSEM|SSKM|SSER|SSKR|CC|CBC|CBBC|LIMA|ZMAX|ZDIF|SCMG)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -900,7 +925,7 @@ repository:
         {'include': '#AQB'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(STAT|KSV|KSB|AM1|AM2|AM3|AM4|AMAX|SC1|SC2|SCS|SS1|SS2|C1|C2|S1|S2|Z1|Z2|SMOD|TVS|KTAU|TTOL|TANA|TANB|MSCD|SCL|DELR)(?!\\w)'
+          match: '(?i)(?<!\\w)(STAT|KSV|KSB|AM1|AM2|AM3|AM4|AMAX|SC1|SC2|SCS|SS1|SS2|SS0|C1|S2|S1|S2|Z1|Z2|SMOD|TVS|MSCD|KTAU|TTOL|TANA|TANB|SC|DELR)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -916,7 +941,7 @@ repository:
         {'include': '#AQB'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(KMOD|KSV|KSB|KMIN|KMAX|ALPH|FMAX|CRAC|CW|BB|HMIN|HMAX|CW-|FFCT|CHKD|CHKT|CHKS|FAT|SIGS|TANS|TANC|DUMP)(?!\\w)'
+          match: '(?i)(?<!\\w)(KMOD|KSV|KSB|KMIN|KMAX|ALPH|FMAX|CRAC|CW|BB|HMIN|HMAX|CW-|FFCT|CHKC|CHKT|CHKR|CHKS|FAT|SIGS|TANS|TANC|DUMP)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -932,7 +957,7 @@ repository:
         {'include': '#AQB'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NCS|CS|TASK|STAT|N|VY|VZ|MT|MY|MZ|MB|MT2|AS0|AS1|AS2|AS3|AS4|AS5|AS6|AS7|AS8|AS9)(?!\\w)'
+          match: '(?i)(?<!\\w)(NCS|CS|TASK|STAT|N|VY|VZ|MT|MY|MZ|MB|MT2|AS0|AS1|AS2|AS3|AS4|AS5|AS6|AS7|AS8|AS9|CMNT)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1290,7 +1315,7 @@ repository:
         {'include': '#ASE'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(OPT|VAL)(?!\\w)'
+          match: '(?i)(?<!\\w)(OPT|VAL|V2|V3|V4|GRP)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1306,7 +1331,7 @@ repository:
         {'include': '#ASE'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(TYPE|PROB|ITER|TOL|TOL4|TOL8|FMAX|FMIN|EMAX|EMIN|PLC|FACV|NMAT|STOR|CHAM)(?!\\w)'
+          match: '(?i)(?<!\\w)(TYPE|PROB|ITER|TOL|TOL4|TOL8|FMAX|FMIN|PLC|FACV|NMAT|STOR|CHAM)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1322,7 +1347,23 @@ repository:
         {'include': '#ASE'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(N|DT|INT|ALF|DEL|THE|LCST|SELE|LCSM|DIV|ALF)(?!\\w)'
+          match: '(?i)(?<!\\w)(N|DT|INT|BET|DEL|THE|LCST|SELE|LCSM|DIV|ALF)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(HIST)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#ASE'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|FROM|TO|INC)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1338,7 +1379,7 @@ repository:
         {'include': '#ASE'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(STEP|FAK1|FAKE|DFAK|PRO|DL|PRIM|DMIN)(?!\\w)'
+          match: '(?i)(?<!\\w)(STEP|FAK1|FAKE|DFAK|PRO|DL|PRIM|DMIN|SLOW|EPSC|EPSS)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1370,7 +1411,7 @@ repository:
         {'include': '#ASE'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(LC|TO|NNO|DIRE|TYPE)(?!\\w)'
+          match: '(?i)(?<!\\w)(LC|TO|NNO|DIRE|TYPE|NO|XI|NULL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1386,7 +1427,7 @@ repository:
         {'include': '#ASE'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NCRE|RO|T|RH|TEMP|BEAM)(?!\\w)'
+          match: '(?i)(?<!\\w)(NCRE|RO|T|BEAM|RCRE)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1402,7 +1443,7 @@ repository:
         {'include': '#ASE'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|VAL|FACS|PLC|GAM|H|K|SIGN|SIGH|FACL|FACD|FACT|HW|GAMA|RADA|RADB|MODD|CS|PREX|PREY|PHI|EPS|RELZ|PHIF|PHIS|T1|HING|FACB|CSDL|MNO|FACP)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|VAL|FACS|PLC|GAM|H|K|SIGN|SIGH|FACL|FACD|HW|GAMA|RADA|RADB|MODD|CS|PREX|PREY|PHI|EPS|RELZ|PHIF|PHIS|T1|HING|FACB|CSDL|MNO|FACP)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1418,7 +1459,7 @@ repository:
         {'include': '#ASE'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|STEA|QUEA|QUEX|QUEY|ALP0|ULUS|QEMX|EXPO|GEOM)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|STEA|QUEA|QUEX|QUEY|ALP0|ULUS|QEMX|EXPO|GEOM|BWES|ST_M|QU_M|QEMY)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1434,7 +1475,7 @@ repository:
         {'include': '#ASE'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(ETYP|NO|FACS|FACL)(?!\\w)'
+          match: '(?i)(?<!\\w)(ETYP|NO|FACS|FACL|FCTK|PREX|EPSC|EPSS)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1498,7 +1539,7 @@ repository:
         {'include': '#ASE'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(LCB|FACT|LCRS|CHKR)(?!\\w)'
+          match: '(?i)(?<!\\w)(LCR|FACT|LCRS|CHKR)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1514,7 +1555,7 @@ repository:
         {'include': '#ASE'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NAME)(?!\\w)'
+          match: '(?i)(?<!\\w)(NAME|OPT|NONL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1530,7 +1571,7 @@ repository:
         {'include': '#ASE'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(SX|SY|SZ|LC|FACV|VMAX|DIRE|STOR)(?!\\w)'
+          match: '(?i)(?<!\\w)(SX|SY|SZ|LC|FACV|VMAX|DIRE)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1546,7 +1587,7 @@ repository:
         {'include': '#ASE'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NOSL|NOG|NOEL)(?!\\w)'
+          match: '(?i)(?<!\\w)(NOSL|NOG|NOEL|MUE)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1562,7 +1603,7 @@ repository:
         {'include': '#ASE'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|GRP|POSI|MNO|V0|P0|PLC|DV|DT|MASS)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|GRP|POSI|MNO|V0|P0|DOZ|PLC|DV|DT|MASS|OPT)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1594,7 +1635,7 @@ repository:
         {'include': '#ASE'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(GRP|DX|DY|DZ|XM|YM|NR1|NR2|PHI|CS)(?!\\w)'
+          match: '(?i)(?<!\\w)(GRP|DX|DY|DZ|XM|YM|ZM|NR1|NR2|PHI|CS)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1706,7 +1747,7 @@ repository:
         {'include': '#ASE'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NEIG|ETYP|NITE|MITE|LMIN|SAVE|LC)(?!\\w)'
+          match: '(?i)(?<!\\w)(NEIG|ETYP|NITE|MITE|LMIN|SAVE|LC|OPT)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1722,7 +1763,7 @@ repository:
         {'include': '#ASE'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|MX|MY|MZ|MXX|MYY|MZZ)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|MX|MY|MZ|MXX|MYY|MZZ|SELE)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1770,7 +1811,7 @@ repository:
         {'include': '#ASE'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(STAT|KSV|KSB|AM1|AM2|AM3|AM4|AMAX|SC1|SC2|SS1|SS2|C1|C2|S1|S2|Z1|Z2|SMOD|TSV|MSCD|KTAU|TTOL|TANA|TANB|SCL)(?!\\w)'
+          match: '(?i)(?<!\\w)(STAT|KSV|KSB|AM1|AM2|AM3|AM4|AMAX|SC1|SC2|SCS|SS1|SS2|SS0|C1|S2|S1|S2|Z1|Z2|SMOD|TVS|MSCD|KTAU|TTOL|TANA|TANB|SC|DELR)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1786,7 +1827,7 @@ repository:
         {'include': '#ASE'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(KMOD|KSV|KSB|KMIN|KMAX|ALPH|FMAX|CRAC|CW|BB|HMIN|HMAX|CW-|CHKC|CHKT|CHKR|FAT|SIGS|TANS|TANC|DUMP)(?!\\w)'
+          match: '(?i)(?<!\\w)(KMOD|KSV|KSB|KMIN|KMAX|ALPH|FMAX|CRAC|CW|BB|HMIN|HMAX|CW-|FFCT|CHKC|CHKT|CHKR|CHKS|FAT|SIGS|TANS|TANC|DUMP)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -2160,7 +2201,7 @@ repository:
         {'include': '#AQUA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(DC|NDC|COUN|CAT|ALT|WIND|SNOW|SEIS)(?!\\w)'
+          match: '(?i)(?<!\\w)(DC|NDC|COUN|CAT|LON|LAT|GAMA|ALT|WIND|SNOW|SEIS|WCAT|UNIT|LANG)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -2256,7 +2297,7 @@ repository:
         {'include': '#AQUA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|C|CT|CRAC|YIEL|MUE|COH|DIL|GAMB|TYPE|MREF|H)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|C|CT|CRAC|YIEL|MUE|COH|DIL|GAMB|TYPE|MREF|H|RFAC)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -2288,7 +2329,7 @@ repository:
         {'include': '#AQUA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|TYPE|FCN|FC|FCT|FCTK|EC|QC|GAM|ALFA|SCM|TYPR|FCR|ECR|FBD|FFAT|FCTD|FEQR|FEQT|GMOD|KMOD|GC|GF|MUEC|TITL)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|TYPE|FCN|FC|FCT|FCTK|EC|MUE|GAM|ALFA|SCM|TYPR|FCR|ECR|FBD|FFAT|FCTD|FEQR|FEQT|GMOD|KMOD|GC|GF|MUEC|TITL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -2304,7 +2345,7 @@ repository:
         {'include': '#AQUA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|TYPE|CLAS|FY|FT|FP|ES|QS|GAM|ALFA|SCM|EPSY|EPST|REL1|REL2|R|K1|FDYN|FYC|FTC|TMAX|GMOD|KMOD|QS|TITL)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|TYPE|CLAS|FY|FT|FP|ES|MUE|GAM|ALFA|SCM|EPSY|EPST|REL1|REL2|R|K1|FDYN|FYC|FTC|TMAX|GMOD|KMOD|SCM0|SCM1|SCM2|TITL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -2336,7 +2377,7 @@ repository:
         {'include': '#AQUA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|STYP|SCLA|MCLA|E|G|MUE|GAM|ALFA|SCM|E90|M90|OAL|OAF|FCN|FC|FT|FV|FHS|FTB|TITL)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|STYP|SCLA|MCLA|FK|FB|FM|FVK0|FV|FT|FTB|SCM|EPST|G|MUE|GAM|ALFA|TITL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -2352,7 +2393,7 @@ repository:
         {'include': '#AQUA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(EPS|SIG|TYPE|TEMP|EPST|TS|MUET|MNOC|FCTF)(?!\\w)'
+          match: '(?i)(?<!\\w)(EPS|SIG|TYPE|TEMP|EPST|EPSS|TS|MUET|MNOC|FCTF)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -2368,7 +2409,7 @@ repository:
         {'include': '#AQUA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|EXP|TYPE|VAL|VAL1|VAL2|VAL3|VAL4|VAL5|VAL6|VAL7|VAL8|VAL9)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|EXP|TYPE|VAL|VAL1|VAL2|VAL3|VAL4|VAL5|VAL6|VAL7|VAL8|VAL9|VAL10|VAL11|VAL12|VAL13|VAL14|VAL15|VAL16|VAL17|VAL18|VAL19|VAL20)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -2384,7 +2425,7 @@ repository:
         {'include': '#AQUA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|X|Y|Z|NX|NY|NZ|ALF|TITL)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|X|Y|Z|NX|NY|NZ|ALF|HGWL|HGWH|TITL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -2400,7 +2441,7 @@ repository:
         {'include': '#AQUA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(S|MN0|ES|MUE|DES|VARI|PMAX|PMAL|C|PHI)(?!\\w)'
+          match: '(?i)(?<!\\w)(S|MN0|ES|MUE|DES|VARI|PMAX|PMAL|C|PHI|GAM|GAMA)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -2416,7 +2457,7 @@ repository:
         {'include': '#AQUA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(S1|S2|K0|K1|K2|K3|M0|C0|TANR|TAND|KSIG|D0|D2|CA0|CA2)(?!\\w)'
+          match: '(?i)(?<!\\w)(S1|S2|K0|K1|K2|K3|M0|C0|TANR|TAND|KSIG|D0|D2|CA0|CA2|PMAX)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -8038,7 +8079,7 @@ repository:
         {'include': '#ELLA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(OPT|VAL)(?!\\w)'
+          match: '(?i)(?<!\\w)(OPT|VAL|V2|V3|V4|V5|V6)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -8070,7 +8111,7 @@ repository:
         {'include': '#ELLA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|TYPE|SA|SE|WR|WL|YCA|YCE|YRA|YLA|YRE|YLE|L)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|TYPE|WR|WL|SA|SE|YCA|YCE|YRA|YLA|YRE|YLE|L|HAS|HSE|INCA|INCE|HEFF|BEFF|DEFF|INCD|ASL|WREF)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -8086,7 +8127,7 @@ repository:
         {'include': '#ELLA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|INT|DX|DY|DZ|RSEL|RSEQ|LSEL|LSEQ)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|INT|DX|DY|DZ|RSEL|RSEQ|LSEL|LSEQ|B|BWH|YMAX|YMIN)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -8118,7 +8159,7 @@ repository:
         {'include': '#ELLA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(T1|L1|T2|L2|T3|L3|T4|L4|T5|L5|T6|L6|TITL)(?!\\w)'
+          match: '(?i)(?<!\\w)(T1|L1|T2|L2|T3|L3|T4|L4|T5|L5|T6|L6|PHI|TITL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -8198,7 +8239,7 @@ repository:
         {'include': '#ELLA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(TYPE|P1|P2|P3|P4|P5|P6|P7|P8|P9|PFAC|WIDT|PHI|PHI2|PHIS|PHI4|V|FUGA|XCON|DIR|DIRT|FRB|DAB|BOGI|FRBO|DABO|WHEE|FRWH|DAWH|YEX)(?!\\w)'
+          match: '(?i)(?<!\\w)(TYPE|P1|P2|P3|P4|P5|P6|P7|P8|P9|PFAC|PFAV|WIDT|PHI|PHIS|V|FUGA|XCON|YEX|DIR|DIRT|FRB|DAB|BOGI|FRBO|DABO|WHEE|FRWH|DAWH)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -8230,7 +8271,7 @@ repository:
         {'include': '#ELLA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(P|PB|PW|PF|PFAC|DIST|A|L|LMAX|LDEL|Y|Y2|HW|ZW|HF|PHI|B)(?!\\w)'
+          match: '(?i)(?<!\\w)(P|PB|PW|PF|PFAC|DIST|A|L|LMAX|LDEL|Y|Y2|HW|ZW|HF|PHI|B|BW|LW|SNO|FRB|DAB|BOGI|FRBO|DABO|WHEE|FRWH|DAWH)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -8294,7 +8335,7 @@ repository:
         {'include': '#ELLA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(V|P|SYNC|TYPE|L1|F1|L2|F2|L3|F3|L4|F4|L5|F5|L6|F6|L7|F7|L8|F8|L9|F9|L10|F10)(?!\\w)'
+          match: '(?i)(?<!\\w)(TYPE|L1|F1|L2|F2|L3|F3|L4|F4|L5|F5|L6|F6|L7|F7|L8|F8|L9|F9|L10|F10)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -12480,7 +12521,7 @@ repository:
         {'include': '#SOFILOAD'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(TYPE|P1|P2|P3|P4|P5|P6|P7|P8|P9|PFAC|WIDT|PHI|PHI2|PHIS|PHI4|V|FUGA|XCON|DIR|DIRT|FRB|DAB|BOGI|FRBO|DABO|WHEE|FRWH|DAWH|YEX)(?!\\w)'
+          match: '(?i)(?<!\\w)(TYPE|P1|P2|P3|P4|P5|P6|P7|P8|P9|PFAC|PFAV|WIDT|PHI|PHIS|V|FUGA|XCON|YEX|DIR|DIRT|FRB|DAB|BOGI|FRBO|DABO|WHEE|FRWH|DAWH)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -12512,7 +12553,7 @@ repository:
         {'include': '#SOFILOAD'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(P|PB|PW|PF|PFAC|VARI|A|L|LMAX|LDEL|Y|Y2|HW|ZW|HF|PHI|B|BW|LW|SNO|FRB|DAB|BOGI|FRBO|DABO|WHEE|FRWH|DAWH)(?!\\w)'
+          match: '(?i)(?<!\\w)(P|PB|PW|PF|PFAC|DIST|A|L|LMAX|LDEL|Y|Y2|HW|ZW|HF|PHI|B|BW|LW|SNO|FRB|DAB|BOGI|FRBO|DABO|WHEE|FRWH|DAWH)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -18551,6 +18592,396 @@ repository:
         {'include': '#defA'}
         {
           match: '(?i)(?<!\\w)(GAUS|TEND|CINT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+    ]
+  }
+  PLBCONVERTER: {
+    patterns: [
+      {include: '#normalText'}
+    
+      {
+      begin: '(?i)(^ *|; *)(HEAD)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(END)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(TXB)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(TXE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(ECHO)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(OPT|VAL|.)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(UNIT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|USE|DIG|SET)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(PAGE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(FIRS|LINE|MARG|LANO|LANI|UNIO|UNII|FORM|PRIL|PAG)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(SIZE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|S.C.|W|H|MARG|FORM)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(GNT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NO|S.C.|XMIN|YMIN|XMAX|YMAX|WXMI|WXMA|WYMA)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(GPL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15|X16|Y16)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(GFA)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15|X16|Y16)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(GGDP)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(GTXT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X|Y|TEXT|VAL|DIM|ND)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(GSCA)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|TEXT|VAL|NIM|ND)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(GCOL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(COL|R|G|B)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(GPLI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|TYPE|WIDT|SCAT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(GPMI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|TYPE|SIZE)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(GTXI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|H|BX|BY|HALI|VALI|PATH|EXPA|SPAC|FONT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(GFAI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|STYL|TYPE)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(@CDB)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(@KEY)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(KWH|KWL|SEL1|SEL2|SEL3|SEL4|SEL5|SEL6|IERR)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(OPT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(OVRT|TMPL|IMG|FMT|FNR)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(DOCX)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IN|OUT|TMPL|OVRT|IMG|FMT|FNR)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^ *|; *)(IMG)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IN|FNR|OVRT|FMT)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
