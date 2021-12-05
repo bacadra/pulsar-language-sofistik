@@ -5,3 +5,4 @@
     softWrap: false
     tabLength: 2
     commentStart: '$ '
+    tabType: 'soft'
