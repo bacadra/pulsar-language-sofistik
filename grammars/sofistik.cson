@@ -1,5 +1,5 @@
 # ***** References *****
-# https://flight-manual.atom.io/hacking-atom/sections/creating-a-grammar/
+# https://flight-manual.atom.io/hacking-atom/sections/creating-a-legacy-textmate-grammar/
 # http://manual.macromates.com/en/language_grammars/
 # https://regex101.com/
 
@@ -4053,7 +4053,7 @@ repository:
         {'include': '#BEMESS'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|PERC|FACT)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|PERC|FACT|SELE)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -5121,7 +5121,7 @@ repository:
         {'include': '#CSM'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|ICS1|ATIL|VAL|ASTI|HFIX|BEDD|SITU|T0|TS|FAC1|PHIF|QUEA|QEMX|FACD|TITL)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|ICS1|ATIL|VAL|ASTI|HFIX|BEDD|SITU|T0|TS|FAC1|ICSD|PHIF|QUEA|QEMX|FACD)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
