@@ -11,7 +11,7 @@ patterns: [
   {include: '#normalText'}
 
   {
-  begin: '(?i)^ *([\$\+-]?prog)( +AQB)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +AQB)( .*)?$'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -20,7 +20,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\$\+-]?prog)( +ASE)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +ASE)( .*)?$'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -29,7 +29,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\$\+-]?prog)( +AQUA)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +AQUA)( .*)?$'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -38,7 +38,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\$\+-]?prog)( +BDK)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +BDK)( .*)?$'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -47,7 +47,16 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\$\+-]?prog)( +BEMESS)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +BEAM)( .*)?$'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  patterns: [{'include': '#BEAM'}, {'include': '$self'}]
+  }
+    
+  {
+  begin: '(?i)^ *([\$\+-]?prog)( +BEMESS)( .*)?$'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -56,7 +65,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\$\+-]?prog)( +COLUMN)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +COLUMN)( .*)?$'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -65,7 +74,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\$\+-]?prog)( +CSM)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +CSM)( .*)?$'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -74,7 +83,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\$\+-]?prog)( +DBMERG)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +DBMERG)( .*)?$'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -83,178 +92,7 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\$\+-]?prog)( +DOLFYN)( .*)?'
-  beginCaptures:
-    1: name: 'support.class'
-    2: name: 'support.class'
-    3: name: 'comment.line'
-  patterns: [{'include': '#DOLFYN'}, {'include': '$self'}]
-  }
-    
-  {
-  begin: '(?i)^ *([\$\+-]?prog)( +DYNA)( .*)?'
-  beginCaptures:
-    1: name: 'support.class'
-    2: name: 'support.class'
-    3: name: 'comment.line'
-  patterns: [{'include': '#DYNA'}, {'include': '$self'}]
-  }
-    
-  {
-  begin: '(?i)^ *([\$\+-]?prog)( +DYNR)( .*)?'
-  beginCaptures:
-    1: name: 'support.class'
-    2: name: 'support.class'
-    3: name: 'comment.line'
-  patterns: [{'include': '#DYNR'}, {'include': '$self'}]
-  }
-    
-  {
-  begin: '(?i)^ *([\$\+-]?prog)( +ELLA)( .*)?'
-  beginCaptures:
-    1: name: 'support.class'
-    2: name: 'support.class'
-    3: name: 'comment.line'
-  patterns: [{'include': '#ELLA'}, {'include': '$self'}]
-  }
-    
-  {
-  begin: '(?i)^ *([\$\+-]?prog)( +FOOTING)( .*)?'
-  beginCaptures:
-    1: name: 'support.class'
-    2: name: 'support.class'
-    3: name: 'comment.line'
-  patterns: [{'include': '#FOOTING'}, {'include': '$self'}]
-  }
-    
-  {
-  begin: '(?i)^ *([\$\+-]?prog)( +HASE)( .*)?'
-  beginCaptures:
-    1: name: 'support.class'
-    2: name: 'support.class'
-    3: name: 'comment.line'
-  patterns: [{'include': '#HASE'}, {'include': '$self'}]
-  }
-    
-  {
-  begin: '(?i)^ *([\$\+-]?prog)( +HYDRA)( .*)?'
-  beginCaptures:
-    1: name: 'support.class'
-    2: name: 'support.class'
-    3: name: 'comment.line'
-  patterns: [{'include': '#HYDRA'}, {'include': '$self'}]
-  }
-    
-  {
-  begin: '(?i)^ *([\$\+-]?prog)( +MAXIMA)( .*)?'
-  beginCaptures:
-    1: name: 'support.class'
-    2: name: 'support.class'
-    3: name: 'comment.line'
-  patterns: [{'include': '#MAXIMA'}, {'include': '$self'}]
-  }
-    
-  {
-  begin: '(?i)^ *([\$\+-]?prog)( +RESULTS)( .*)?'
-  beginCaptures:
-    1: name: 'support.class'
-    2: name: 'support.class'
-    3: name: 'comment.line'
-  patterns: [{'include': '#RESULTS'}, {'include': '$self'}]
-  }
-    
-  {
-  begin: '(?i)^ *([\$\+-]?prog)( +SIR)( .*)?'
-  beginCaptures:
-    1: name: 'support.class'
-    2: name: 'support.class'
-    3: name: 'comment.line'
-  patterns: [{'include': '#SIR'}, {'include': '$self'}]
-  }
-    
-  {
-  begin: '(?i)^ *([\$\+-]?prog)( +SOFILOAD)( .*)?'
-  beginCaptures:
-    1: name: 'support.class'
-    2: name: 'support.class'
-    3: name: 'comment.line'
-  patterns: [{'include': '#SOFILOAD'}, {'include': '$self'}]
-  }
-    
-  {
-  begin: '(?i)^ *([\$\+-]?prog)( +SOFIMSHA)( .*)?'
-  beginCaptures:
-    1: name: 'support.class'
-    2: name: 'support.class'
-    3: name: 'comment.line'
-  patterns: [{'include': '#SOFIMSHA'}, {'include': '$self'}]
-  }
-    
-  {
-  begin: '(?i)^ *([\$\+-]?prog)( +SOFIMSHC)( .*)?'
-  beginCaptures:
-    1: name: 'support.class'
-    2: name: 'support.class'
-    3: name: 'comment.line'
-  patterns: [{'include': '#SOFIMSHC'}, {'include': '$self'}]
-  }
-    
-  {
-  begin: '(?i)^ *([\$\+-]?prog)( +STAR2)( .*)?'
-  beginCaptures:
-    1: name: 'support.class'
-    2: name: 'support.class'
-    3: name: 'comment.line'
-  patterns: [{'include': '#STAR2'}, {'include': '$self'}]
-  }
-    
-  {
-  begin: '(?i)^ *([\$\+-]?prog)( +TALPA)( .*)?'
-  beginCaptures:
-    1: name: 'support.class'
-    2: name: 'support.class'
-    3: name: 'comment.line'
-  patterns: [{'include': '#TALPA'}, {'include': '$self'}]
-  }
-    
-  {
-  begin: '(?i)^ *([\$\+-]?prog)( +TENDON)( .*)?'
-  beginCaptures:
-    1: name: 'support.class'
-    2: name: 'support.class'
-    3: name: 'comment.line'
-  patterns: [{'include': '#TENDON'}, {'include': '$self'}]
-  }
-    
-  {
-  begin: '(?i)^ *([\$\+-]?prog)( +TEXTILE)( .*)?'
-  beginCaptures:
-    1: name: 'support.class'
-    2: name: 'support.class'
-    3: name: 'comment.line'
-  patterns: [{'include': '#TEXTILE'}, {'include': '$self'}]
-  }
-    
-  {
-  begin: '(?i)^ *([\$\+-]?prog)( +WING)( .*)?'
-  beginCaptures:
-    1: name: 'support.class'
-    2: name: 'support.class'
-    3: name: 'comment.line'
-  patterns: [{'include': '#WING'}, {'include': '$self'}]
-  }
-    
-  {
-  begin: '(?i)^ *([\$\+-]?prog)( +TEMPLATE)( .*)?'
-  beginCaptures:
-    1: name: 'support.class'
-    2: name: 'support.class'
-    3: name: 'comment.line'
-  patterns: [{'include': '#TEMPLATE'}, {'include': '$self'}]
-  }
-    
-  {
-  begin: '(?i)^ *([\$\+-]?prog)( +DECREATOR)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +DECREATOR)( .*)?$'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
@@ -263,12 +101,192 @@ patterns: [
   }
     
   {
-  begin: '(?i)^ *([\$\+-]?prog)( +PLBCONVERTER)( .*)?'
+  begin: '(?i)^ *([\$\+-]?prog)( +DOLFYN)( .*)?$'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  patterns: [{'include': '#DOLFYN'}, {'include': '$self'}]
+  }
+    
+  {
+  begin: '(?i)^ *([\$\+-]?prog)( +DYNA)( .*)?$'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  patterns: [{'include': '#DYNA'}, {'include': '$self'}]
+  }
+    
+  {
+  begin: '(?i)^ *([\$\+-]?prog)( +DYNR)( .*)?$'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  patterns: [{'include': '#DYNR'}, {'include': '$self'}]
+  }
+    
+  {
+  begin: '(?i)^ *([\$\+-]?prog)( +ELLA)( .*)?$'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  patterns: [{'include': '#ELLA'}, {'include': '$self'}]
+  }
+    
+  {
+  begin: '(?i)^ *([\$\+-]?prog)( +FOOTING)( .*)?$'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  patterns: [{'include': '#FOOTING'}, {'include': '$self'}]
+  }
+    
+  {
+  begin: '(?i)^ *([\$\+-]?prog)( +HASE)( .*)?$'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  patterns: [{'include': '#HASE'}, {'include': '$self'}]
+  }
+    
+  {
+  begin: '(?i)^ *([\$\+-]?prog)( +HYDRA)( .*)?$'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  patterns: [{'include': '#HYDRA'}, {'include': '$self'}]
+  }
+    
+  {
+  begin: '(?i)^ *([\$\+-]?prog)( +MAXIMA)( .*)?$'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  patterns: [{'include': '#MAXIMA'}, {'include': '$self'}]
+  }
+    
+  {
+  begin: '(?i)^ *([\$\+-]?prog)( +PLBCONVERTER)( .*)?$'
   beginCaptures:
     1: name: 'support.class'
     2: name: 'support.class'
     3: name: 'comment.line'
   patterns: [{'include': '#PLBCONVERTER'}, {'include': '$self'}]
+  }
+    
+  {
+  begin: '(?i)^ *([\$\+-]?prog)( +RESULTS)( .*)?$'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  patterns: [{'include': '#RESULTS'}, {'include': '$self'}]
+  }
+    
+  {
+  begin: '(?i)^ *([\$\+-]?prog)( +SHEARWALL)( .*)?$'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  patterns: [{'include': '#SHEARWALL'}, {'include': '$self'}]
+  }
+    
+  {
+  begin: '(?i)^ *([\$\+-]?prog)( +SIR)( .*)?$'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  patterns: [{'include': '#SIR'}, {'include': '$self'}]
+  }
+    
+  {
+  begin: '(?i)^ *([\$\+-]?prog)( +SOFILOAD)( .*)?$'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  patterns: [{'include': '#SOFILOAD'}, {'include': '$self'}]
+  }
+    
+  {
+  begin: '(?i)^ *([\$\+-]?prog)( +SOFIMSHA)( .*)?$'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  patterns: [{'include': '#SOFIMSHA'}, {'include': '$self'}]
+  }
+    
+  {
+  begin: '(?i)^ *([\$\+-]?prog)( +SOFIMSHC)( .*)?$'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  patterns: [{'include': '#SOFIMSHC'}, {'include': '$self'}]
+  }
+    
+  {
+  begin: '(?i)^ *([\$\+-]?prog)( +STAR2)( .*)?$'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  patterns: [{'include': '#STAR2'}, {'include': '$self'}]
+  }
+    
+  {
+  begin: '(?i)^ *([\$\+-]?prog)( +TALPA)( .*)?$'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  patterns: [{'include': '#TALPA'}, {'include': '$self'}]
+  }
+    
+  {
+  begin: '(?i)^ *([\$\+-]?prog)( +TEMPLATE)( .*)?$'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  patterns: [{'include': '#TEMPLATE'}, {'include': '$self'}]
+  }
+    
+  {
+  begin: '(?i)^ *([\$\+-]?prog)( +TENDON)( .*)?$'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  patterns: [{'include': '#TENDON'}, {'include': '$self'}]
+  }
+    
+  {
+  begin: '(?i)^ *([\$\+-]?prog)( +TEXTILE)( .*)?$'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  patterns: [{'include': '#TEXTILE'}, {'include': '$self'}]
+  }
+    
+  {
+  begin: '(?i)^ *([\$\+-]?prog)( +WING)( .*)?$'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  patterns: [{'include': '#WING'}, {'include': '$self'}]
   }
     
 
@@ -3464,6 +3482,524 @@ repository:
       }
     ]
   }
+  BEAM: {
+    patterns: [
+      {include: '#normalText'}
+    
+      {
+      begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(END)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(TXB)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(TXE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(ECHO)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(OPT|VAL)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(UNIT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|USE|DIG|SET)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(PAGE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(FIRS|LINE|MARG|LANO|LANI|UNIO|UNII|FORM|PRIL|PAG)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(SIZE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|S.C.|W|H|MARG|FORM)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GNT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NO|S.C.|XMIN|YMIN|XMAX|YMAX|WXMI|WXMA|WYMA)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GPL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15|X16|Y16)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GFA)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15|X16|Y16)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GGDP)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GTXT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X|Y|TEXT|VAL|DIM|ND)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GSCA)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|TEXT|VAL|NIM|ND)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GCOL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(COL|R|G|B)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GPLI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|TYPE|WIDT|SCAT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GPMI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|TYPE|SIZE)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GTXI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|H|BX|BY|HALI|VALI|PATH|EXPA|SPAC|FONT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GFAI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|STYL|TYPE)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(@CDB)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(@KEY)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(KWH|KWL|SEL1|SEL2|SEL3|SEL4|SEL5|SEL6|IERR)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(CTRL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(OPT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(DSLN)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NO)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(POS)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TITL|PLAC|TEXT|KOTE)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(LPOS)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X|TITL)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(COMB)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(LC|TYPE|TITL)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(DESI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TETA|TYPE|FDX)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(DELR)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(DELT|TYPE)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(LRF)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(VAL1)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(SRF)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(VAL1)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(DEFL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(PHI|EPCS|BETA|RH|TEMP|T|T0|TS)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(CRCK)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#BEAM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(WK|FCTE)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+    ]
+  }
   BEMESS: {
     patterns: [
       {include: '#normalText'}
@@ -6168,6 +6704,460 @@ repository:
         {'include': '#defA'}
         {
           match: '(?i)(?<!\\w)(TYPE|FSX|FSY|FSZ|FTAU)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+    ]
+  }
+  DECREATOR: {
+    patterns: [
+      {include: '#normalText'}
+    
+      {
+      begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(END)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(TXB)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(TXE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(ECHO)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(OPT|VAL|.)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(UNIT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|USE|DIG|SET)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(PAGE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(FIRS|LINE|MARG|LANO|LANI|UNIO|UNII|FORM|PRIL|PAG)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(SIZE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|S.C.|W|H|MARG|FORM)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GNT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NO|S.C.|XMIN|YMIN|XMAX|YMAX|WXMI|WXMA|WYMA)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GPL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15|X16|Y16)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GFA)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15|X16|Y16)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GGDP)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GTXT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X|Y|TEXT|VAL|DIM|ND)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GSCA)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|TEXT|VAL|NIM|ND)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GCOL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(COL|R|G|B)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GPLI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|TYPE|WIDT|SCAT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GPMI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|TYPE|SIZE)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GTXI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|H|BX|BY|HALI|VALI|PATH|EXPA|SPAC|FONT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GFAI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|STYL|TYPE)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(@CDB)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(@KEY)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(KWH|KWL|SEL1|SEL2|SEL3|SEL4|SEL5|SEL6|IERR)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(DSLN)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NO|NCS|NCS2|HDIV|FREF|GRP|TITL)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(DGEO)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(OPT|ID|X1|Y1|Z1|X2|Y2|Z2|DRX|DRY|DRZ|SA|SE)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(DSEL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(OPT|NO|YMIN|ZMIN|YMAX|ZMAX)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(DSLC)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(REF|S|TYPM|TYPT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(LC)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NO)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(DDEL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NO)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(CTRL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(GAUS|TEND|CINT)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -10496,6 +11486,396 @@ repository:
       }
     ]
   }
+  PLBCONVERTER: {
+    patterns: [
+      {include: '#normalText'}
+    
+      {
+      begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(END)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(TXB)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(TXE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(ECHO)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(OPT|VAL|.)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(UNIT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|USE|DIG|SET)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(PAGE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(FIRS|LINE|MARG|LANO|LANI|UNIO|UNII|FORM|PRIL|PAG)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(SIZE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|S.C.|W|H|MARG|FORM)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GNT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NO|S.C.|XMIN|YMIN|XMAX|YMAX|WXMI|WXMA|WYMA)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GPL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15|X16|Y16)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GFA)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15|X16|Y16)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GGDP)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GTXT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X|Y|TEXT|VAL|DIM|ND)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GSCA)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|TEXT|VAL|NIM|ND)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GCOL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(COL|R|G|B)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GPLI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|TYPE|WIDT|SCAT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GPMI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|TYPE|SIZE)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GTXI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|H|BX|BY|HALI|VALI|PATH|EXPA|SPAC|FONT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GFAI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|STYL|TYPE)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(@CDB)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(@KEY)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(KWH|KWL|SEL1|SEL2|SEL3|SEL4|SEL5|SEL6|IERR)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(OPT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(OVRT|TMPL|IMG|FMT|FNR)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(DOCX)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IN|OUT|TMPL|OVRT|IMG|FMT|FNR)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(IMG)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#PLBCONVERTER'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IN|FNR|OVRT|FMT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+    ]
+  }
   RESULTS: {
     patterns: [
       {include: '#normalText'}
@@ -11246,6 +12626,460 @@ repository:
         {'include': '#defA'}
         {
           match: '(?i)(?<!\\w)(TYPE|STYP|TOTA|AVER|REPR|FILL|UNIT|SCHH)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+    ]
+  }
+  SHEARWALL: {
+    patterns: [
+      {include: '#normalText'}
+    
+      {
+      begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(END)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(TXB)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(TXE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(ECHO)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(OPT|VAL1)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(UNIT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|USE|DIG|SET)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(PAGE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(FIRS|LINE|MARG|LANO|LANI|UNIO|UNII|FORM|PRIL|PAG)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(SIZE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|S.C.|W|H|MARG|FORM)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GNT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NO|S.C.|XMIN|YMIN|XMAX|YMAX|WXMI|WXMA|WYMA)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GPL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15|X16|Y16)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GFA)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15|X16|Y16)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GGDP)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GTXT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X|Y|TEXT|VAL|DIM|ND)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GSCA)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|TEXT|VAL|NIM|ND)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GCOL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(COL|R|G|B)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GPLI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|TYPE|WIDT|SCAT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GPMI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|TYPE|SIZE)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GTXI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|H|BX|BY|HALI|VALI|PATH|EXPA|SPAC|FONT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GFAI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|STYL|TYPE)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(@CDB)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(@KEY)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(KWH|KWL|SEL1|SEL2|SEL3|SEL4|SEL5|SEL6|IERR)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(CTRL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(OPT|VAL1|VAL2)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(LC)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NO|TYPE)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(SEL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(REF|NO|TYPA|LENA|MAXA|TYPB|LENB|MAXB)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(DESI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(STAT|CMAX|TMAX|TITL|DC)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(CHCK)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(STAT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(PLOT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|VAL1|MY|MZ)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(RF)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#SHEARWALL'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NO|AS|D|N|ZLVL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -15674,6 +17508,348 @@ repository:
       }
     ]
   }
+  TEMPLATE: {
+    patterns: [
+      {include: '#normalText'}
+    
+      {
+      begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#TEMPLATE'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(END)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#TEMPLATE'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(TXB)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#TEMPLATE'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(TXE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#TEMPLATE'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(ECHO)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#TEMPLATE'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(OPT|VAL|.)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(UNIT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#TEMPLATE'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|USE|DIG|SET)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(PAGE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#TEMPLATE'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(FIRS|LINE|MARG|LANO|LANI|UNIO|UNII|FORM|PRIL|PAG)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(SIZE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#TEMPLATE'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|S.C.|W|H|MARG|FORM)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GNT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#TEMPLATE'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NO|S.C.|XMIN|YMIN|XMAX|YMAX|WXMI|WXMA|WYMA)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GPL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#TEMPLATE'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15|X16|Y16)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GFA)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#TEMPLATE'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15|X16|Y16)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GGDP)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#TEMPLATE'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GTXT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#TEMPLATE'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X|Y|TEXT|VAL|DIM|ND)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GSCA)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#TEMPLATE'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|TEXT|VAL|NIM|ND)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GCOL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#TEMPLATE'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(COL|R|G|B)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GPLI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#TEMPLATE'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|TYPE|WIDT|SCAT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GPMI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#TEMPLATE'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|TYPE|SIZE)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GTXI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#TEMPLATE'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|H|BX|BY|HALI|VALI|PATH|EXPA|SPAC|FONT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GFAI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#TEMPLATE'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|STYL|TYPE)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(@CDB)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#TEMPLATE'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(@KEY)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#TEMPLATE'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(KWH|KWL|SEL1|SEL2|SEL3|SEL4|SEL5|SEL6|IERR)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+    ]
+  }
   TENDON: {
     patterns: [
       {include: '#normalText'}
@@ -17796,1192 +19972,6 @@ repository:
         {'include': '#defA'}
         {
           match: '(?i)(?<!\\w)(SET|PAR1|PAR2|PAR3|PAR4|PAR5|PAR6|PAR7|PAR8|PAR9|PA10|PA11|PA12|PA13|PA14|PA15|PA16|PA17|PA18|PA19|PA20|PA21|PA22|PA23|PA24|PA25|PA26|PA27)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-    ]
-  }
-  TEMPLATE: {
-    patterns: [
-      {include: '#normalText'}
-    
-      {
-      begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#TEMPLATE'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)()(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(END)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#TEMPLATE'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)()(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(TXB)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#TEMPLATE'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)()(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(TXE)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#TEMPLATE'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)()(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(ECHO)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#TEMPLATE'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(OPT|VAL|.)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(UNIT)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#TEMPLATE'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(TYPE|USE|DIG|SET)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(PAGE)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#TEMPLATE'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(FIRS|LINE|MARG|LANO|LANI|UNIO|UNII|FORM|PRIL|PAG)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(SIZE)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#TEMPLATE'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(TYPE|S.C.|W|H|MARG|FORM)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GNT)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#TEMPLATE'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(NO|S.C.|XMIN|YMIN|XMAX|YMAX|WXMI|WXMA|WYMA)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GPL)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#TEMPLATE'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15|X16|Y16)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GFA)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#TEMPLATE'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15|X16|Y16)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GGDP)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#TEMPLATE'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(TYPE|X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GTXT)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#TEMPLATE'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(X|Y|TEXT|VAL|DIM|ND)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GSCA)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#TEMPLATE'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|TEXT|VAL|NIM|ND)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GCOL)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#TEMPLATE'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(COL|R|G|B)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GPLI)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#TEMPLATE'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(IND|COL|TYPE|WIDT|SCAT)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GPMI)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#TEMPLATE'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(IND|COL|TYPE|SIZE)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GTXI)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#TEMPLATE'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(IND|COL|H|BX|BY|HALI|VALI|PATH|EXPA|SPAC|FONT)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GFAI)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#TEMPLATE'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(IND|COL|STYL|TYPE)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(@CDB)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#TEMPLATE'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)()(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(@KEY)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#TEMPLATE'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(KWH|KWL|SEL1|SEL2|SEL3|SEL4|SEL5|SEL6|IERR)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-    ]
-  }
-  DECREATOR: {
-    patterns: [
-      {include: '#normalText'}
-    
-      {
-      begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)()(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(END)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)()(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(TXB)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)()(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(TXE)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)()(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(ECHO)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(OPT|VAL|.)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(UNIT)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(TYPE|USE|DIG|SET)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(PAGE)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(FIRS|LINE|MARG|LANO|LANI|UNIO|UNII|FORM|PRIL|PAG)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(SIZE)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(TYPE|S.C.|W|H|MARG|FORM)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GNT)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(NO|S.C.|XMIN|YMIN|XMAX|YMAX|WXMI|WXMA|WYMA)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GPL)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15|X16|Y16)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GFA)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15|X16|Y16)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GGDP)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(TYPE|X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GTXT)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(X|Y|TEXT|VAL|DIM|ND)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GSCA)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|TEXT|VAL|NIM|ND)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GCOL)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(COL|R|G|B)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GPLI)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(IND|COL|TYPE|WIDT|SCAT)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GPMI)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(IND|COL|TYPE|SIZE)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GTXI)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(IND|COL|H|BX|BY|HALI|VALI|PATH|EXPA|SPAC|FONT)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GFAI)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(IND|COL|STYL|TYPE)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(@CDB)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)()(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(@KEY)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(KWH|KWL|SEL1|SEL2|SEL3|SEL4|SEL5|SEL6|IERR)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(DSLN)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(NO|NCS|NCS2|HDIV|FREF|GRP|TITL)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(DGEO)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(OPT|ID|X1|Y1|Z1|X2|Y2|Z2|DRX|DRY|DRZ|SA|SE)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(DSEL)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(OPT|NO|YMIN|ZMIN|YMAX|ZMAX)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(DSLC)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(REF|S|TYPM|TYPT)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(LC)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(NO)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(DDEL)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(NO)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(CTRL)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#DECREATOR'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(GAUS|TEND|CINT)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-    ]
-  }
-  PLBCONVERTER: {
-    patterns: [
-      {include: '#normalText'}
-    
-      {
-      begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#PLBCONVERTER'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)()(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(END)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#PLBCONVERTER'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)()(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(TXB)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#PLBCONVERTER'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)()(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(TXE)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#PLBCONVERTER'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)()(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(ECHO)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#PLBCONVERTER'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(OPT|VAL|.)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(UNIT)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#PLBCONVERTER'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(TYPE|USE|DIG|SET)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(PAGE)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#PLBCONVERTER'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(FIRS|LINE|MARG|LANO|LANI|UNIO|UNII|FORM|PRIL|PAG)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(SIZE)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#PLBCONVERTER'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(TYPE|S.C.|W|H|MARG|FORM)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GNT)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#PLBCONVERTER'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(NO|S.C.|XMIN|YMIN|XMAX|YMAX|WXMI|WXMA|WYMA)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GPL)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#PLBCONVERTER'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15|X16|Y16)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GFA)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#PLBCONVERTER'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15|X16|Y16)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GGDP)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#PLBCONVERTER'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(TYPE|X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GTXT)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#PLBCONVERTER'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(X|Y|TEXT|VAL|DIM|ND)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GSCA)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#PLBCONVERTER'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|TEXT|VAL|NIM|ND)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GCOL)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#PLBCONVERTER'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(COL|R|G|B)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GPLI)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#PLBCONVERTER'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(IND|COL|TYPE|WIDT|SCAT)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GPMI)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#PLBCONVERTER'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(IND|COL|TYPE|SIZE)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GTXI)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#PLBCONVERTER'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(IND|COL|H|BX|BY|HALI|VALI|PATH|EXPA|SPAC|FONT)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(GFAI)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#PLBCONVERTER'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(IND|COL|STYL|TYPE)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(@CDB)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#PLBCONVERTER'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)()(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(@KEY)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#PLBCONVERTER'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(KWH|KWL|SEL1|SEL2|SEL3|SEL4|SEL5|SEL6|IERR)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(OPT)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#PLBCONVERTER'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(OVRT|TMPL|IMG|FMT|FNR)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(DOCX)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#PLBCONVERTER'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(IN|OUT|TMPL|OVRT|IMG|FMT|FNR)(?!\\w)'
-          name: 'entity.name.function'
-        }
-        {'include': '#normalText'}
-        {'include': '$self'}
-        ]
-      }
-      {
-      begin: '(?i)(^[ \\t]*|; *)(IMG)(?=;|$| )'
-      beginCaptures:
-        1: name: 'support.type'
-        2: name: 'keyword.control'
-      patterns: [
-        {'include': '#PLBCONVERTER'}
-        {'include': '#defA'}
-        {
-          match: '(?i)(?<!\\w)(IN|FNR|OVRT|FMT)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
