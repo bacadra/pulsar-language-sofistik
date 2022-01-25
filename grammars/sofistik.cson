@@ -8,6 +8,14 @@ name: 'SOFiSTiK'
 fileTypes: ['dat','gra','grb','results']
 foldingStartMarker: '+prog'
 patterns: [
+  {
+    match: '^@ SOFiSTiK \\d{4}(?:-\\d\\d?)?$'
+    name: 'meta.sofistik.version'
+  }
+  {
+    match: '^@ .+'
+    name: 'meta.sofistik'
+  }
   {include: '#normalText'}
 
   {
