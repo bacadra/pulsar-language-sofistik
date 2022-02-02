@@ -384,12 +384,18 @@ repository:
     name: 'comment.line'
   }
   str1: { # strings
-    match: '\\".*?\\"'
+    match: '\\"(.*?)\\"'
     name: 'string.double'
+    captures: 1: patterns: [
+        {include: '#inc1'}
+    ]
   }
   str2: { # strings
-    match: "\\'.*?\\'"
+    match: "\\'(.*?)\\'"
     name: 'string.single'
+    captures: 1: patterns: [
+        {include: '#inc1'}
+    ]
   }
   var1: {
     match: '(?i)(?<!\\w)(?:let|sto|del|dbg|prt)(?=#\\w+)'
