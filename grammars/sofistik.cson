@@ -6,7 +6,6 @@
 scopeName: 'source.sofistik'
 name: 'SOFiSTiK'
 fileTypes: ['dat','gra','grb','results']
-foldingStartMarker: '+prog'
 patterns: [
   {
     match: '^@ SOFiSTiK \\d{4}(?:-\\d\\d?)?$'
@@ -421,9 +420,10 @@ repository:
     name: 'constant.other'
   }
   loops: {
-    match: '(?i)(?:^|;)[ ]*(endloop|end)(?!\\w)'
+    match: '(?i)(^|;)[ ]*(endloop|end)(?!\\w)'
     captures:
-      1: name: 'keyword.control'
+      1: name: 'support.type'
+      2: name: 'keyword.control'
   }
   textcmds: {
     match: '(?i)(^ *)(head|txb|txe)( .+?$| *$)'
@@ -14049,7 +14049,7 @@ repository:
         {'include': '#SOFILOAD'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|FACT|TYPE|FROM|TO|INC|REF|DX|DY|DZ|ALPH|WIDE|YEX|PROJ)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|FACT|TYPE|FROM|TO|INC|REF|LEV|DX|DY|DZ|ALPH|WIDE|YEX|CASE|NRE|XABS|XCON|XV1|XV2|XV3|XV4|XV5|XV6|XV7|XV8|XV9|XV10|XV11|XV12|XV13|XV14|XV15|PROJ)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
