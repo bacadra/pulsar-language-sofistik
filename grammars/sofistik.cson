@@ -957,7 +957,7 @@ repository:
         {'include': '#AQB'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(STAT|KSV|KSB|AM1|AM2|AM3|AM4|AMAX|SC1|SC2|SCS|SS1|SS2|SS0|C1|S2|S1|S2|Z1|Z2|SMOD|TVS|MSCD|KTAU|TTOL|TANA|TANB|SC|DELR)(?!\\w)'
+          match: '(?i)(?<!\\w)(STAT|KSV|KSB|AM1|AM2|AM3|AM4|AMAX|SC1|SC2|SCS|SS1|SS2|SS0|C1|S2|S1|Z1|Z2|SMOD|TVS|MSCD|KTAU|TTOL|TANA|TANB|SC|DELR)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1843,7 +1843,7 @@ repository:
         {'include': '#ASE'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(STAT|KSV|KSB|AM1|AM2|AM3|AM4|AMAX|SC1|SC2|SCS|SS1|SS2|SS0|C1|S2|S1|S2|Z1|Z2|SMOD|TVS|MSCD|KTAU|TTOL|TANA|TANB|SC|DELR)(?!\\w)'
+          match: '(?i)(?<!\\w)(STAT|KSV|KSB|AM1|AM2|AM3|AM4|AMAX|SC1|SC2|SCS|SS1|SS2|SS0|C1|S2|S1|Z1|Z2|SMOD|TVS|MSCD|KTAU|TTOL|TANA|TANB|SC|DELR)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -4379,7 +4379,7 @@ repository:
         {'include': '#BEMESS'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(TYPE|RMOD|SYST|WALL|AUGM|THIC|TENS|LCR|PFAI|RO_V|COTT|FACH|WARN|LCRI|VF70|SNIP|WINT|WEND|REDN|RADP|BUBB|REDM|VPDC|SIGZ|LCRP|WTEN)(?!\\w)'
+          match: '(?i)(?<!\\w)(TYPE|RMOD|LAY|SYST|WALL|AUGM|THIC|TENS|LCR|LCRI|PFAI|RO_V|COTT|FACH|WARN|BOUN|VF70|SNIP|WINT|WEND|REDN|RADP|BUBB|REDM|VPDC|SIGZ|LCRP|WTEN|DMOM|VMIN|MINS|BETA|BRIC|CORE|V2|V3)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -4459,7 +4459,7 @@ repository:
         {'include': '#BEMESS'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(SIGS|SIGT|CHKC|CHKR|FATC|LS_U|LS_L|LS_V|LS_P|FACU|FACL|FACV|FACP|SIGP|LOCP)(?!\\w)'
+          match: '(?i)(?<!\\w)(SIGS|SIGT|SIGP|CHKC|CHKR|DECO|FATC|LS_U|LS_L|LS_V|LS_P|LC14|FACU|FACL|FACV|FACP|LOCP)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -4539,7 +4539,7 @@ repository:
         {'include': '#BEMESS'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(OAL|OAF|X|Y|Z|LAY|POS|Z|DIRE|D|AS|ASMA|BS|WK|SS)(?!\\w)'
+          match: '(?i)(?<!\\w)(OAL|OAF|X|Y|Z|LAY|POS|DIRE|D|AS|ASMA|BS|WK|SS)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -4571,7 +4571,7 @@ repository:
         {'include': '#BEMESS'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NOG|NOEL|DU|DU|DU3|DL|DL2|DL3|WKU|WKU2|WKU3|WKL|WKL2|WKL3|SSU|SSU2|SSU3|SSL|SSL2|SSL3|ASU|ASU2|ASU3|ASL|ASL2|ASL3|BSU|BSU2|BSU3|BSL|BSL2|BSL3|TYPE)(?!\\w)'
+          match: '(?i)(?<!\\w)(NOG|NOEL|DU|DU3|DL|DL2|DL3|WKU|WKU2|WKU3|WKL|WKL2|WKL3|SSU|SSU2|SSU3|SSL|SSL2|SSL3|ASU|ASU2|ASU3|ASL|ASL2|ASL3|BSU|BSU2|BSU3|BSL|BSL2|BSL3|TYPE)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -4619,7 +4619,7 @@ repository:
         {'include': '#BEMESS'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|ENVA|ENVB|WKU|WKL|SIGU|SIGL)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|ENVA|ENVB|WKU|WKL|SIGU|SIGL|SAR|CS)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -4635,7 +4635,7 @@ repository:
         {'include': '#BEMESS'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(FROM|TO|DELT|WKA|WKB|SIGA|SIGB)(?!\\w)'
+          match: '(?i)(?<!\\w)(FROM|TO|INC|DELT|WKA|WKB|SIGA|SIGB)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -4651,7 +4651,7 @@ repository:
         {'include': '#BEMESS'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(FROM|TO|DELT|GROU|WKA|WKB|SIGA|SIGB)(?!\\w)'
+          match: '(?i)(?<!\\w)(FROM|TO|DELT|GROU|WKA|WKB|SIGA|SIGB|INC)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -5767,7 +5767,7 @@ repository:
         {'include': '#CSM'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(MNO|GRP|CS|DPHI|DEPS|RH)(?!\\w)'
+          match: '(?i)(?<!\\w)(MNO|GRP|CS|DPHI|RH)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -5863,7 +5863,7 @@ repository:
         {'include': '#CSM'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(COMB|ACT1|GAM1|ACT2|GAM2|ACT3|GAM3|ACT4|GAM4|ACT5|GAM5|ACT6|GAM6|ACT7|GAM7|ACT8|GAM8|ACT9|GAM9|ACT10|GAM10|ACT11|GAM11|ACT12|GAM12|TITL)(?!\\w)'
+          match: '(?i)(?<!\\w)(ACT1|GAM1|ACT2|GAM2|ACT3|GAM3|ACT4|GAM4|ACT5|GAM5|ACT6|GAM6|ACT7|GAM7|ACT8|GAM8|ACT9|GAM9|ACT10|GAM10|ACT11|GAM11|ACT12|GAM12|TITL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -7529,7 +7529,7 @@ repository:
         {'include': '#DOLFYN'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(TURB|TEMP|MAT|GAM|NUE|TEMP|RHO|COND)(?!\\w)'
+          match: '(?i)(?<!\\w)(TURB|TEMP|MAT|GAM|NUE|RHO|COND)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -14161,7 +14161,7 @@ repository:
         {'include': '#SOFILOAD'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|TO|PASS|EVAL|TYPE|NO|NAME|IND)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|TO|PASS|EVAL|TYPE|NAME|IND)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -14305,7 +14305,7 @@ repository:
         {'include': '#SOFILOAD'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(TYPT|TYPE|LFUN|TMIN|TMAX|TDIF|D1|D2|D4|D4|D5|REF1|RID1|REF2|RID2|REF3|RID3)(?!\\w)'
+          match: '(?i)(?<!\\w)(TYPT|TYPE|LFUN|TMIN|TMAX|TDIF|D1|D2|D4|D5|REF1|RID1|REF2|RID2|REF3|RID3)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -15351,7 +15351,7 @@ repository:
         {'include': '#SOFIMSHA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|SET|ITEM|UNIT|NO|NG|X|NGS|TITL)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|SET|ITEM|UNIT|NG|X|NGS|TITL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -16883,7 +16883,7 @@ repository:
         {'include': '#STAR2'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(KMOD|KSV|KSB|KMIN|KMAX|ALPH|FMAX|SIGS|CRAC|CW|BB|HMIN|HMAX|CW-|CHKC|CHKT|CHKS|FAT|SIGS|TANS|TANC)(?!\\w)'
+          match: '(?i)(?<!\\w)(KMOD|KSV|KSB|KMIN|KMAX|ALPH|FMAX|SIGS|CRAC|CW|BB|HMIN|HMAX|CW-|CHKC|CHKT|CHKS|FAT|TANS|TANC)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -17353,7 +17353,7 @@ repository:
         {'include': '#TALPA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|FACT|DLX|DLY|DLZ|T|GAMF|GAMC|CRI3|TITL|TYPWE|GAMF|PSI0|PSI1|PSI2|PS1S|GAMA)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|FACT|DLX|DLY|DLZ|T|GAMF|GAMC|CRI3|TITL|TYPWE|PSI0|PSI1|PSI2|PS1S|GAMA)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
