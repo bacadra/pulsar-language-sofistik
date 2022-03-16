@@ -3,8 +3,6 @@
 # http://manual.macromates.com/en/language_grammars/
 # https://regex101.com/
 
-# ================== GENERAL =================================================
-
 scopeName: 'source.sofistik'
 name: 'SOFiSTiK RAW'
 fileTypes: ['erg','lst','prt','urs']
