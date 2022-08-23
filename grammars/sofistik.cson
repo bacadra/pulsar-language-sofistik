@@ -17273,7 +17273,7 @@ repository:
         {'include': '#TALPA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(OPT|VAL|FMAX|FMIN|EMAX|EMIN|IDES|SAVE|FACQ)(?!\\w)'
+          match: '(?i)(?<!\\w)(OPT|VAL|FMAX|FMIN|EMAX|EMIN|IDES|SAVE|FACQ|TREF|TCRL|PTSZ|REFZ|FCT|GFS|MNO|MTYP|MSTP)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -17353,7 +17353,7 @@ repository:
         {'include': '#TALPA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|FACT|DLX|DLY|DLZ|T|GAMF|GAMC|CRI3|TITL|TYPWE|PSI0|PSI1|PSI2|PS1S|GAMA)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|FACT|DLX|DLY|DLZ|T|GAMF|GAMC|CRI3|TITL|TYPE|PSI0|PSI1|PSI2|PS1S|GAMA|DT|GFRI|GCOH|GAMU)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
