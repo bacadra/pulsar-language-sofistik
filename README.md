@@ -14,7 +14,7 @@ and obtain the package directly from Github repository. Please note that package
 
 ## Compatibility
 
-**Support versions of SOFiSTiK are 2022, 2020 and 2018. Only Enligsh.**
+**Support versions of SOFiSTiK are 2023, 2022, 2020 and 2018. Only Enligsh.**
 
 As the package supports many versions of SOFiSTiK and commands are constantly changing, the package offers hints that may no longer be valid in a given version.
 

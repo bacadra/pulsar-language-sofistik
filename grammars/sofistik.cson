@@ -1795,7 +1795,7 @@ repository:
         {'include': '#ASE'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|MX|MY|MZ|MXX|MYY|MZZ|SELE)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|MX|MY|MZ|MXX|MYY|MZZ|LC|PRZ|SELE)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -12255,7 +12255,7 @@ repository:
         {'include': '#RESULTS'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(M|W|H|MSCA|TITL|SPLT)(?!\\w)'
+          match: '(?i)(?<!\\w)(SC|M|W|H|MSCA|TITL|SPLT)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -12375,6 +12375,22 @@ repository:
         ]
       }
       {
+      begin: '(?i)(^[ \\t]*|; *)(FLT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#RESULTS'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(ID1|NAME|RULE|ACT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
       begin: '(?i)(^[ \\t]*|; *)(JOIN)(?=;|$| )'
       beginCaptures:
         1: name: 'support.type'
@@ -12399,7 +12415,7 @@ repository:
         {'include': '#RESULTS'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NAME|WS|ROW|COL|CLNM|TIME|CDB|ELEM|FILT|RESU)(?!\\w)'
+          match: '(?i)(?<!\\w)(NAME|WS|ROW|COL|CLNM|TIME|CDB|ELEM|FILT|RESU|TYPE|DELI|DEC)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -12463,7 +12479,7 @@ repository:
         {'include': '#RESULTS'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(SHOW|OVLP)(?!\\w)'
+          match: '(?i)(?<!\\w)(SHOW|OVLP|EXTR)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -12640,6 +12656,22 @@ repository:
         {'include': '#defA'}
         {
           match: '(?i)(?<!\\w)(TYPE|STYP|TOTA|AVER|REPR|FILL|UNIT|SCHH)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(RSET)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#RESULTS'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(ID1|REPR)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -16141,7 +16173,7 @@ repository:
         {'include': '#SOFIMSHC'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|NPA|NPE|REF|FIX|SDIV|GRP|NCS|NP|KR|DRX|DRY|DRZ|DROT|EXA|EYA|EZA|EXE|E|EZE|FIXA|FIXE|FIMA|FIME|XFLG|TITL)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|NPA|NPE|REF|FIX|SDIV|GRP|STYP|SNO|NP|KR|DRX|DRY|DRZ|DROT|EXA|EYA|EZA|EXE|EYE|EZE|FIXA|FIXE|FIMA|FIME|XFLG|TITL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
