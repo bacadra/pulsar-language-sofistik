@@ -6,23 +6,27 @@ SOFiSTiK RAW grammar is provide for files with extensions `.erg`, `.lst`, `.prt`
 
 ## Installation
 
-After the announcement of Atoms sunset, the official [Atom packages store](https://atom.io/packages) isn't respond properly, so latest version of this package cannot be downloaded there. To get latest version run the shell command
+The official [Atom packages store](https://atom.io/packages) has been disabled. To get latest version run the shell command
 
     apm install bacadra/atom-language-sofistik
 
-and obtain the package directly from Github repository. Please note that package will occur in `Settings/Packages/Git Packages` instead of `Community Packages`.
+and obtain the package directly from Github repository.
+
+The package has compability with [Pulsar](https://pulsar-edit.dev/) and can be install
+
+    pulsar -p install bacadra/atom-language-sofistik
 
 ## Compatibility
 
-**Support versions of SOFiSTiK are 2023, 2022, 2020 and 2018. Only Enligsh.**
+**Support versions of SOFiSTiK are 2023, 2022, 2020 and 2018. English only.**
 
-As the package supports many versions of SOFiSTiK and commands are constantly changing, the package offers hints that may no longer be valid in a given version.
+As the package supports many versions of SOFiSTiK and commands are constantly changing, the package offers hints that may no longer be valid in given version.
 
 # Contributing
 
-If you have ideas on how to improve the package, see bugs or want to support new features, feel free to share them via GitHub.
+If you have ideas on how to improve the package, see bugs or want to support new features - feel free to share it via GitHub.
 
-See my other packages dedicated to Atom Editor:
+See my other packages for Atom Editor:
 
 * [autocomplete-sofistik](https://github.com/bacadra/atom-autocomplete-sofistik)
 * [bib-finder](https://github.com/bacadra/atom-bib-finder)
