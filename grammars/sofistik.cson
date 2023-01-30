@@ -288,6 +288,15 @@ patterns: [
   }
     
   {
+  begin: '(?i)^ *([\$\+-]?prog)( +Sheet1)( .*)?$'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  patterns: [{'include': '#Sheet1'}, {'include': '$self'}]
+  }
+    
+  {
   begin: '(?i)^ *([\$\+-]?prog)( +WING)( .*)?$'
   beginCaptures:
     1: name: 'support.class'
@@ -11491,7 +11500,7 @@ repository:
         {'include': '#MAXIMA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(LC|ETYP|ELEM|X|SELE|OPT)(?!\\w)'
+          match: '(?i)(?<!\\w)(LC|ETYP|ELEM|X|SELE|OPT|CSAV)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -18245,7 +18254,7 @@ repository:
         {'include': '#TENDON'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NOPS|COMP|TAPP|NO|MAT|ZV|AZ|LITZ|MINR|BETA|BETG|MUE|MUE-|ECC|CDIS|CEDG|SS|SC|SF|VP|VC|VF|LPRE|LCOP|LFIX|DI|DO|TITL)(?!\\w)'
+          match: '(?i)(?<!\\w)(NOPS|COMP|TAPP|NO|MAT|ZV|AZ|LITZ|MINR|BETA|BETG|MUE|MUE-|ECC|CDIS|CEDG|SS|SC|SF|VP|VC|VF|LPRE|LCOP|LFIX|DI|DO|TITL|SP)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -18972,6 +18981,348 @@ repository:
         {'include': '#defA'}
         {
           match: '(?i)(?<!\\w)(XA|YA|ZA|XE|YE|ZE|NX|NY|NZ|GRP)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+    ]
+  }
+  Sheet1: {
+    patterns: [
+      {include: '#normalText'}
+    
+      {
+      begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#Sheet1'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(END)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#Sheet1'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(TXB)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#Sheet1'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(TXE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#Sheet1'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(ECHO)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#Sheet1'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(OPT|VAL|.)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(UNIT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#Sheet1'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|USE|DIG|SET)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(PAGE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#Sheet1'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(FIRS|LINE|MARG|LANO|LANI|UNIO|UNII|FORM|PRIL|PAG)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(SIZE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#Sheet1'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|S.C.|W|H|MARG|FORM)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GNT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#Sheet1'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NO|S.C.|XMIN|YMIN|XMAX|YMAX|WXMI|WXMA|WYMA)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GPL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#Sheet1'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15|X16|Y16)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GFA)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#Sheet1'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15|X16|Y16)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GGDP)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#Sheet1'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GTXT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#Sheet1'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X|Y|TEXT|VAL|DIM|ND)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GSCA)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#Sheet1'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|TEXT|VAL|NIM|ND)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GCOL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#Sheet1'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(COL|R|G|B)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GPLI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#Sheet1'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|TYPE|WIDT|SCAT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GPMI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#Sheet1'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|TYPE|SIZE)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GTXI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#Sheet1'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|H|BX|BY|HALI|VALI|PATH|EXPA|SPAC|FONT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GFAI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#Sheet1'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|STYL|TYPE)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(@CDB)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#Sheet1'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(@KEY)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      patterns: [
+        {'include': '#Sheet1'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(KWH|KWL|SEL1|SEL2|SEL3|SEL4|SEL5|SEL6|IERR)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
