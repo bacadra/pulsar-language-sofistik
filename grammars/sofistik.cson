@@ -25,7 +25,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#AQB'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +ASE)( .*)?$'
   beginCaptures:
@@ -34,7 +33,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#ASE'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +AQUA)( .*)?$'
   beginCaptures:
@@ -43,7 +41,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#AQUA'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +BDK)( .*)?$'
   beginCaptures:
@@ -52,7 +49,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#BDK'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +BEAM)( .*)?$'
   beginCaptures:
@@ -61,7 +57,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#BEAM'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +BEMESS)( .*)?$'
   beginCaptures:
@@ -70,7 +65,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#BEMESS'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +COLUMN)( .*)?$'
   beginCaptures:
@@ -79,7 +73,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#COLUMN'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +CSM)( .*)?$'
   beginCaptures:
@@ -88,7 +81,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#CSM'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +DBMERG)( .*)?$'
   beginCaptures:
@@ -97,7 +89,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#DBMERG'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +DECREATOR)( .*)?$'
   beginCaptures:
@@ -106,7 +97,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#DECREATOR'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +DOLFYN)( .*)?$'
   beginCaptures:
@@ -115,7 +105,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#DOLFYN'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +DYNA)( .*)?$'
   beginCaptures:
@@ -124,7 +113,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#DYNA'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +DYNR)( .*)?$'
   beginCaptures:
@@ -133,7 +121,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#DYNR'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +ELLA)( .*)?$'
   beginCaptures:
@@ -142,7 +129,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#ELLA'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +FOOTING)( .*)?$'
   beginCaptures:
@@ -151,7 +137,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#FOOTING'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +HASE)( .*)?$'
   beginCaptures:
@@ -160,7 +145,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#HASE'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +HYDRA)( .*)?$'
   beginCaptures:
@@ -169,7 +153,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#HYDRA'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +MAXIMA)( .*)?$'
   beginCaptures:
@@ -178,7 +161,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#MAXIMA'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +PLBCONVERTER)( .*)?$'
   beginCaptures:
@@ -187,7 +169,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#PLBCONVERTER'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +RESULTS)( .*)?$'
   beginCaptures:
@@ -196,7 +177,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#RESULTS'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +SHEARWALL)( .*)?$'
   beginCaptures:
@@ -205,7 +185,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#SHEARWALL'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +SIR)( .*)?$'
   beginCaptures:
@@ -214,7 +193,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#SIR'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +SOFILOAD)( .*)?$'
   beginCaptures:
@@ -223,7 +201,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#SOFILOAD'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +SOFIMSHA)( .*)?$'
   beginCaptures:
@@ -232,7 +209,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#SOFIMSHA'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +SOFIMSHC)( .*)?$'
   beginCaptures:
@@ -241,7 +217,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#SOFIMSHC'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +STAR2)( .*)?$'
   beginCaptures:
@@ -250,7 +225,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#STAR2'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +TALPA)( .*)?$'
   beginCaptures:
@@ -259,7 +233,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#TALPA'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +TEMPLATE)( .*)?$'
   beginCaptures:
@@ -268,7 +241,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#TEMPLATE'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +TENDON)( .*)?$'
   beginCaptures:
@@ -277,7 +249,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#TENDON'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +TEXTILE)( .*)?$'
   beginCaptures:
@@ -286,7 +257,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#TEXTILE'}, {'include': '$self'}]
   }
-    
   {
   begin: '(?i)^ *([\$\+-]?prog)( +WING)( .*)?$'
   beginCaptures:
@@ -295,7 +265,6 @@ patterns: [
     3: name: 'comment.line'
   patterns: [{'include': '#WING'}, {'include': '$self'}]
   }
-    
 ]
 repository:
   normalText: {
@@ -321,11 +290,24 @@ repository:
     ]
   }
   text: {
-    begin: '(?i)^[ ]*(<text>|</text>|<text,file=(.+)>)(?= |$)'
+    begin: '(?i)^[ ]*(<text>|<text,file=(.+)>)(?= |$)'
     beginCaptures:
       1: name: 'support.function'
       2: name: 'string.other'
     end: '(?i)^[ ]*(<\\/text>)(?= |$)'
+    endCaptures:
+      1: name: 'support.function'
+    patterns: [
+        {include: '#var2'}
+        {include: '#inc1'}
+        {include: '#edit'}
+    ]
+  }
+  edit: {
+    begin: '(?i)(<edit:.+?>)'
+    beginCaptures:
+      1: name: 'support.function'
+    end: '(?i)(<\\/edit>)'
     endCaptures:
       1: name: 'support.function'
     patterns: [
@@ -438,7 +420,6 @@ repository:
   AQB: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -1004,7 +985,6 @@ repository:
   ASE: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -1874,7 +1854,6 @@ repository:
   AQUA: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -3016,7 +2995,6 @@ repository:
   BDK: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -3502,7 +3480,6 @@ repository:
   BEAM: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -4020,7 +3997,6 @@ repository:
   BEMESS: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -4714,7 +4690,6 @@ repository:
   COLUMN: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -5280,7 +5255,6 @@ repository:
   CSM: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -6198,7 +6172,6 @@ repository:
   DBMERG: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -6732,7 +6705,6 @@ repository:
   DECREATOR: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -7186,7 +7158,6 @@ repository:
   DOLFYN: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -7736,7 +7707,6 @@ repository:
   DYNA: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -8302,7 +8272,6 @@ repository:
   DYNR: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -8740,7 +8709,6 @@ repository:
   ELLA: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -9230,7 +9198,7 @@ repository:
         {'include': '#ELLA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|PSI0|PSI1|PSI2|PS1S|GAMU|GAMF|TITL)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|TYPE|PSI0|PSI1|PSI2|PS1S|GAMU|GAMF|TITL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -9354,7 +9322,6 @@ repository:
   FOOTING: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -9920,7 +9887,6 @@ repository:
   HASE: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -10438,7 +10404,6 @@ repository:
   HYDRA: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -11004,7 +10969,6 @@ repository:
   MAXIMA: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -11506,7 +11470,6 @@ repository:
   PLBCONVERTER: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -11896,7 +11859,6 @@ repository:
   RESULTS: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -12686,7 +12648,6 @@ repository:
   SHEARWALL: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -13140,7 +13101,6 @@ repository:
   SIR: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -13578,7 +13538,6 @@ repository:
   SOFILOAD: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -14608,7 +14567,6 @@ repository:
   SOFIMSHA: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -15430,7 +15388,6 @@ repository:
   SOFIMSHC: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -16444,7 +16401,6 @@ repository:
   STAR2: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -16930,7 +16886,6 @@ repository:
   TALPA: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -17560,7 +17515,6 @@ repository:
   TEMPLATE: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -17902,7 +17856,6 @@ repository:
   TENDON: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -18564,7 +18517,6 @@ repository:
   TEXTILE: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
@@ -18986,7 +18938,6 @@ repository:
   WING: {
     patterns: [
       {include: '#normalText'}
-    
       {
       begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
       beginCaptures:
