@@ -24,7 +24,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#AQB'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#AQB'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +ASE)( .*)?$'
@@ -33,7 +36,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#ASE'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#ASE'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +AQUA)( .*)?$'
@@ -42,7 +48,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#AQUA'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#AQUA'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +BDK)( .*)?$'
@@ -51,7 +60,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#BDK'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#BDK'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +BEAM)( .*)?$'
@@ -60,7 +72,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#BEAM'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#BEAM'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +BEMESS)( .*)?$'
@@ -69,7 +84,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#BEMESS'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#BEMESS'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +COLUMN)( .*)?$'
@@ -78,7 +96,22 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#COLUMN'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#COLUMN'}
+    {'include': '$self'}
+    ]
+  }
+  {
+  begin: '(?i)^ *([\$\+-]?prog)( +CSA)( .*)?$'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  end: '\\z'
+  patterns: [
+    {'include': '#CSA'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +CSM)( .*)?$'
@@ -87,7 +120,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#CSM'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#CSM'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +DBMERG)( .*)?$'
@@ -96,7 +132,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#DBMERG'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#DBMERG'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +DECREATOR)( .*)?$'
@@ -105,7 +144,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#DECREATOR'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#DECREATOR'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +DOLFYN)( .*)?$'
@@ -114,7 +156,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#DOLFYN'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#DOLFYN'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +DYNA)( .*)?$'
@@ -123,7 +168,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#DYNA'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#DYNA'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +DYNR)( .*)?$'
@@ -132,7 +180,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#DYNR'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#DYNR'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +ELLA)( .*)?$'
@@ -141,7 +192,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#ELLA'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#ELLA'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +FOOTING)( .*)?$'
@@ -150,7 +204,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#FOOTING'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#FOOTING'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +HASE)( .*)?$'
@@ -159,7 +216,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#HASE'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#HASE'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +HYDRA)( .*)?$'
@@ -168,7 +228,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#HYDRA'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#HYDRA'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +MAXIMA)( .*)?$'
@@ -177,7 +240,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#MAXIMA'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#MAXIMA'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +PLBCONVERTER)( .*)?$'
@@ -186,7 +252,22 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#PLBCONVERTER'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#PLBCONVERTER'}
+    {'include': '$self'}
+    ]
+  }
+  {
+  begin: '(?i)^ *([\$\+-]?prog)( +RELY)( .*)?$'
+  beginCaptures:
+    1: name: 'support.class'
+    2: name: 'support.class'
+    3: name: 'comment.line'
+  end: '\\z'
+  patterns: [
+    {'include': '#RELY'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +RESULTS)( .*)?$'
@@ -195,7 +276,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#RESULTS'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#RESULTS'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +SHEARWALL)( .*)?$'
@@ -204,7 +288,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#SHEARWALL'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#SHEARWALL'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +SIR)( .*)?$'
@@ -213,7 +300,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#SIR'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#SIR'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +SOFILOAD)( .*)?$'
@@ -222,7 +312,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#SOFILOAD'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#SOFILOAD'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +SOFIMSHA)( .*)?$'
@@ -231,7 +324,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#SOFIMSHA'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#SOFIMSHA'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +SOFIMSHC)( .*)?$'
@@ -240,7 +336,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#SOFIMSHC'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#SOFIMSHC'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +STAR2)( .*)?$'
@@ -249,7 +348,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#STAR2'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#STAR2'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +TALPA)( .*)?$'
@@ -258,7 +360,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#TALPA'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#TALPA'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +TEMPLATE)( .*)?$'
@@ -267,7 +372,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#TEMPLATE'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#TEMPLATE'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +TENDON)( .*)?$'
@@ -276,7 +384,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#TENDON'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#TENDON'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +TEXTILE)( .*)?$'
@@ -285,7 +396,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#TEXTILE'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#TEXTILE'}
+    {'include': '$self'}
+    ]
   }
   {
   begin: '(?i)^ *([\$\+-]?prog)( +WING)( .*)?$'
@@ -294,7 +408,10 @@ patterns: [
     2: name: 'support.class'
     3: name: 'comment.line'
   end: '\\z'
-  patterns: [{'include': '#WING'}, {'include': '$self'}]
+  patterns: [
+    {'include': '#WING'}
+    {'include': '$self'}
+    ]
   }
 ]
 repository:
@@ -818,7 +935,7 @@ repository:
         {'include': '#AQB'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(DC|NDC|COUN|CAT|LON|LAT|GAMF|ALT|WIND|SNOW|SEIS|WCAT|UNIT|LANG)(?!\\w)'
+          match: '(?i)(?<!\\w)(DC|NDC|COUN|CAT|LON|LAT|G|ALT|WIND|SNOW|SEIS|WCAT|UNIT|LANG|GAMF)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -869,7 +986,7 @@ repository:
         {'include': '#AQB'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(FROM|TO|STEP|TYPE|X|XE|NCS|BETA|BETS|STYP|PRED|LAMS|LAMT|LAML|LAMC|LAMM|CS|CS0|CS1|CS2|CS3|CS4|CS5|CS6|CS7|CS8|CS9|CS10|CS11|CS12|CS13|CS14|CS15|CS16|CS17|CS18|CS19|CS20|CS21|CS22|CS23|CS24|CS25|CS26|CS27|CS28|CS29|CS30|CS31)(?!\\w)'
+          match: '(?i)(?<!\\w)(FROM|TO|INC|TYPE|X|XE|NCS|BETA|BETS|STYP|PRED|LAMS|LAMT|LAML|LAMC|LAMM|CS|CS0|CS1|CS2|CS3|CS4|CS5|CS6|CS7|CS8|CS9|CS10|CS11|CS12|CS13|CS14|CS15|CS16|CS17|CS18|CS19|CS20|CS21|CS22|CS23|CS24|CS25|CS26|CS27|CS28|CS29|CS30|CS31|STEP)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1005,7 +1122,7 @@ repository:
         {'include': '#AQB'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(STAT|KSV|KSB|AM1|AM2|AM3|AM4|AMAX|SC1|SC2|SCS|SS1|SS2|SS0|C1|S2|S1|Z1|Z2|SMOD|TVS|MSCD|KTAU|TTOL|TANA|TANB|SC|DELR)(?!\\w)'
+          match: '(?i)(?<!\\w)(STAT|KSV|KSB|AM1|AM2|AM3|AM4|AMAX|SC1|SC2|SCS|SS1|SS2|SS0|C1|S2|S1|Z1|Z2|SMOD|TVS|MSCD|KTAU|TTOL|TANA|TANB|SCL|DELR)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1435,7 +1552,7 @@ repository:
         {'include': '#ASE'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(TYPE|PROB|ITER|TOL|TOL4|TOL8|FMAX|FMIN|PLC|FACV|NMAT|STOR|CHAM)(?!\\w)'
+          match: '(?i)(?<!\\w)(TYPE|PROB|ITER|TOL|TOL4|TOL8|FMAX|FMIN|PLC|FACV|NMAT|STOR|CHAM|POST)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1572,6 +1689,23 @@ repository:
         {'include': '#defA'}
         {
           match: '(?i)(?<!\\w)(NO|STEA|QUEA|QUEX|QUEY|ALP0|ULUS|QEMX|EXPO|GEOM|BWES|ST_M|QU_M|QEMY)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(Q8X8)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#ASE'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(ROW|MXX|MYY|MXY|QX|QY|NXX|NYY|NXY|FROM|TO)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -1945,7 +2079,7 @@ repository:
         {'include': '#ASE'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(STAT|KSV|KSB|AM1|AM2|AM3|AM4|AMAX|SC1|SC2|SCS|SS1|SS2|SS0|C1|S2|S1|Z1|Z2|SMOD|TVS|MSCD|KTAU|TTOL|TANA|TANB|SC|DELR)(?!\\w)'
+          match: '(?i)(?<!\\w)(STAT|KSV|KSB|AM1|AM2|AM3|AM4|AMAX|SC1|SC2|SCS|SS1|SS2|SS0|C1|S2|S1|Z1|Z2|SMOD|TVS|MSCD|KTAU|TTOL|TANA|TANB|SCL|SC|DELR)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -5583,6 +5717,470 @@ repository:
       }
     ]
   }
+  CSA: {
+    patterns: [
+      {include: '#normalText'}
+      {
+      begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(END)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(TXB)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(TXE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(ECHO)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(OPT|VAL)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(UNIT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|USE|DIG|SET)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(PAGE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(FIRS|LINE|MARG|LANO|LANI|UNIO|UNII|FORM|PRIL|PAG)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(SIZE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|S.C.|W|H|MARG|FORM)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GNT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NO|S.C.|XMIN|YMIN|XMAX|YMAX|WXMI|WXMA|WYMA)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GPL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15|X16|Y16)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GFA)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15|X16|Y16)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GGDP)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GTXT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X|Y|TEXT|VAL|DIM|ND)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GSCA)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|TEXT|VAL|NIM|ND)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GCOL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(COL|R|G|B)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GPLI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|TYPE|WIDT|SCAT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GPMI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|TYPE|SIZE)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GTXI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|H|BX|BY|HALI|VALI|PATH|EXPA|SPAC|FONT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GFAI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|STYL|TYPE)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(@CDB)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(@KEY)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(KWH|KWL|SEL1|SEL2|SEL3|SEL4|SEL5|SEL6|IERR)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(TASK)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|NCS|CS)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(MCRL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(STAT|LSCY|LSCU|LSRY|LSRU|SCMC|SCMR)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(PHNG)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|LENG|ALPH)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(CPHN)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(P|ALPH)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(EXPO)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(OPT|NO|MTYP|TITL)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(PLOT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSA'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|VAL)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+    ]
+  }
   CSM: {
     patterns: [
       {include: '#normalText'}
@@ -6106,7 +6704,7 @@ repository:
         {'include': '#CSM'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(MNO|GRP|CS|DPHI|RH)(?!\\w)'
+          match: '(?i)(?<!\\w)(MNO|GRP|CS|DPHI|DEPS|RH)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -6216,6 +6814,23 @@ repository:
         ]
       }
       {
+      begin: '(?i)(^[ \\t]*|; *)(GAMT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#CSM'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|GAMU|GAMF)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
       begin: '(?i)(^[ \\t]*|; *)(LCCS)(?=;|$| )'
       beginCaptures:
         1: name: 'support.type'
@@ -6259,7 +6874,7 @@ repository:
         {'include': '#CSM'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(LCR|LCRC|LC|LCC)(?!\\w)'
+          match: '(?i)(?<!\\w)(LCR|LCRC|LC|LCC|BASE|CDB)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -6395,7 +7010,7 @@ repository:
         {'include': '#CSM'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|TYPE|FMIN|FMAX)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|TYPE|FMIN|FMAX|USE)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -6446,7 +7061,7 @@ repository:
         {'include': '#CSM'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|X|N|VY|VZ|MT|MY|MZ|DSIG|ETYP|CS|ADD|TOL)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|X|N|VY|VZ|MT|MY|MZ|DSIG|ETYP|CS|ADD|TOL|LC)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -6463,7 +7078,7 @@ repository:
         {'include': '#CSM'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(ITER|FMAX)(?!\\w)'
+          match: '(?i)(?<!\\w)(ITER|FMAX|COPY)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -6514,7 +7129,7 @@ repository:
         {'include': '#CSM'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(LC|DIFF|EX_Z|EX_Y|EX_Q|GRP)(?!\\w)'
+          match: '(?i)(?<!\\w)(LC|DIFF|EX_Z|EX_Y|EX_R|EX_Q|GRP)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -7204,7 +7819,7 @@ repository:
         {'include': '#DECREATOR'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(OPT|VAL|.)(?!\\w)'
+          match: '(?i)(?<!\\w)(OPT|VAL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -7493,7 +8108,7 @@ repository:
         {'include': '#DECREATOR'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|NCS|NCS2|HDIV|FREF|GRP|TITL)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|NCS|NCS2|HDIV|FREF|GRP|TYPE|TITL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -7569,6 +8184,23 @@ repository:
         ]
       }
       {
+      begin: '(?i)(^[ \\t]*|; *)(GRP)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#DECREATOR'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NO)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
       begin: '(?i)(^[ \\t]*|; *)(DDEL)(?=;|$| )'
       beginCaptures:
         1: name: 'support.type'
@@ -7595,7 +8227,7 @@ repository:
         {'include': '#DECREATOR'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(GAUS|TEND|CINT)(?!\\w)'
+          match: '(?i)(?<!\\w)(GAUS|TEND|CINT|WARP)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -9383,7 +10015,7 @@ repository:
         {'include': '#ELLA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(TYPE|SC|W|H|MARG|FORM|HDIV|C1|C2|C3|C4|C5|C6|C7)(?!\\w)'
+          match: '(?i)(?<!\\w)(TYPE|SC|W|H|MARG|FORM|HDIV|C1|C2|C3|C4|C5|C6|C7|C8|C9)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -9808,7 +10440,7 @@ repository:
         {'include': '#ELLA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(P|PB|PW|PF|PFAC|DIST|A|DPOS|DMIN|DMAX|Y|Y2|HW|ZW|HF|PHI|B)(?!\\w)'
+          match: '(?i)(?<!\\w)(P|PB|PW|PF|PFAC|DIST|A|DPOS|DMIN|DMAX|Y|HW|ZW|HF|PHI|NW|B|BW|LW|SNO|FRB|DAB|BOGI|FRBO|DABO|WHEE|FRWH|DAWH|CONT|Y2)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -9825,7 +10457,7 @@ repository:
         {'include': '#ELLA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(P|PB|PW|PF|PFAC|DIST|A|L|LMAX|LDEL|Y|Y2|HW|ZW|HF|PHI|B|BW|LW|SNO|FRB|DAB|BOGI|FRBO|DABO|WHEE|FRWH|DAWH)(?!\\w)'
+          match: '(?i)(?<!\\w)(P|PB|PW|PF|PFAC|DIST|A|L|LMAX|LDEL|Y|HW|ZW|HF|PHI|NW|B|BW|LW|SNO|FRB|DAB|BOGI|FRBO|DABO|WHEE|FRWH|DAWH|Y2)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -12588,6 +13220,674 @@ repository:
         {'include': '#defA'}
         {
           match: '(?i)(?<!\\w)(IN|FNR|OVRT|FMT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+    ]
+  }
+  RELY: {
+    patterns: [
+      {include: '#normalText'}
+      {
+      begin: '(?i)(^[ \\t]*|; *)(HEAD)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(END)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(TXB)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(TXE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(ECHO)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(OPT|VAL|.)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(UNIT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|USE|DIG|SET)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(PAGE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(FIRS|LINE|MARG|LANO|LANI|UNIO|UNII|FORM|PRIL|PAG)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(SIZE)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|S.C.|W|H|MARG|FORM)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GNT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NO|S.C.|XMIN|YMIN|XMAX|YMAX|WXMI|WXMA|WYMA)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GPL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15|X16|Y16)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GFA)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15|X16|Y16)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GGDP)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|X1|Y1|X2|Y2|X3|Y3|X4|Y4|X5|Y5|X6|Y6|X7|Y7|X8|Y8|X9|Y9|X10|Y10|X11|Y11|X12|Y12|X13|Y13|X14|Y14|X15|Y15)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GTXT)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X|Y|TEXT|VAL|DIM|ND)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GSCA)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(X1|Y1|X2|Y2|TEXT|VAL|NIM|ND)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GCOL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(COL|R|G|B)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GPLI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|TYPE|WIDT|SCAT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GPMI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|TYPE|SIZE)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GTXI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|H|BX|BY|HALI|VALI|PATH|EXPA|SPAC|FONT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(GFAI)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(IND|COL|STYL|TYPE)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(@CDB)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(@KEY)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(KWH|KWL|SEL1|SEL2|SEL3|SEL4|SEL5|SEL6|IERR)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(CTRL)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TRAN|SEED|SVAL|CDBP|CLSE|ENTR)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(OUTP)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NPRI|IMON|LSFR|PRUV|PRXV)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(VAR)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(TYPE|TID|PTYP|P1|P2|P3|P4|V1|V2|V3|V4|VAL|UMIN|UMAX|CHAV|TXT)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(CORR)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(VAR1|VAR2|C)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(PROJ)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(DAT|CDB)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(FUNC)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NAME|EXPR)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(SLSF)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(VARN|EXPR)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(MC)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NSPL|LSF|SAVE|SAPD|FSAV|FSAP|SPLS|SENS|REST)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(IS)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NSPL|DSPT|LSF)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(LS)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NSPL|SPNT|LSF|GSTP|EPSC)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(DS)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NSPL|LSF|GSTP|EPSC)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(ADS)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NSPL|SPNT|LSF)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(FORM)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(SPNT|OPTA|GRDM|GSTP|MIT1|MIT2|EPSC|SMU|LSF)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(SORM)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(SPNT|OPTA|GRDM|GSTP|MIT1|MIT2|EPSC|SMU|LSF)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(MVFO)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(SPNT|GRDM|GSTP|RELA|LSF)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(SUBS)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NSPL|P0|LMDA|NCS|LSF)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(EXDS)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(SDES|CNTR|SAIF|SAVE|SAPD|LSF|SPRD)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(RSF)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#RELY'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NAME|LSF|ANSA|LOAD|SAVE)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -19326,6 +20626,23 @@ repository:
         ]
       }
       {
+      begin: '(?i)(^[ \\t]*|; *)(GRP)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#TENDON'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NO|CMD)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
       begin: '(?i)(^[ \\t]*|; *)(SYSP)(?=;|$| )'
       beginCaptures:
         1: name: 'support.type'
@@ -19335,7 +20652,24 @@ repository:
         {'include': '#TENDON'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NOPS|COMP|TAPP|NO|MAT|ZV|AZ|LITZ|MINR|BETA|BETG|MUE|MUE-|ECC|CDIS|CEDG|SS|SC|SF|VP|VC|VF|LPRE|LCOP|LFIX|DI|DO|TITL|SP)(?!\\w)'
+          match: '(?i)(?<!\\w)(NOPS|MAT|ZV|AZ|LITZ|MINR|BETA|BETG|MUE|MUE-|ECC|CDIS|CEDG|SP|SF|LPRE|LFIX|DO|TITL|COMP|TAPP|NO|SS|SC|VP|VC|VF|LCOP|DI)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(SYSS)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#TENDON'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NOPS|MAT|ZV|AZ|LITZ|TITL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -19403,7 +20737,7 @@ repository:
         {'include': '#TENDON'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NOG|NOH|NOPS|XREF|ELEM|POSI|DELT|TITL|GUID)(?!\\w)'
+          match: '(?i)(?<!\\w)(NOG|NOH|NOPS|XREF|ELEM|TITL|GUID|POSI|DELT)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -19471,7 +20805,7 @@ repository:
         {'include': '#TENDON'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(EINL|ETYP|LITZ|FAK|MATA|AR|UZ|DZ)(?!\\w)'
+          match: '(?i)(?<!\\w)(FTL|FTYP|MATA|AR|UD|DZ|EINL|ETYP|LITZ|FAK|UZ)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -19522,7 +20856,7 @@ repository:
         {'include': '#TENDON'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(KIND|STR|RER|RSR|SLR|STL|REL|RSL|SL)(?!\\w)'
+          match: '(?i)(?<!\\w)(KIND|STR|RER|RSR|SLR|STL|REL|RSL|SLL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -19556,7 +20890,7 @@ repository:
         {'include': '#TENDON'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NOT|NOG|NTEN|TYPE|FROM|TO|SFRO|STO|EFRO|ETO|LC|LC0|TITL)(?!\\w)'
+          match: '(?i)(?<!\\w)(NOT|NOG|NTEN|TYPE|FROM|TO|SFRO|STO|EFRO|ETO|LC|LC0|TITL|GUID)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -19573,7 +20907,7 @@ repository:
         {'include': '#TENDON'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(TYPE|NO)(?!\\w)'
+          match: '(?i)(?<!\\w)(AXES|TGEO|TEND|TYPE|NO)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -19590,7 +20924,7 @@ repository:
         {'include': '#TENDON'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NOG|FROM|TO|INC|TYPG|OUTP|CSP|DU|DV|FACH|EXPO|VAL1|VAL2)(?!\\w)'
+          match: '(?i)(?<!\\w)(NOG|FROM|TO|INC|TYPG|OUTP|CSP|DU|DV|FACH|EXPO|AXID|TITL|SEP|VAL1|VAL2)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -19607,7 +20941,7 @@ repository:
         {'include': '#TENDON'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(C1|C2|C3|C4|C5|C6|C7|C8|C9|C10|C11)(?!\\w)'
+          match: '(?i)(?<!\\w)(F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12|F13|F14|C1|C2|C3|C4|C5|C6|C7|C8|C9|C10|C11)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -19641,7 +20975,7 @@ repository:
         {'include': '#TENDON'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(SHOW|NO|FACH|FROM|TO|TYPG|DIA|PCS)(?!\\w)'
+          match: '(?i)(?<!\\w)(SHOW|NO|FACH|TYPG|FROM|TO|PCS|DIA)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -19659,6 +20993,74 @@ repository:
         {'include': '#defA'}
         {
           match: '(?i)(?<!\\w)()(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(EXPO)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#TENDON'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(OPT|TO)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(PAAS)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#TENDON'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(KIND|ANWS|K1|K2|K3)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(SLAB)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#TENDON'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NOT|REFS|NOPS|TYPG|ICS1|ICS2|ICS3|S0|ZSPT|ZSPB|FRLT|FRLL|LC|TITL)(?!\\w)'
+          name: 'entity.name.function'
+        }
+        {'include': '#normalText'}
+        {'include': '$self'}
+        ]
+      }
+      {
+      begin: '(?i)(^[ \\t]*|; *)(SLBS)(?=;|$| )'
+      beginCaptures:
+        1: name: 'support.type'
+        2: name: 'keyword.control'
+      end: '\\z'
+      patterns: [
+        {'include': '#TENDON'}
+        {'include': '#defA'}
+        {
+          match: '(?i)(?<!\\w)(NOT|BIT|S|ZS|DZS|DL|DR|RV|RL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
