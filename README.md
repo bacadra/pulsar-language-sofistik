@@ -1,9 +1,12 @@
 # language-sofistik
 
-![Tag](https://img.shields.io/github/v/tag/bacadra/atom-language-sofistik?style=for-the-badge)
-![LastCommit](https://img.shields.io/github/last-commit/bacadra/atom-language-sofistik?style=for-the-badge)
-![RepoSize](https://img.shields.io/github/repo-size/bacadra/atom-language-sofistik?style=for-the-badge)
-![Licence](https://img.shields.io/github/license/bacadra/atom-language-sofistik?style=for-the-badge)
+<p align="center">
+  <img src="https://img.shields.io/github/v/tag/bacadra/atom-language-sofistik?style=for-the-badge&label=Latest&color=007EC6" alt="Latest">
+  <img src="https://img.shields.io/github/languages/code-size/bacadra/atom-language-sofistik?style=for-the-badge&color=007EC6" alt="CodeSize">
+  <img src="https://img.shields.io/github/languages/top/bacadra/atom-language-sofistik?style=for-the-badge&color=007EC6" alt="Language">
+  <img src="https://img.shields.io/github/last-commit/bacadra/atom-language-sofistik?style=for-the-badge&color=007EC6" alt="LastCommit">
+  <img src="https://img.shields.io/github/license/bacadra/atom-language-sofistik?style=for-the-badge&color=007EC6" alt="Licence">
+</p>
 
 SOFiSTiK grammar is provide for files with extensions `.dat`, `.gra`, `.grb` and `.results`.
 
@@ -29,9 +32,7 @@ or directly [language-sofistik](https://web.pulsar-edit.dev/packages/language-so
 
 ## Compatibility
 
-**Support versions of SOFiSTiK are 2023, 2022, 2020 and 2018. English only.**
-
-As the package supports many versions of SOFiSTiK and commands are constantly changing, the package offers hints that may no longer be valid in given version.
+<%sofistik_compatibility%>
 
 # Contributing
 
