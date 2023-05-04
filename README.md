@@ -1,5 +1,10 @@
 # language-sofistik
 
+![Tag](https://img.shields.io/github/v/tag/bacadra/atom-language-sofistik?style=for-the-badge)
+![LastCommit](https://img.shields.io/github/last-commit/bacadra/atom-language-sofistik?style=for-the-badge)
+![RepoSize](https://img.shields.io/github/repo-size/bacadra/atom-language-sofistik?style=for-the-badge)
+![Licence](https://img.shields.io/github/license/bacadra/atom-language-sofistik?style=for-the-badge)
+
 SOFiSTiK grammar is provide for files with extensions `.dat`, `.gra`, `.grb` and `.results`.
 
 SOFiSTiK RAW grammar is provide for files with extensions `.erg`, `.lst`, `.prt` and `.urs`.
