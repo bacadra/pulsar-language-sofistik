@@ -6,6 +6,7 @@
 scopeName: 'source.sofistik'
 name: 'SOFiSTiK'
 fileTypes: ['dat','gra','grb','results']
+injectionSelector: 'source.embedded.sofistik'
 patterns: [
   {
     match: '^@ SOFiSTiK \\d{4}(?:-\\d\\d?)?$'
