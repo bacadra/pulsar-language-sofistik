@@ -43,7 +43,7 @@ or directly [language-sofistik](https://web.pulsar-edit.dev/packages/language-so
 
 As the package supports many versions of SOFiSTiK and commands are constantly changing, the package offers hints that may no longer be valid in given version.
 
-# Contributing
+# Contributing [🍺](https://www.buymeacoffee.com/asiloisad)
 
 If you have ideas on how to improve the package, see bugs or want to support new features - feel free to share it via GitHub.
 
