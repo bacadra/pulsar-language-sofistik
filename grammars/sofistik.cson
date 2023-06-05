@@ -6,7 +6,6 @@
 scopeName: 'source.sofistik'
 name: 'SOFiSTiK'
 fileTypes: ['dat','gra','grb','results']
-injectionSelector: 'source.embedded.sofistik'
 patterns: [
   {
     match: '^@ SOFiSTiK \\d{4}(?:-\\d\\d?)?$'
@@ -418,6 +417,8 @@ patterns: [
 repository:
   normalText: {
     patterns: [
+      {include: '#markdown'}
+      {include: '#python'}
       {include: '#textcmds'}
       {include: '#defA'}
       {include: '#defB'}
@@ -436,6 +437,30 @@ repository:
       {include: '#units'}
       {include: '#loops'}
       {include: '#units'}
+    ]
+  }
+  markdown: {
+    begin: '(?i)^[ ]*```(markdown|md)'
+    beginCaptures:
+      1: name: 'string.other.sofistik'
+      2: name: 'support.type.sofistik'
+    end: '(?i)^[ ]*```'
+    endCaptures:
+      1: name: 'string.other.sofistik'
+    patterns: [
+        {include: 'source.gfm'}
+    ]
+  }
+  python: {
+    begin: '(?i)^[ ]*```(python|py)'
+    beginCaptures:
+      1: name: 'string.other.sofistik'
+      2: name: 'support.type.sofistik'
+    end: '(?i)^[ ]*```'
+    endCaptures:
+      1: name: 'string.other.sofistik'
+    patterns: [
+        {include: 'source.python'}
     ]
   }
   text: {
