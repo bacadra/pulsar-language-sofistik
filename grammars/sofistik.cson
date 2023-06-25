@@ -418,6 +418,7 @@ repository:
   normalText: {
     patterns: [
       {include: '#markdown'}
+      {include: '#todo'}
       {include: '#python'}
       {include: '#textcmds'}
       {include: '#defA'}
@@ -449,6 +450,18 @@ repository:
       1: name: 'string.other.sofistik'
     patterns: [
         {include: 'source.gfm'}
+    ]
+  }
+  todo: {
+    begin: '(?i)^[ ]*```(todo)'
+    beginCaptures:
+      1: name: 'string.other.sofistik'
+      2: name: 'support.type.sofistik'
+    end: '(?i)^[ ]*```'
+    endCaptures:
+      1: name: 'string.other.sofistik'
+    patterns: [
+        {include: 'source.todo'}
     ]
   }
   python: {
@@ -16602,7 +16615,7 @@ repository:
         {'include': '#SOFILOAD'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(P|PB|PW|PF|PFAC|DIST|A|DPOS|DMIN|DMAX|Y|Y2|HW|ZW|HF|PHI|B|BW|LW|SNO|FRB|DAB|BOGI|FRBO|DABO|WHEE|FRWH|DAWH|CONT)(?!\\w)'
+          match: '(?i)(?<!\\w)(P|PB|PW|PF|PFAC|DIST|A|DPOS|DMIN|DMAX|Y|HW|ZW|HF|PHI|NW|B|BW|LW|SNO|FRB|DAB|BOGI|FRBO|DABO|WHEE|FRWH|DAWH|CONT|Y2)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -16619,7 +16632,7 @@ repository:
         {'include': '#SOFILOAD'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(P|PB|PW|PF|PFAC|DIST|A|L|LMAX|LDEL|Y|Y2|HW|ZW|HF|PHI|B|BW|LW|SNO|FRB|DAB|BOGI|FRBO|DABO|WHEE|FRWH|DAWH)(?!\\w)'
+          match: '(?i)(?<!\\w)(P|PB|PW|PF|PFAC|DIST|A|L|LMAX|LDEL|Y|HW|ZW|HF|PHI|NW|B|BW|LW|SNO|FRB|DAB|BOGI|FRBO|DABO|WHEE|FRWH|DAWH|Y2)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -22133,7 +22146,7 @@ repository:
         {'include': '#WING'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(TYPE|FROM|TO|INC|NUMB|MODE|EDGE|INTE|COLO|INDX|RED|GREE|BLUE|DMOD|LIGH|LIPX|LIPY|LIPZ|DARK|BRIG)(?!\\w)'
+          match: '(?i)(?<!\\w)(TYPE|FROM|TO|INC|NUMB|MODE|EDGE|INTE|COLI|INDX|RED|GREE|BLUE|DMOD|LIGH|LIPX|LIPY|LIPZ|DARK|BRIG)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
