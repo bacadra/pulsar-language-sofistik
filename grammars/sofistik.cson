@@ -4807,7 +4807,7 @@ repository:
         {'include': '#BEMESS'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(TYPE|RMOD|LAY|SYST|WALL|AUGM|THIC|TENS|LCR|LCRI|PFAI|RO_V|COTT|FACH|WARN|BOUN|VF70|SNIP|WINT|WEND|REDN|RADP|BUBB|REDM|VPDC|SIGZ|LCRP|WTEN|DMOM|VMIN|MINS|BETA|BRIC|CORE|V2|V3)(?!\\w)'
+          match: '(?i)(?<!\\w)(TYPE|RMOD|LAY|LCR|LCRI|LCRP|DMOM|TENS|PFAI|RO_V|COTT|VLEV|BOUN|VMIN|MINS|WINT|WEND|BETA|RADP|VPDC|SIGZ|WTEN|BRIC|BUBB|REDN|REDM|FACH|SNIP|WALL|CORE|WARN|V2|V3|SYST|AUGM|THIC|VF70)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -4841,7 +4841,7 @@ repository:
         {'include': '#BEMESS'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(MUEZ|XMIN|DDES|STAN|WK|BETA|BOND|BET1|BET2|K1|DDEB|WKB)(?!\\w)'
+          match: '(?i)(?<!\\w)(XMIN|WK|BOND|BET1|BET2|WKB|CODE|MUEZ|DDES|STAN|BETA|K1|DDEB)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -4892,7 +4892,7 @@ repository:
         {'include': '#BEMESS'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(SIGS|SIGT|SIGP|CHKC|CHKR|DECO|FATC|LS_U|LS_L|LS_V|LS_P|LC14|FACU|FACL|FACV|FACP|LOCP)(?!\\w)'
+          match: '(?i)(?<!\\w)(SIGS|SIGT|SIGP|CHKC|CHKR|DECO|FATC|LS_U|LS_L|LS_V|LS_P|LC14|FACU|FACL|FACV|FACP|LOCP|G_SD)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -4909,7 +4909,7 @@ repository:
         {'include': '#BEMESS'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(CONC|STEE|K|BETZ|N|MINC|MSTA|T011|T02|T03|AM3|FC|FY|TU0|TUGR|TRD|SC1|SC2|SS1|SS2)(?!\\w)'
+          match: '(?i)(?<!\\w)(CONC|STEE|K|MINC|MSTA|AM3|FV|FY|FYS|SC1|SC2|SS1|SS2|C1|S2|BETZ|N|T011|T02|T03|FC|TU0|TUGR|TRD)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -5011,7 +5011,7 @@ repository:
         {'include': '#BEMESS'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NOG|NOEL|DU|DU3|DL|DL2|DL3|WKU|WKU2|WKU3|WKL|WKL2|WKL3|SSU|SSU2|SSU3|SSL|SSL2|SSL3|ASU|ASU2|ASU3|ASL|ASL2|ASL3|BSU|BSU2|BSU3|BSL|BSL2|BSL3|TYPE)(?!\\w)'
+          match: '(?i)(?<!\\w)(NOG|NOEL|DU|DU2|DU3|DL|DL2|DL3|WKU|WKU2|WKU3|WKL|WKL2|WKL3|SSU|SSU2|SSU3|SSL|SSL2|SSL3|ASU|ASU2|ASU3|ASL|ASL2|ASL3|BSU|BSU2|BSU3|BSL|BSL2|BSL3|TYPE|XMIN|XMAX|YMIN|YMAX|ZMIN|ZMAX|ROT)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -5062,7 +5062,7 @@ repository:
         {'include': '#BEMESS'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|ENVA|ENVB|WKU|WKL|SIGU|SIGL|SAR|CS)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|SAR|CS|ENVA|ENVB|WKU|WKL|SIGU|SIGL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -5096,7 +5096,7 @@ repository:
         {'include': '#BEMESS'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(FROM|TO|DELT|GROU|WKA|WKB|SIGA|SIGB|INC)(?!\\w)'
+          match: '(?i)(?<!\\w)(FROM|TO|INC|GROU|DELT|WKA|WKB|SIGA|SIGB)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -5113,7 +5113,7 @@ repository:
         {'include': '#BEMESS'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|TYPE)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|TYPE|GRP)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
@@ -12726,7 +12726,7 @@ repository:
         {'include': '#MAXIMA'}
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(TYPE|GAMU|GAMF|PSI0|PSI1|PSI2|PS1S|PART|SUP|TITL)(?!\\w)'
+          match: '(?i)(?<!\\w)(TYPE|GAMU|GAMF|PSI0|PSI1|PSI2|PS1S|GAMA|PART|SUP|TITL)(?!\\w)'
           name: 'entity.name.function'
         }
         {'include': '#normalText'}
