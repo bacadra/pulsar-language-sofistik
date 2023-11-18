@@ -23,11 +23,11 @@ SOFiSTiK RAW grammar is provide for files with extensions `.erg`, `.lst`, `.prt`
 
 To install `language-sofistik` search for [language-sofistik](https://web.pulsar-edit.dev/packages/language-sofistik) in the Install pane of the Pulsar settings or run `ppm install language-sofistik`.
 
-Alternatively, run `ppm install bacadra/pulsar-language-sofistik` to install a package directly from Github repository.
+Alternatively, you can run `ppm install bacadra/pulsar-language-sofistik` to install a package directly from the Github repository.
 
 ## Compatibility
 
-**Support versions of SOFiSTiK are 2023, 2022, 2020 and 2018. English only.** As the package supports many versions of SOFiSTiK, the package hints may become invalid for certain versions due to changing commands and features.
+**Support versions of SOFiSTiK are 2024, 2023, 2022, 2020 and 2018. English only.** As the package supports many versions of SOFiSTiK, the package hints may become invalid for certain versions due to changing commands and features.
 
 # Contributing [🍺](https://www.buymeacoffee.com/asiloisad)
 
