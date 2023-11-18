@@ -1,6 +1,6 @@
 {
   "name": "language-sofistik",
-  "version": "0.3.30",
+  "version": "0.3.31",
   "description": "SOFiSTiK grammar",
   "keywords": [
     "bacadra",
@@ -10,7 +10,7 @@
   ],
   "engines": {
     "atom": ">=1.100.0 <2.0.0"
-  },  
+  },
   "readmeFilename": "README.md",
   "homepage": "https://github.com/bacadra/pulsar-language-sofistik",
   "url": "https://github.com/bacadra/pulsar-language-sofistik",
