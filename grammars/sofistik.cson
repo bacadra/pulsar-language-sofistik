@@ -463,11 +463,11 @@ repository:
     ]
   }
   defA: {
-    match: '(?i)^[ ]*(#DEFINE|#ENDDEF)( .+?) *(=) *(.*)'
+    match: '(?i)^[ ]*(#DEFINE|#ENDDEF) *(.+?)?(?: *= *(.*))?$'
     captures:
       1: name: 'entity.name.section.sofistik'
       2: name: 'string.other.sofistik'
-      4: patterns: [
+      3: patterns: [
         { include: '#inc1' }
         { include: '#comments' }
         { include: '#str1' }
@@ -479,6 +479,7 @@ repository:
         { include: '#expr' }
         { include: '#units' }
       ]
+      4: name: 'entity.name.section.sofistik'
   }
   defB: {
     match: '(?i)^[ ]*(#INCLUDE)( +.+)'
