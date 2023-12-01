@@ -486,7 +486,7 @@ repository:
         ]
   }
   defC: {
-    match: '(?i)^[ ]*([\\+-]?APPLY|[\\+-]?SYS)( +.+)'
+    match: '(?i)^[ ]*([\\$\\+-]?APPLY|[\\+-]?SYS)( +.+)'
     captures:
       1: name: 'support.class.sofistik'
       2:
