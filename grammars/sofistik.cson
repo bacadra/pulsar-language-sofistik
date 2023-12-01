@@ -509,14 +509,14 @@ repository:
     match: '(?i)(!|\\/\\/|\\$(?!PROG)).*'
     name: 'comment.line.sofistik'
   }
-  str1: { # strings
+  str1: {
     match: '\\"(.*?)\\"'
     name: 'string.double.sofistik'
     captures: 1: patterns: [
         { include: '#inc1' }
     ]
   }
-  str2: { # strings
+  str2: {
     match: "\\'(.*?)\\'"
     name: 'string.single.sofistik'
     captures: 1: patterns: [
