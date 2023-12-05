@@ -24,7 +24,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.aqb.sofistik'
     2: name: 'support.class.aqb.sofistik'
-    3: name: 'comment.line.aqb.sofistik'
+    3:
+      name: 'comment.line.aqb.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.aqb.sofistik'
   patterns: [
@@ -36,7 +38,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.ase.sofistik'
     2: name: 'support.class.ase.sofistik'
-    3: name: 'comment.line.ase.sofistik'
+    3:
+      name: 'comment.line.ase.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.ase.sofistik'
   patterns: [
@@ -48,7 +52,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.aqua.sofistik'
     2: name: 'support.class.aqua.sofistik'
-    3: name: 'comment.line.aqua.sofistik'
+    3:
+      name: 'comment.line.aqua.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.aqua.sofistik'
   patterns: [
@@ -60,7 +66,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.bdk.sofistik'
     2: name: 'support.class.bdk.sofistik'
-    3: name: 'comment.line.bdk.sofistik'
+    3:
+      name: 'comment.line.bdk.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.bdk.sofistik'
   patterns: [
@@ -72,7 +80,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.beam.sofistik'
     2: name: 'support.class.beam.sofistik'
-    3: name: 'comment.line.beam.sofistik'
+    3:
+      name: 'comment.line.beam.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.beam.sofistik'
   patterns: [
@@ -84,7 +94,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.bemess.sofistik'
     2: name: 'support.class.bemess.sofistik'
-    3: name: 'comment.line.bemess.sofistik'
+    3:
+      name: 'comment.line.bemess.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.bemess.sofistik'
   patterns: [
@@ -96,7 +108,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.column.sofistik'
     2: name: 'support.class.column.sofistik'
-    3: name: 'comment.line.column.sofistik'
+    3:
+      name: 'comment.line.column.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.column.sofistik'
   patterns: [
@@ -108,7 +122,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.csa.sofistik'
     2: name: 'support.class.csa.sofistik'
-    3: name: 'comment.line.csa.sofistik'
+    3:
+      name: 'comment.line.csa.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.csa.sofistik'
   patterns: [
@@ -120,7 +136,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.csm.sofistik'
     2: name: 'support.class.csm.sofistik'
-    3: name: 'comment.line.csm.sofistik'
+    3:
+      name: 'comment.line.csm.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.csm.sofistik'
   patterns: [
@@ -132,7 +150,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.dbmerg.sofistik'
     2: name: 'support.class.dbmerg.sofistik'
-    3: name: 'comment.line.dbmerg.sofistik'
+    3:
+      name: 'comment.line.dbmerg.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.dbmerg.sofistik'
   patterns: [
@@ -144,7 +164,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.decreator.sofistik'
     2: name: 'support.class.decreator.sofistik'
-    3: name: 'comment.line.decreator.sofistik'
+    3:
+      name: 'comment.line.decreator.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.decreator.sofistik'
   patterns: [
@@ -156,7 +178,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.dolfyn.sofistik'
     2: name: 'support.class.dolfyn.sofistik'
-    3: name: 'comment.line.dolfyn.sofistik'
+    3:
+      name: 'comment.line.dolfyn.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.dolfyn.sofistik'
   patterns: [
@@ -168,7 +192,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.dyna.sofistik'
     2: name: 'support.class.dyna.sofistik'
-    3: name: 'comment.line.dyna.sofistik'
+    3:
+      name: 'comment.line.dyna.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.dyna.sofistik'
   patterns: [
@@ -180,7 +206,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.dynr.sofistik'
     2: name: 'support.class.dynr.sofistik'
-    3: name: 'comment.line.dynr.sofistik'
+    3:
+      name: 'comment.line.dynr.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.dynr.sofistik'
   patterns: [
@@ -192,7 +220,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.ella.sofistik'
     2: name: 'support.class.ella.sofistik'
-    3: name: 'comment.line.ella.sofistik'
+    3:
+      name: 'comment.line.ella.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.ella.sofistik'
   patterns: [
@@ -204,7 +234,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.footing.sofistik'
     2: name: 'support.class.footing.sofistik'
-    3: name: 'comment.line.footing.sofistik'
+    3:
+      name: 'comment.line.footing.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.footing.sofistik'
   patterns: [
@@ -216,7 +248,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.hase.sofistik'
     2: name: 'support.class.hase.sofistik'
-    3: name: 'comment.line.hase.sofistik'
+    3:
+      name: 'comment.line.hase.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.hase.sofistik'
   patterns: [
@@ -228,7 +262,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.hydra.sofistik'
     2: name: 'support.class.hydra.sofistik'
-    3: name: 'comment.line.hydra.sofistik'
+    3:
+      name: 'comment.line.hydra.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.hydra.sofistik'
   patterns: [
@@ -240,7 +276,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.maxima.sofistik'
     2: name: 'support.class.maxima.sofistik'
-    3: name: 'comment.line.maxima.sofistik'
+    3:
+      name: 'comment.line.maxima.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.maxima.sofistik'
   patterns: [
@@ -252,7 +290,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.plbconverter.sofistik'
     2: name: 'support.class.plbconverter.sofistik'
-    3: name: 'comment.line.plbconverter.sofistik'
+    3:
+      name: 'comment.line.plbconverter.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.plbconverter.sofistik'
   patterns: [
@@ -264,7 +304,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.rely.sofistik'
     2: name: 'support.class.rely.sofistik'
-    3: name: 'comment.line.rely.sofistik'
+    3:
+      name: 'comment.line.rely.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.rely.sofistik'
   patterns: [
@@ -276,7 +318,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.results.sofistik'
     2: name: 'support.class.results.sofistik'
-    3: name: 'comment.line.results.sofistik'
+    3:
+      name: 'comment.line.results.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.results.sofistik'
   patterns: [
@@ -288,7 +332,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.shearwall.sofistik'
     2: name: 'support.class.shearwall.sofistik'
-    3: name: 'comment.line.shearwall.sofistik'
+    3:
+      name: 'comment.line.shearwall.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.shearwall.sofistik'
   patterns: [
@@ -300,7 +346,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.sir.sofistik'
     2: name: 'support.class.sir.sofistik'
-    3: name: 'comment.line.sir.sofistik'
+    3:
+      name: 'comment.line.sir.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.sir.sofistik'
   patterns: [
@@ -312,7 +360,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.sofiload.sofistik'
     2: name: 'support.class.sofiload.sofistik'
-    3: name: 'comment.line.sofiload.sofistik'
+    3:
+      name: 'comment.line.sofiload.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.sofiload.sofistik'
   patterns: [
@@ -324,7 +374,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.sofimsha.sofistik'
     2: name: 'support.class.sofimsha.sofistik'
-    3: name: 'comment.line.sofimsha.sofistik'
+    3:
+      name: 'comment.line.sofimsha.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.sofimsha.sofistik'
   patterns: [
@@ -336,7 +388,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.sofimshc.sofistik'
     2: name: 'support.class.sofimshc.sofistik'
-    3: name: 'comment.line.sofimshc.sofistik'
+    3:
+      name: 'comment.line.sofimshc.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.sofimshc.sofistik'
   patterns: [
@@ -348,7 +402,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.star2.sofistik'
     2: name: 'support.class.star2.sofistik'
-    3: name: 'comment.line.star2.sofistik'
+    3:
+      name: 'comment.line.star2.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.star2.sofistik'
   patterns: [
@@ -360,7 +416,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.talpa.sofistik'
     2: name: 'support.class.talpa.sofistik'
-    3: name: 'comment.line.talpa.sofistik'
+    3:
+      name: 'comment.line.talpa.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.talpa.sofistik'
   patterns: [
@@ -372,7 +430,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.template.sofistik'
     2: name: 'support.class.template.sofistik'
-    3: name: 'comment.line.template.sofistik'
+    3:
+      name: 'comment.line.template.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.template.sofistik'
   patterns: [
@@ -384,7 +444,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.tendon.sofistik'
     2: name: 'support.class.tendon.sofistik'
-    3: name: 'comment.line.tendon.sofistik'
+    3:
+      name: 'comment.line.tendon.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.tendon.sofistik'
   patterns: [
@@ -396,7 +458,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.textile.sofistik'
     2: name: 'support.class.textile.sofistik'
-    3: name: 'comment.line.textile.sofistik'
+    3:
+      name: 'comment.line.textile.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.textile.sofistik'
   patterns: [
@@ -408,7 +472,9 @@ patterns: [
   beginCaptures:
     1: name: 'support.class.wing.sofistik'
     2: name: 'support.class.wing.sofistik'
-    3: name: 'comment.line.wing.sofistik'
+    3:
+      name: 'comment.line.wing.sofistik'
+      patterns: [{ include: 'text.todo' }]
   end: '(?i)(?=^ *([\\$\\+-]?PROG))'
   name: 'module.wing.sofistik'
   patterns: [
@@ -442,7 +508,7 @@ repository:
     captures:
       1: name: 'support.type.sofistik'
       2: name: 'keyword.control.sofistik'
-  }  
+  }
   text: {
     begin: '(?i)^[ ]*(<TEXT>|<TEXT,FILE=(.+)>)(?= |$)'
     beginCaptures:
@@ -450,12 +516,13 @@ repository:
       2: name: 'string.other.sofistik'
     end: '(?i)^[ ]*(<\\/TEXT>)(?= |$)'
     endCaptures:
-      1: name: 'support.function.sofistik'
-    patterns: [
-        { include: '#var2' }
-        { include: '#inc1' }
-        { include: '#edit' }
-    ]
+      1:
+        name: 'support.function.sofistik'
+        patterns: [
+          { include: '#var2' }
+          { include: '#inc1' }
+          { include: '#edit' }
+        ]
   }
   edit: {
     begin: '(?i)(<EDIT:.+?>)'
@@ -465,8 +532,8 @@ repository:
     endCaptures:
       1: name: 'support.function.sofistik'
     patterns: [
-        { include: '#var2' }
-        { include: '#inc1' }
+      { include: '#var2' }
+      { include: '#inc1' }
     ]
   }
   defA: {
@@ -494,9 +561,7 @@ repository:
       1: name: 'entity.name.section.sofistik'
       2:
         name: 'string.other.sofistik'
-        patterns: [
-            { include: '#inc1' }
-        ]
+        patterns: [{ include: '#inc1' }]
   }
   defC: {
     match: '(?i)^[ ]*([\\$\\+-]?APPLY|[\\+-]?SYS)( +.+)'
@@ -505,8 +570,8 @@ repository:
       2:
         name: 'string.other.sofistik'
         patterns: [
-            { include: '#inc1' }
-            { include: '#comments' }
+          { include: '#inc1' }
+          { include: '#comments' }
         ]
   }
   defD: {
@@ -524,21 +589,19 @@ repository:
     match: '(?i)(?:!|\\/\\/|\\$(?!PROG))(.*)'
     name: 'comment.line.sofistik'
     captures:
-        1: patterns: [{ include: 'text.todo' }]
+      1: patterns: [{ include: 'text.todo' }]
   }
   str1: {
     match: '\\"(.*?)\\"'
     name: 'string.double.sofistik'
-    captures: 1: patterns: [
-        { include: '#inc1' }
-    ]
+    captures:
+      1: patterns: [{ include: '#inc1' }]
   }
   str2: {
     match: "\\'(.*?)\\'"
     name: 'string.single.sofistik'
-    captures: 1: patterns: [
-        { include: '#inc1' }
-    ]
+    captures:
+      1: patterns: [{ include: '#inc1' }]
   }
   var1: {
     match: '(?i)(^|;)[ ]*(LET|STO|DEL|DBG|PRT)(?!\\w)'
