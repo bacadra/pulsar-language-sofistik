@@ -633,7 +633,7 @@ repository:
         patterns: [{'include': '#var2'}]
   }
   units: {
-    match: '(?<=\\w)\\[.*?\\]'
+    match: '(?<=\\S)\\[.*?\\]'
     name: 'constant.other.sofistik'
   }
 
