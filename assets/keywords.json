@@ -6261,6 +6261,16 @@
       "NV0",
       "NV1"
     ],
+    "SARS": [
+      "REFT",
+      "REF",
+      "FIXL",
+      "CA",
+      "CL",
+      "GRP",
+      "MNO",
+      "RCTL"
+    ],
     "SVO": [
       "NO",
       "FIX",
