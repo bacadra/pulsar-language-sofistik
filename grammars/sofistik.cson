@@ -1694,7 +1694,7 @@ repository:
       patterns: [
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|STEA|QUEA|QUEX|QUEY|ALP0|ULUS|QEMX|EXPO|GEOM|BWES|ST_M|QU_M|QEMY)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|STEA|QUEA|QUEX|QUEY|ALP0|ULUS|QEMX|EXPO|GEOM|BWES|ST_M|STIT|QU_M|QEMY)(?!\\w)'
           name: 'entity.name.function'
         }
         { 'include': '#normalText' }
