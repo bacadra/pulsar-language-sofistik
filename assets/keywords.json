@@ -544,6 +544,22 @@
       "LC",
       "PLC"
     ],
+    "FIXT": [
+      "REF",
+      "NO",
+      "UX",
+      "UY",
+      "UZ",
+      "PHIX",
+      "PHIY",
+      "PHIZ",
+      "XMIN",
+      "XMAX",
+      "YMIN",
+      "YMAX",
+      "ZMIN",
+      "ZMAX"
+    ],
     "ACTB": [
       "NO",
       "MEND",
@@ -568,6 +584,10 @@
       "CRI1",
       "CRI2",
       "CRI3"
+    ],
+    "ELLO": [
+      "TYPE",
+      "PCS"
     ],
     "TEMP": [
       "NO",
