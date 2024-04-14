@@ -15505,7 +15505,7 @@ repository:
       patterns: [
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(REF|NO|TITL|TYPE|P1|X1|Y1|Z1|P2|X2|Y2|Z2|P3|X3|Y3|Z3)(?!\\w)'
+          match: '(?i)(?<!\\w)(REF|NO|TITL|A/U|TYPE|P|X|Y|Z|P1|X1|Y1|Z1|P2|X2|Y2|Z2|P3|X3|Y3|Z3|P4|X4|Y4|Z4|P5|X5|Y5|Z5)(?!\\w)'
           name: 'entity.name.function'
         }
         { 'include': '#normalText' }
@@ -15521,7 +15521,7 @@ repository:
       patterns: [
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|TO|PASS|EVAL|TYPE|NAME|IND)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|TO|PASS|OPT|EVAL|TYPE|NAME|IND)(?!\\w)'
           name: 'entity.name.function'
         }
         { 'include': '#normalText' }
