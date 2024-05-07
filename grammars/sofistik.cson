@@ -17115,7 +17115,7 @@ repository:
       patterns: [
         {'include': '#defA'}
         {
-          match: '(?i)(?<!\\w)(NO|REF|BASE|TITL)(?!\\w)'
+          match: '(?i)(?<!\\w)(NO|REF|BASE|ICS|ICE|TITL)(?!\\w)'
           name: 'entity.name.function'
         }
         { 'include': '#normalText' }
