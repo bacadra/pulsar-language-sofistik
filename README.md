@@ -1,8 +1,6 @@
 # language-sofistik
 
-SOFiSTiK grammar is provide for files with extensions `.dat`, `.gra`, `.grb` and `.results`.
-
-SOFiSTiK RAW grammar is provide for files with extensions `.erg`, `.lst`, `.prt` and `.urs`.
+Syntax highlighting  for SOFiSTiK. SOFiSTiK grammar is provide for files with extensions `.dat`, `.gra`, `.grb` and `.results`. SOFiSTiK RAW grammar is provide for files with extensions `.erg`, `.lst`, `.prt` and `.urs`.
 
 ## Installation
 

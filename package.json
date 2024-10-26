@@ -1,7 +1,7 @@
 {
   "name": "language-sofistik",
   "version": "1.0.1",
-  "description": "SOFiSTiK grammar",
+  "description": "Syntax highlighting  for SOFiSTiK",
   "keywords": [
     "bacadra",
     "SOFiSTiK",
