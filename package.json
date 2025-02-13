@@ -1,19 +1,16 @@
 {
   "name": "language-sofistik",
-  "version": "1.1.0",
   "description": "Syntax highlighting  for SOFiSTiK",
+  "repository": "https://github.com/bacadra/pulsar-language-sofistik",
   "keywords": [
     "bacadra",
     "SOFiSTiK",
     "CADINP",
     "language"
   ],
+  "version": "1.1.0",
+  "license": "MIT",
   "engines": {
     "atom": ">=1.100.0 <2.0.0"
-  },
-  "readmeFilename": "README.md",
-  "homepage": "https://github.com/bacadra/pulsar-language-sofistik",
-  "url": "https://github.com/bacadra/pulsar-language-sofistik",
-  "repository": "https://github.com/bacadra/pulsar-language-sofistik",
-  "license": "MIT"
+  }
 }
